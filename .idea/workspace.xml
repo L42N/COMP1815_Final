@@ -4,31 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/COMP1815_Trial.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/test.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainGUI.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SubGUI/AddPubWindow.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SubGUI/AddPubWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SubGUI/DeleteWindow.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SubGUI/DeleteWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SubGUI/EditWindow.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SubGUI/EditWindow.java" afterDir="false" />
+    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="New GUI. Still need the buttons to work">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +74,21 @@
       <option name="presentableId" value="Default" />
       <updated>1670257099503</updated>
     </task>
+    <task id="LOCAL-00001" summary="New GUI. Still need the buttons to work">
+      <created>1670283685948</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670283685948</updated>
+    </task>
+    <task id="LOCAL-00002" summary="New GUI. Still need the buttons to work">
+      <created>1670283789206</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670283789206</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -107,5 +101,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="New GUI. Still need the buttons to work" />
+    <option name="LAST_COMMIT_MESSAGE" value="New GUI. Still need the buttons to work" />
   </component>
 </project>

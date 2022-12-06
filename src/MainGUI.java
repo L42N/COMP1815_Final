@@ -17,7 +17,6 @@ public class MainGUI {
     private JRadioButton authorRadioButton;
     private JRadioButton publisherRadioButton;
     private JTextField loadField;
-    private JButton displayAllButton;
     private JTextField timeTextField;
     private JComboBox sortCombobox;
     private JLabel RuntimeLabel;

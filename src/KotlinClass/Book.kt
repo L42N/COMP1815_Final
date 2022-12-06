@@ -1,0 +1,4 @@
+package KotlinClass
+
+class Book {
+}

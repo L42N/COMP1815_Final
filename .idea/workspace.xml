@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="New GUI. Still need the buttons to work" />
+    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Added More classes. Still need to work on GUI">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddPubWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddPubWindow.form" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,7 +120,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670285342054</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added More classes. Still need to work on GUI">
+      <created>1670285400162</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670285400162</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added More classes. Still need to work on GUI">
+      <created>1670285447834</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670285447834</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -129,6 +150,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New GUI. Still need the buttons to work" />
-    <option name="LAST_COMMIT_MESSAGE" value="New GUI. Still need the buttons to work" />
+    <MESSAGE value="Added More classes. Still need to work on GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added More classes. Still need to work on GUI" />
   </component>
 </project>

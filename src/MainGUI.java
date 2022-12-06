@@ -68,7 +68,7 @@ public class MainGUI {
     }
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("DDBBGUI");
+        JFrame frame = new JFrame("GUIBOI");
         frame.setContentPane(new MainGUI().MainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();

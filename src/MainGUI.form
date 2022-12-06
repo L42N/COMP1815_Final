@@ -67,6 +67,7 @@
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-28252"/>
               <text value="Book"/>
             </properties>
           </component>
@@ -75,6 +76,7 @@
               <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-28252"/>
               <text value="Author"/>
             </properties>
           </component>
@@ -83,6 +85,7 @@
               <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-28252"/>
               <text value="Publisher"/>
             </properties>
           </component>

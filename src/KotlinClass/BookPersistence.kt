@@ -1,4 +1,6 @@
 package KotlinClass
 
 class BookPersistence {
+
+
 }

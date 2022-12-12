@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Kotlin Data Persistence done">
+    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Deleted Java Class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/KotlinClass/Author.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinClass/Author.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/KotlinClass/BookPersistence.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinClass/BookPersistence.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/KotlinClass/Pub.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinClass/Pub.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scala/Book.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scala/csv_persistence.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SortingAlgo/BubbleSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/SortingAlgo/BubbleSort.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +167,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670876355541</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Deleted Java Class">
+      <created>1670877829201</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670877829201</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Deleted Java Class">
+      <created>1670877847729</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1670877847729</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -180,6 +200,7 @@
     <MESSAGE value="Added More classes. Still need to work on GUI" />
     <MESSAGE value="Added kotlin Classes" />
     <MESSAGE value="Kotlin Data Persistence done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Kotlin Data Persistence done" />
+    <MESSAGE value="Deleted Java Class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted Java Class" />
   </component>
 </project>

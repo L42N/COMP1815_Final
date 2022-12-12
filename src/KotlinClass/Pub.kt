@@ -1,10 +1,5 @@
 package KotlinClass
 
-class Pub {
+class Pub (var pubName:String){
 
-    private var PubName: String? = null
-
-    fun set(PubName: String?) {
-        this.PubName = PubName
-    }
 }

@@ -1,23 +1,5 @@
 package KotlinClass
 
-class Author {
-    private var firstName: String? = null
-    private var surname: String? = null
+class Author (var id: String, var firstName: String, var lastName: String){
 
-
-    fun setFirstName(firstName: String?) {
-        this.firstName = firstName
-    }
-
-    fun setSurname(surname: String?) {
-        this.surname = surname
-    }
-
-    fun getFirstName(): String? {
-        return firstName
-    }
-
-    fun getSurname(): String? {
-        return surname
-    }
 }

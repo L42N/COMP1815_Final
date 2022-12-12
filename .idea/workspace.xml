@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Added kotlin Classes">
-      <change afterPath="$PROJECT_DIR$/src/JavaClass/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/JavaClass/csv_reader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Scala/Book.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Scala/csv_persistence.scala" afterDir="false" />
+    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Kotlin Data Persistence done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/COMP1815_Trial.iml" beforeDir="false" afterPath="$PROJECT_DIR$/COMP1815_Trial.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KotlinClass/Author.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinClass/Author.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KotlinClass/Book.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinClass/Book.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KotlinClass/BookPersistence.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinClass/BookPersistence.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
     </list>
-    <list id="c1e4763a-6fce-48a1-bb4c-a793a97ad495" name="Changes by kevin" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +44,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "8",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "38",
     "last_opened_file_path": "C:/Users/lenovo/Downloads/IntellijScalaToKotlin-0.1.1.zip",
@@ -159,7 +147,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670798409473</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Kotlin Data Persistence done">
+      <created>1670876287716</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670876287716</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Kotlin Data Persistence done">
+      <created>1670876355541</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670876355541</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -177,6 +179,7 @@
     <MESSAGE value="New GUI. Still need the buttons to work" />
     <MESSAGE value="Added More classes. Still need to work on GUI" />
     <MESSAGE value="Added kotlin Classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added kotlin Classes" />
+    <MESSAGE value="Kotlin Data Persistence done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kotlin Data Persistence done" />
   </component>
 </project>

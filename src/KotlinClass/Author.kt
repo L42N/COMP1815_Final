@@ -4,6 +4,7 @@ class Author {
     private var firstName: String? = null
     private var surname: String? = null
 
+
     fun setFirstName(firstName: String?) {
         this.firstName = firstName
     }

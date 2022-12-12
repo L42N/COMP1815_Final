@@ -1,9 +1,13 @@
+import KotlinClass.Book;
+import KotlinClass.BookPersistence;
 import SubGUI.AddBookWindow;
+import SortingAlgo.MergeSort;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import Scala.csv_persistence;
 
 public class MainGUI {
     private JPanel MainPanel;
@@ -26,11 +30,18 @@ public class MainGUI {
     private JButton adminPowerButton;
 
 
+
+
     public MainGUI() {
         loadButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                var result = BookPersistence.INSTANCE.getBooks(loadField.getText());
+                DefaultTableModel model = (DefaultTableModel) InfoTable.getModel();
+                result.forEach(book -> {
+                    Object[] row = new Object[]{book.getId(), book.getTitle(), book.getAuthors(), book.getYearOfPublication(), book.getPublisher(), book.getSubject()};
+                    model.addRow(row);
+                });
             }
         });
 
@@ -57,6 +68,18 @@ public class MainGUI {
         });
 
 
+        refreshButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        sortButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 
     private void createUIComponents() {
@@ -74,6 +97,8 @@ public class MainGUI {
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+
+
 
 
     }

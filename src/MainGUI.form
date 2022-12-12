@@ -23,7 +23,8 @@
           <component id="e385d" class="javax.swing.JTable" binding="InfoTable" custom-create="true">
             <constraints/>
             <properties>
-              <background color="-12828863"/>
+              <background color="-2561"/>
+              <gridColor color="-2561"/>
             </properties>
           </component>
         </children>

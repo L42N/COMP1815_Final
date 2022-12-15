@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="MainGUI">
-  <grid id="27dc6" binding="MainPanel" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="MainPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
       <xy x="20" y="20" width="611" height="427"/>
@@ -11,191 +11,439 @@
     </properties>
     <border type="none"/>
     <children>
-      <scrollpane id="5f4e4" binding="scrollPane" custom-create="true">
+      <tabbedpane id="44efe" binding="tabbedPane">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="600" height="600"/>
+          </grid>
         </constraints>
-        <properties>
-          <background color="-28252"/>
-        </properties>
+        <properties/>
         <border type="none"/>
         <children>
-          <component id="e385d" class="javax.swing.JTable" binding="InfoTable" custom-create="true">
-            <constraints/>
-            <properties>
-              <background color="-2561"/>
-              <gridColor color="-2561"/>
-            </properties>
-          </component>
-        </children>
-      </scrollpane>
-      <grid id="23f42" layout-manager="GridLayoutManager" row-count="6" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-        <margin top="0" left="0" bottom="0" right="0"/>
-        <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <background color="-28252"/>
-        </properties>
-        <border type="none"/>
-        <children>
-          <component id="aabf" class="javax.swing.JButton" binding="loadButton" default-binding="true">
+          <grid id="8964b" binding="bookPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
-              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Load"/>
-            </properties>
-          </component>
-          <component id="eff64" class="javax.swing.JButton" binding="searchButton" default-binding="true">
-            <constraints>
-              <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Search"/>
-            </properties>
-          </component>
-          <component id="a8590" class="javax.swing.JTextField" binding="searchField">
-            <constraints>
-              <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
+              <tabbedpane title="Book"/>
             </constraints>
             <properties/>
-          </component>
-          <component id="18fa8" class="javax.swing.JRadioButton" binding="BookButton">
-            <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <background color="-28252"/>
-              <text value="Book"/>
-            </properties>
-          </component>
-          <component id="38d2e" class="javax.swing.JRadioButton" binding="authorRadioButton" default-binding="true">
-            <constraints>
-              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <background color="-28252"/>
-              <text value="Author"/>
-            </properties>
-          </component>
-          <component id="29d4f" class="javax.swing.JRadioButton" binding="publisherRadioButton" default-binding="true">
-            <constraints>
-              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <background color="-28252"/>
-              <text value="Publisher"/>
-            </properties>
-          </component>
-          <component id="df523" class="javax.swing.JTextField" binding="loadField">
-            <constraints>
-              <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
+            <border type="none"/>
+            <children>
+              <grid id="23f42" binding="controlPanel" layout-manager="GridLayoutManager" row-count="9" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-28252"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="aabf" class="javax.swing.JButton" binding="loadButton" default-binding="true">
+                    <constraints>
+                      <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Load"/>
+                    </properties>
+                  </component>
+                  <component id="eff64" class="javax.swing.JButton" binding="searchButton" default-binding="true">
+                    <constraints>
+                      <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Search"/>
+                    </properties>
+                  </component>
+                  <component id="a8590" class="javax.swing.JTextField" binding="searchField">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="18fa8" class="javax.swing.JRadioButton" binding="BookButton">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-28252"/>
+                      <text value="Book"/>
+                    </properties>
+                  </component>
+                  <component id="38d2e" class="javax.swing.JRadioButton" binding="authorRadioButton" default-binding="true">
+                    <constraints>
+                      <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-28252"/>
+                      <text value="Author"/>
+                    </properties>
+                  </component>
+                  <component id="df523" class="javax.swing.JTextField" binding="loadField">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <text value="C:\Users\lenovo\IdeaProjects\COMP1815_Trial\resources\test.csv"/>
+                    </properties>
+                  </component>
+                  <component id="30531" class="javax.swing.JButton" binding="sortButton" default-binding="true">
+                    <constraints>
+                      <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Sort"/>
+                    </properties>
+                  </component>
+                  <component id="b37e0" class="javax.swing.JComboBox" binding="sortCombobox">
+                    <constraints>
+                      <grid row="3" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <model>
+                        <item value="Bubble Sort"/>
+                        <item value="Merge Sort"/>
+                        <item value="Radix Sort"/>
+                      </model>
+                    </properties>
+                  </component>
+                  <component id="e4fc0" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="5" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <foreground color="-2561"/>
+                      <text value="THE ABSOLUTE SHITE OF A SOFTWARE :D "/>
+                    </properties>
+                  </component>
+                  <scrollpane id="5f4e4" binding="scrollPane" custom-create="true">
+                    <constraints>
+                      <grid row="6" column="0" row-span="1" col-span="4" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-28252"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="e385d" class="javax.swing.JTable" binding="InfoTable" custom-create="true">
+                        <constraints/>
+                        <properties>
+                          <background color="-2561"/>
+                          <gridColor color="-28252"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </scrollpane>
+                  <grid id="9d574" binding="runTimePanel" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="7" column="0" row-span="1" col-span="4" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-28252"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="e28c" class="javax.swing.JTextField" binding="timeTextField">
+                        <constraints>
+                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="-1"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <editable value="false"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="51b33" class="javax.swing.JLabel" binding="RuntimeLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="Runtime"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <component id="f62b0" class="javax.swing.JButton" binding="NUKEButton" default-binding="true">
+                    <constraints>
+                      <grid row="8" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-28252"/>
+                      <foreground color="-4517353"/>
+                      <text value="NUKE"/>
+                    </properties>
+                  </component>
+                  <component id="1bfd1" class="javax.swing.JButton" binding="addNewEntryButton" default-binding="true">
+                    <constraints>
+                      <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Add New Entry"/>
+                    </properties>
+                  </component>
+                  <component id="98637" class="javax.swing.JButton" binding="deleteButton" default-binding="true">
+                    <constraints>
+                      <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Delete"/>
+                    </properties>
+                  </component>
+                  <component id="ccee" class="javax.swing.JButton" binding="editButton" default-binding="true">
+                    <constraints>
+                      <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Edit"/>
+                    </properties>
+                  </component>
+                  <component id="8c15c" class="javax.swing.JButton" binding="refreshButton" default-binding="true">
+                    <constraints>
+                      <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Refresh"/>
+                    </properties>
+                  </component>
+                </children>
               </grid>
+            </children>
+          </grid>
+          <grid id="aa61" binding="authPanel" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Author"/>
             </constraints>
             <properties>
-              <text value="C:\Users\lenovo\IdeaProjects\COMP1815_Trial\resources\test.csv"/>
+              <background color="-28252"/>
             </properties>
-          </component>
-          <component id="30531" class="javax.swing.JButton" binding="sortButton" default-binding="true">
-            <constraints>
-              <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Sort"/>
-            </properties>
-          </component>
-          <component id="b37e0" class="javax.swing.JComboBox" binding="sortCombobox">
-            <constraints>
-              <grid row="3" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <model>
-                <item value="Bubble Sort"/>
-                <item value="Merge Sort"/>
-                <item value="Radix Sort"/>
-              </model>
-            </properties>
-          </component>
-          <component id="e4fc0" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="5" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <foreground color="-2561"/>
-              <text value="THE ABSOLUTE SHITE OF A SOFTWARE :D "/>
-            </properties>
-          </component>
-          <component id="69704" class="javax.swing.JButton" binding="addButton" default-binding="true">
-            <constraints>
-              <grid row="4" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Add New Entry "/>
-            </properties>
-          </component>
-          <component id="499e2" class="javax.swing.JButton" binding="adminPowerButton" default-binding="true">
-            <constraints>
-              <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Admin Power"/>
-            </properties>
-          </component>
-          <component id="24d1a" class="javax.swing.JButton" binding="refreshButton" default-binding="true">
-            <constraints>
-              <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Refresh"/>
-            </properties>
-          </component>
-        </children>
-      </grid>
-      <grid id="9d574" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-        <margin top="0" left="0" bottom="0" right="0"/>
-        <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <background color="-28252"/>
-        </properties>
-        <border type="none"/>
-        <children>
-          <component id="e28c" class="javax.swing.JTextField" binding="timeTextField">
-            <constraints>
-              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
+            <border type="none"/>
+            <children>
+              <grid id="e842a" binding="authControlPanel" layout-manager="GridLayoutManager" row-count="3" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-28252"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="18ccf" class="javax.swing.JButton" binding="authLoadButton">
+                    <constraints>
+                      <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Load"/>
+                    </properties>
+                  </component>
+                  <component id="a94b2" class="javax.swing.JButton" binding="authSearchButton">
+                    <constraints>
+                      <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Search"/>
+                    </properties>
+                  </component>
+                  <component id="35404" class="javax.swing.JButton" binding="AuthRefeshButton">
+                    <constraints>
+                      <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Refesh"/>
+                    </properties>
+                  </component>
+                  <component id="addfb" class="javax.swing.JTextField" binding="authLoad">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="a189f" class="javax.swing.JTextField" binding="authSearchEntry">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="94855" class="javax.swing.JButton" binding="authAdd">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Add new Entry"/>
+                    </properties>
+                  </component>
+                  <component id="537f2" class="javax.swing.JButton" binding="authEdit">
+                    <constraints>
+                      <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Edit"/>
+                    </properties>
+                  </component>
+                  <component id="2888b" class="javax.swing.JButton" binding="authDelete">
+                    <constraints>
+                      <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Delete"/>
+                    </properties>
+                  </component>
+                </children>
               </grid>
-            </constraints>
-            <properties>
-              <editable value="false"/>
-              <text value=""/>
-            </properties>
-          </component>
-          <component id="51b33" class="javax.swing.JLabel" binding="RuntimeLabel">
+              <scrollpane id="6c21b" binding="authScrollPane" custom-create="true">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-28252"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="86f51" class="javax.swing.JTable" binding="authInfoTable" custom-create="true">
+                    <constraints/>
+                    <properties>
+                      <background color="-2561"/>
+                      <gridColor color="-28252"/>
+                    </properties>
+                  </component>
+                </children>
+              </scrollpane>
+              <component id="2a6f1" class="javax.swing.JButton" binding="authExitButton">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-28252"/>
+                  <text value="Exit"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="47ddc" binding="pubPanel" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <tabbedpane title="Publisher"/>
             </constraints>
-            <properties>
-              <text value="Runtime"/>
-            </properties>
-          </component>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="22267" binding="pubControlPanel" layout-manager="GridLayoutManager" row-count="3" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-28252"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="8a33a" class="javax.swing.JButton" binding="pubLoadButton">
+                    <constraints>
+                      <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Load"/>
+                    </properties>
+                  </component>
+                  <component id="563c1" class="javax.swing.JButton" binding="pubSearchButton">
+                    <constraints>
+                      <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Search"/>
+                    </properties>
+                  </component>
+                  <component id="cfe93" class="javax.swing.JButton" binding="pubRefreshButton">
+                    <constraints>
+                      <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Refresh"/>
+                    </properties>
+                  </component>
+                  <component id="db509" class="javax.swing.JTextField" binding="pubLoad">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="fc2a5" class="javax.swing.JTextField" binding="pubSearchEntry">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="a19cc" class="javax.swing.JButton" binding="pubAddButton">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Add"/>
+                    </properties>
+                  </component>
+                  <component id="4777" class="javax.swing.JButton" binding="pubEditButton">
+                    <constraints>
+                      <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Edit"/>
+                    </properties>
+                  </component>
+                  <component id="a758e" class="javax.swing.JButton" binding="pubDeleteButton">
+                    <constraints>
+                      <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Delete"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <scrollpane id="f9ea" binding="pubScrollPane" custom-create="true">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-28252"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="6dc7e" class="javax.swing.JTable" binding="pubInfoTable" custom-create="true">
+                    <constraints/>
+                    <properties>
+                      <background color="-2561"/>
+                      <gridColor color="-28252"/>
+                    </properties>
+                  </component>
+                </children>
+              </scrollpane>
+              <component id="a4bd6" class="javax.swing.JButton" binding="pubExitButton">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-28252"/>
+                  <text value="Exit"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
         </children>
-      </grid>
-      <component id="f62b0" class="javax.swing.JButton" binding="NUKEButton" default-binding="true">
-        <constraints>
-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <background color="-28252"/>
-          <foreground color="-4517353"/>
-          <text value="NUKE"/>
-        </properties>
-      </component>
+      </tabbedpane>
     </children>
   </grid>
 </form>

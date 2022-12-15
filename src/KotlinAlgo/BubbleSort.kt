@@ -1,4 +1,4 @@
-package SortingAlgo
+package KotlinAlgo
 
 class BubbleSort {
     

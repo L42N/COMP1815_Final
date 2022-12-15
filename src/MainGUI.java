@@ -1,7 +1,4 @@
-import KotlinClass.Book;
-import KotlinClass.BookPersistence;
-import SubGUI.AddBookWindow;
-import SortingAlgo.MergeSort;
+import KotlinClass.DataPersistence;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -19,45 +16,66 @@ public class MainGUI {
     private JTextField searchField;
     private JRadioButton BookButton;
     private JRadioButton authorRadioButton;
-    private JRadioButton publisherRadioButton;
     private JTextField loadField;
     private JTextField timeTextField;
     private JComboBox sortCombobox;
     private JLabel RuntimeLabel;
-    private JButton addButton;
+    private JButton pubAddButton;
     private JButton NUKEButton;
     private JButton refreshButton;
-    private JButton adminPowerButton;
-
-
+    private JTabbedPane tabbedPane;
+    private JPanel runTimePanel;
+    private JPanel controlPanel;
+    private JButton addNewEntryButton;
+    private JButton deleteButton;
+    private JButton editButton;
+    private JTable authInfoTable;
+    private JButton authExitButton;
+    private JButton authLoadButton;
+    private JButton authSearchButton;
+    private JButton AuthRefeshButton;
+    private JTextField authLoad;
+    private JTextField authSearchEntry;
+    private JButton authAdd;
+    private JButton authEdit;
+    private JButton authDelete;
+    private JScrollPane authScrollPane;
+    private JPanel bookPanel;
+    private JPanel authControlPanel;
+    private JTable pubInfoTable;
+    private JButton pubLoadButton;
+    private JButton pubSearchButton;
+    private JButton pubRefreshButton;
+    private JTextField pubLoad;
+    private JTextField pubSearchEntry;
+    private JButton pubEditButton;
+    private JButton pubDeleteButton;
+    private JPanel authPanel;
+    private JPanel pubPanel;
+    private JScrollPane pubScrollPane;
+    private JButton pubExitButton;
+    private JPanel pubControlPanel;
 
 
     public MainGUI() {
         loadButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                var result = BookPersistence.INSTANCE.getBooks(loadField.getText());
+                var result = DataPersistence.INSTANCE.getBooks(loadField.getText());
                 DefaultTableModel model = (DefaultTableModel) InfoTable.getModel();
                 result.forEach(book -> {
-                    Object[] row = new Object[]{book.getId(), book.getTitle(), book.getAuthors(), book.getYearOfPublication(), book.getPublisher(), book.getSubject()};
+                    Object[] row = new Object[]{book.getId(),
+                            book.getTitle(),
+                            book.getAuthors(),
+                            book.getYearOfPublication(),
+                            book.getPublisher(),
+                            book.getSubject()};
                     model.addRow(row);
                 });
             }
         });
 
-        searchButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
 
-            }
-        });
-
-        addButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                AddBookWindow mywindow = new AddBookWindow();
-            }
-        });
 
 
         NUKEButton.addActionListener(new ActionListener() {
@@ -68,13 +86,25 @@ public class MainGUI {
         });
 
 
-        refreshButton.addActionListener(new ActionListener() {
+        addNewEntryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
             }
         });
-        sortButton.addActionListener(new ActionListener() {
+        deleteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        editButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        refreshButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
@@ -84,9 +114,17 @@ public class MainGUI {
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
-        Object[] cols = {"ID", "Title", "Author" ,"Year", "Publisher", "Subject", };
-        InfoTable = new JTable(new DefaultTableModel(cols, 0));
+        Object[] mainCols = {"ID", "Title", "Author" ,"Year", "Publisher", "Subject"};
+        InfoTable = new JTable(new DefaultTableModel(mainCols, 0));
         scrollPane = new JScrollPane(InfoTable);
+
+        Object[] authCols = {"ID", "First Name", "Surname" };
+        authInfoTable = new JTable(new DefaultTableModel(authCols, 0));
+        authScrollPane = new JScrollPane(authInfoTable);
+
+        Object[] pubCols = {"ID", "Publisher Name"};
+        pubInfoTable = new JTable(new DefaultTableModel(pubCols, 0));
+        pubScrollPane = new JScrollPane(pubInfoTable);
 
     }
 

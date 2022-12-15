@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Deleted test classes from the Scala lab">
+      <change afterPath="$PROJECT_DIR$/src/KotlinAlgo/SearchAlgo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_12_2022_22_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_12_2022_22_02__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_12_2022_12_47__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_12_2022_12_47__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/KotlinClass/BookPersistence.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinClass/DataPersistence.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SortingAlgo/BubbleSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinAlgo/BubbleSort.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SortingAlgo/MergeSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinAlgo/MergeSort.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeleteWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/DeleteBookWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeleteWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/DeleteBookWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +35,7 @@
         <option value="Scala Object" />
         <option value="Package Object" />
         <option value="Class" />
+        <option value="Kotlin Object" />
       </list>
     </option>
   </component>
@@ -44,8 +58,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "8",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "38",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "165",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "363",
     "last_opened_file_path": "C:/Users/lenovo/Downloads/IntellijScalaToKotlin-0.1.1.zip",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
@@ -56,6 +70,9 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\lenovo\IdeaProjects\COMP1815_Trial\resources" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="SortingAlgo" />
     </key>
   </component>
   <component name="RunManager">

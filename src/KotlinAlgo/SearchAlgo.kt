@@ -1,0 +1,4 @@
+package KotlinAlgo
+
+object SearchAlgo {
+}

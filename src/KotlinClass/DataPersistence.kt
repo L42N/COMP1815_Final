@@ -1,10 +1,7 @@
 package KotlinClass
 import java.io.File
-import java.io.InputStream
-import java.nio.file.Paths
 
-
-object BookPersistence {
+object DataPersistence {
 
     fun getBooks(path: String): List<Book> {
         val rows = fileToRows(path)

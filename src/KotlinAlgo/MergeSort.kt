@@ -1,6 +1,5 @@
-package SortingAlgo
+package KotlinAlgo
 
-import java.io.File
 import java.util.*
 
 class MergeSort    // Constructor

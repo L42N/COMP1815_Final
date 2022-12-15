@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Deleted test classes from the Scala lab">
-      <change afterPath="$PROJECT_DIR$/src/KotlinAlgo/SearchAlgo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_12_2022_22_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_12_2022_22_02__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_12_2022_12_47__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_12_2022_12_47__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KotlinClass/BookPersistence.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinClass/DataPersistence.kt" afterDir="false" />
+    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Updated GUI with more components">
       <change beforePath="$PROJECT_DIR$/src/MainGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SortingAlgo/BubbleSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinAlgo/BubbleSort.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SortingAlgo/MergeSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinAlgo/MergeSort.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeleteWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/DeleteBookWindow.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeleteWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/DeleteBookWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +186,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670878816810</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Updated GUI with more components">
+      <created>1671064754028</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1671064754028</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Updated GUI with more components">
+      <created>1671064786042</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1671064786042</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -220,6 +221,7 @@
     <MESSAGE value="Kotlin Data Persistence done" />
     <MESSAGE value="Deleted Java Class" />
     <MESSAGE value="Deleted test classes from the Scala lab" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleted test classes from the Scala lab" />
+    <MESSAGE value="Updated GUI with more components" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated GUI with more components" />
   </component>
 </project>

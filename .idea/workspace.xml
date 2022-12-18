@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Added more csv files and Sort button">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Author.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Author.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Publisher.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Publisher.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KotlinClass/DataPersistence.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinClass/DataPersistence.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KotlinClass/Pub.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinClass/Pub.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
-    </list>
+    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Load Button on the Author works" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -220,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671369874298</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Load Button on the Author works">
+      <created>1671376188397</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1671376188397</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -243,6 +242,7 @@
     <MESSAGE value="Deleted test classes from the Scala lab" />
     <MESSAGE value="Updated GUI with more components" />
     <MESSAGE value="Added more csv files and Sort button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added more csv files and Sort button" />
+    <MESSAGE value="Load Button on the Author works" />
+    <option name="LAST_COMMIT_MESSAGE" value="Load Button on the Author works" />
   </component>
 </project>

@@ -4,19 +4,23 @@ import java.io.File
 object DataPersistence {
 
     fun getBooks(path: String): List<Book> {
-        val rows = fileToRows(path)
+        val rows = bookToRows(path)
         println(rows)
         return rows
   }
-    fun getAuthors(){
-
+    fun getAuthors(path: String): List<Author> {
+        val rows = authToRows(path)
+        println(rows)
+        return rows
     }
 
-    fun getPublishers(){
-
+    fun getPublishers(path: String): List<Pub>{
+        val rows = pubToRows(path)
+        println(rows)
+        return rows
     }
 
-    fun fileToRows(path: String): MutableList<Book> {
+    fun bookToRows(path: String): MutableList<Book> {
         val books:MutableList<Book> = mutableListOf()
         File(path).forEachLine { line ->
             val row = line.split(",")
@@ -31,6 +35,33 @@ object DataPersistence {
         }
         return books
     }
+
+    fun authToRows(path:String): MutableList<Author>{
+        val authors:MutableList<Author> = mutableListOf()
+        File(path).forEachLine { line ->
+            val row = line.split(",")
+            val id:String = row[0]
+            val firstname:String = row[1]
+            val surname:String = row[2]
+
+            authors.add(Author(id, firstname, surname))
+        }
+        return authors
+    }
+
+
+    fun pubToRows(path:String): MutableList<Pub>{
+        val pubs:MutableList<Pub> = mutableListOf()
+        File(path).forEachLine { line ->
+            val row = line.split(",")
+            val id:String = row[0]
+            val pubname:String = row[1]
+
+            pubs.add(Pub(id, pubname))
+        }
+        return pubs
+    }
+
 
 
 }

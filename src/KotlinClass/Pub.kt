@@ -1,5 +1,5 @@
 package KotlinClass
 
-class Pub (var pubName:String){
+class Pub (var id: String,var pubName:String){
 
 }

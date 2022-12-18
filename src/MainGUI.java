@@ -61,17 +61,50 @@ public class MainGUI {
         loadButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                var result = DataPersistence.INSTANCE.getBooks(loadField.getText());
-                DefaultTableModel model = (DefaultTableModel) InfoTable.getModel();
-                result.forEach(book -> {
-                    Object[] row = new Object[]{book.getId(),
+                var bookImport = DataPersistence.INSTANCE.getBooks(loadField.getText());
+                DefaultTableModel bookModel = (DefaultTableModel) InfoTable.getModel();
+                bookImport.forEach(book -> {
+                    Object[] bookRow = new Object[]{
+                            book.getId(),
                             book.getTitle(),
                             book.getAuthors(),
                             book.getYearOfPublication(),
                             book.getPublisher(),
-                            book.getSubject()};
-                    model.addRow(row);
+                            book.getSubject()
+                    };
+                    bookModel.addRow(bookRow);
                 });
+            }
+        });
+
+        authLoadButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                var authorImport = DataPersistence.INSTANCE.getAuthors(authLoad.getText());
+                DefaultTableModel authModel = (DefaultTableModel)authInfoTable.getModel();
+                authorImport.forEach(author -> {
+                    Object[] authRow = new Object[]{
+                            author.getId(),
+                            author.getFirstName(),
+                            author.getLastName()
+                    };
+                    authModel.addRow(authRow);
+                });
+            }
+        });
+
+        pubLoadButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+//                var pubImport = DataPersistence.INSTANCE.getPublishers(pubLoad.getText());
+//                DefaultTableModel pubModel = (DefaultTableModel)pubInfoTable.getModel();
+//                pubImport.forEach(pub -> {
+//                    Object[] pubRow = new Object[]{
+//                            pub.getId(),
+//                            pub.getPubName()
+//                    };
+//                    pubModel.addRow(pubRow);
+//                });
             }
         });
 
@@ -101,7 +134,12 @@ public class MainGUI {
             }
         });
 
+        sortButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
 
+            }
+        });
         NUKEButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -110,12 +148,7 @@ public class MainGUI {
         });
 
 
-        sortButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
 
-            }
-        });
     }
 
     private void createUIComponents() {

@@ -1,9 +1,15 @@
+import KotlinAlgo.MergeSort;
 import KotlinClass.DataPersistence;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+import javax.swing.JButton;
 
 
 public class MainGUI {
@@ -118,7 +124,32 @@ public class MainGUI {
         deleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(e.getSource() == sortButton){
+                    ArrayList<String> sortedAuthors = new ArrayList<>();
+                    try {
+                        Scanner sc = new Scanner(new File("C:\\Users\\abdill\\Desktop\\AuthorNames.csv"));
+                        while (sc.hasNext()) {
+                            String line = sc.nextLine();
+                            //setting comma as delimiter pattern
+                            String[] authorNames = line.split(",");
+                            sortedAuthors.add(authorNames[0]);
+                        }
+                    } catch (FileNotFoundException ex) {
+                        throw new RuntimeException(ex);
+                    }
 
+
+                    System.out.println("Before");
+                    System.out.println(sortedAuthors);
+
+
+                    MergeSort test = new MergeSort((sortedAuthors));
+
+
+                    test.sortAuthors();
+                    test.showSortedAuthors();
+                    System.out.println("After");
+                }
             }
         });
         editButton.addActionListener(new ActionListener() {
@@ -135,9 +166,35 @@ public class MainGUI {
         });
 
         sortButton.addActionListener(new ActionListener() {
+
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(e.getSource() == sortButton){
+                    ArrayList<String> sortedAuthors = new ArrayList<>();
+                    try {
+                        Scanner sc = new Scanner(new File("C:\\Users\\abdill\\Desktop\\AuthorNames.csv"));
+                        while (sc.hasNext()) {
+                            String line = sc.nextLine();
+                            //setting comma as delimiter pattern
+                            String[] authorNames = line.split(",");
+                            sortedAuthors.add(authorNames[0]);
+                        }
+                    } catch (FileNotFoundException ex) {
+                        throw new RuntimeException(ex);
+                    }
 
+
+                    System.out.println("Before");
+                    System.out.println(sortedAuthors);
+
+
+                    MergeSort test = new MergeSort((sortedAuthors));
+
+
+                    test.sortAuthors();
+                    test.showSortedAuthors();
+                    System.out.println("After");
+                }
             }
         });
         NUKEButton.addActionListener(new ActionListener() {

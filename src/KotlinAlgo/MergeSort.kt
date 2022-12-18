@@ -44,6 +44,10 @@ class MergeSort    // Constructor
         return whole
     }
 
+     fun print(){
+        println("dddd")
+    }
+
     private fun mergeResults(left: ArrayList<String>, right: ArrayList<String>, whole: ArrayList<String>) {
         var leftIndex = 0
         var rightIndex = 0

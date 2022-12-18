@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Load Button on the Author works" />
+    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Updated GUI with more components">
+      <change afterPath="$PROJECT_DIR$/resources/Author.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Publisher.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Book.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/KotlinClass/DataPersistence.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinClass/DataPersistence.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,19 +47,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "165",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "468",
-    "last_opened_file_path": "C:/Users/lenovo/Downloads/IntellijScalaToKotlin-0.1.1.zip",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;165&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;363&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lenovo/Downloads/IntellijScalaToKotlin-0.1.1.zip&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\lenovo\IdeaProjects\COMP1815_Trial\resources" />
@@ -60,7 +68,21 @@
       <recent name="SortingAlgo" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MainGUI (2)">
+    <configuration name="MainGUI (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainGUI" />
+      <module name="COMP1815_Trial" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainGUI (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainGUI" />
+      <module name="COMP1815_Trial" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainGUI" />
       <module name="COMP1815_Trial" />
@@ -70,6 +92,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainGUI (2)" />
+        <item itemvalue="Application.MainGUI (1)" />
         <item itemvalue="Application.MainGUI" />
       </list>
     </recent_temporary>
@@ -205,21 +229,7 @@
       <option name="project" value="LOCAL" />
       <updated>1671064905572</updated>
     </task>
-    <task id="LOCAL-00018" summary="Added more csv files and Sort button">
-      <created>1671369874298</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1671369874298</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Load Button on the Author works">
-      <created>1671376188397</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1671376188397</updated>
-    </task>
-    <option name="localTasksCounter" value="20" />
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -241,8 +251,6 @@
     <MESSAGE value="Deleted Java Class" />
     <MESSAGE value="Deleted test classes from the Scala lab" />
     <MESSAGE value="Updated GUI with more components" />
-    <MESSAGE value="Added more csv files and Sort button" />
-    <MESSAGE value="Load Button on the Author works" />
-    <option name="LAST_COMMIT_MESSAGE" value="Load Button on the Author works" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated GUI with more components" />
   </component>
 </project>

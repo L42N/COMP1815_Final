@@ -87,7 +87,7 @@
                       </grid>
                     </constraints>
                     <properties>
-                      <text value="C:\Users\lenovo\IdeaProjects\COMP1815_Trial\resources\test.csv"/>
+                      <text value="C:\Users\lenovo\IdeaProjects\COMP1815_Trial\resources\Book.csv"/>
                     </properties>
                   </component>
                   <component id="30531" class="javax.swing.JButton" binding="sortButton" default-binding="true">

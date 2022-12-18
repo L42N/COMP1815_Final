@@ -76,16 +76,6 @@ public class MainGUI {
         });
 
 
-
-
-        NUKEButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.exit(0);
-            }
-        });
-
-
         addNewEntryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -105,6 +95,22 @@ public class MainGUI {
             }
         });
         refreshButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
+
+        NUKEButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+
+
+        sortButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
@@ -135,11 +141,9 @@ public class MainGUI {
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-
-
-
-
     }
+
+
 
 }
 

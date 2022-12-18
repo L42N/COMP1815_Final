@@ -8,6 +8,14 @@ object DataPersistence {
         println(rows)
         return rows
   }
+    fun getAuthors(){
+
+    }
+
+    fun getPublishers(){
+
+    }
+
     fun fileToRows(path: String): MutableList<Book> {
         val books:MutableList<Book> = mutableListOf()
         File(path).forEachLine { line ->
@@ -23,4 +31,6 @@ object DataPersistence {
         }
         return books
     }
+
+
 }

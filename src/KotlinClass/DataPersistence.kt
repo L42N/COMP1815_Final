@@ -49,15 +49,14 @@ object DataPersistence {
         return authors
     }
 
-
-    fun pubToRows(path:String): MutableList<Pub>{
+    fun pubToRows(path: String) : MutableList<Pub>{
         val pubs:MutableList<Pub> = mutableListOf()
         File(path).forEachLine { line ->
             val row = line.split(",")
             val id:String = row[0]
-            val pubname:String = row[1]
+            val publishername:String = row[1]
 
-            pubs.add(Pub(id, pubname))
+            pubs.add(Pub(id, publishername))
         }
         return pubs
     }

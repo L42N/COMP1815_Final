@@ -12,7 +12,7 @@ import java.util.Scanner;
 import javax.swing.JButton;
 
 
-public class MainGUI {
+public class  MainGUI {
     private JPanel MainPanel;
     private JTable InfoTable;
     private JScrollPane scrollPane;
@@ -102,15 +102,16 @@ public class MainGUI {
         pubLoadButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-//                var pubImport = DataPersistence.INSTANCE.getPublishers(pubLoad.getText());
-//                DefaultTableModel pubModel = (DefaultTableModel)pubInfoTable.getModel();
-//                pubImport.forEach(pub -> {
-//                    Object[] pubRow = new Object[]{
-//                            pub.getId(),
-//                            pub.getPubName()
-//                    };
-//                    pubModel.addRow(pubRow);
-//                });
+                var pubImport = DataPersistence.INSTANCE.getPublishers((pubLoad.getText()));
+                DefaultTableModel pubModel = (DefaultTableModel) pubInfoTable.getModel();
+                pubImport.forEach(publisher -> {
+                    Object [] pubRow = new Object[]{
+                            publisher.getId(),
+                            publisher.getPubName()
+                    };
+                    pubModel.addRow(pubRow);
+                });
+
             }
         });
 

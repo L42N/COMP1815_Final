@@ -4,9 +4,9 @@ import java.io.File
 object DataPersistence {
 
     fun getBooks(path: String): List<Book> {
-        val rows = bookToRows(path)
-        println(rows)
-        return rows
+//        val rows = bookToRows(path)
+//        println(rows)
+        return bookToRows(path)
   }
     fun getAuthors(path: String): List<Author> {
         val rows = authToRows(path)
@@ -49,14 +49,15 @@ object DataPersistence {
         return authors
     }
 
-    fun pubToRows(path: String) : MutableList<Pub>{
+
+    fun pubToRows(path:String): MutableList<Pub>{
         val pubs:MutableList<Pub> = mutableListOf()
         File(path).forEachLine { line ->
             val row = line.split(",")
             val id:String = row[0]
-            val publishername:String = row[1]
+            val pubname:String = row[1]
 
-            pubs.add(Pub(id, publishername))
+            pubs.add(Pub(id, pubname))
         }
         return pubs
     }

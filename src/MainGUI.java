@@ -1,4 +1,5 @@
 import KotlinAlgo.MergeSort;
+import KotlinClass.Book;
 import KotlinClass.DataPersistence;
 
 import javax.swing.*;
@@ -7,12 +8,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.LineNumberInputStream;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import javax.swing.JButton;
 
 
-public class  MainGUI {
+public class MainGUI {
     private JPanel MainPanel;
     private JTable InfoTable;
     private JScrollPane scrollPane;
@@ -62,24 +65,16 @@ public class  MainGUI {
     private JButton pubExitButton;
     private JPanel pubControlPanel;
 
+    private List<Book> books;
+
 
     public MainGUI() {
         loadButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                var bookImport = DataPersistence.INSTANCE.getBooks(loadField.getText());
-                DefaultTableModel bookModel = (DefaultTableModel) InfoTable.getModel();
-                bookImport.forEach(book -> {
-                    Object[] bookRow = new Object[]{
-                            book.getId(),
-                            book.getTitle(),
-                            book.getAuthors(),
-                            book.getYearOfPublication(),
-                            book.getPublisher(),
-                            book.getSubject()
-                    };
-                    bookModel.addRow(bookRow);
-                });
+                books = DataPersistence.INSTANCE.getBooks(loadField.getText());
+                refreshTable();
+
             }
         });
 
@@ -102,16 +97,15 @@ public class  MainGUI {
         pubLoadButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                var pubImport = DataPersistence.INSTANCE.getPublishers((pubLoad.getText()));
-                DefaultTableModel pubModel = (DefaultTableModel) pubInfoTable.getModel();
-                pubImport.forEach(publisher -> {
-                    Object [] pubRow = new Object[]{
-                            publisher.getId(),
-                            publisher.getPubName()
+                var pubImport = DataPersistence.INSTANCE.getPublishers(pubLoad.getText());
+                DefaultTableModel pubModel = (DefaultTableModel)pubInfoTable.getModel();
+                pubImport.forEach(pub -> {
+                    Object[] pubRow = new Object[]{
+                            pub.getId(),
+                            pub.getPubName()
                     };
                     pubModel.addRow(pubRow);
                 });
-
             }
         });
 
@@ -120,37 +114,13 @@ public class  MainGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+
             }
         });
         deleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(e.getSource() == sortButton){
-                    ArrayList<String> sortedAuthors = new ArrayList<>();
-                    try {
-                        Scanner sc = new Scanner(new File("C:\\Users\\abdill\\Desktop\\AuthorNames.csv"));
-                        while (sc.hasNext()) {
-                            String line = sc.nextLine();
-                            //setting comma as delimiter pattern
-                            String[] authorNames = line.split(",");
-                            sortedAuthors.add(authorNames[0]);
-                        }
-                    } catch (FileNotFoundException ex) {
-                        throw new RuntimeException(ex);
-                    }
 
-
-                    System.out.println("Before");
-                    System.out.println(sortedAuthors);
-
-
-                    MergeSort test = new MergeSort((sortedAuthors));
-
-
-                    test.sortAuthors();
-                    test.showSortedAuthors();
-                    System.out.println("After");
-                }
             }
         });
         editButton.addActionListener(new ActionListener() {
@@ -172,29 +142,45 @@ public class  MainGUI {
             public void actionPerformed(ActionEvent e) {
                 if(e.getSource() == sortButton){
                     ArrayList<String> sortedAuthors = new ArrayList<>();
+                    ArrayList<String> sortedBooks = new ArrayList<>();
                     try {
-                        Scanner sc = new Scanner(new File("C:\\Users\\abdill\\Desktop\\AuthorNames.csv"));
+                        Scanner sc = new Scanner(new File("resources/Book.csv"));
                         while (sc.hasNext()) {
                             String line = sc.nextLine();
                             //setting comma as delimiter pattern
-                            String[] authorNames = line.split(",");
-                            sortedAuthors.add(authorNames[0]);
+                            String[] sortedItems = line.split(",");
+                            sortedAuthors.add(sortedItems[2]);
+                            sortedBooks.add(sortedItems[1]);
+
                         }
                     } catch (FileNotFoundException ex) {
                         throw new RuntimeException(ex);
                     }
 
 
-                    System.out.println("Before");
-                    System.out.println(sortedAuthors);
+//                    System.out.println("Before Authors");
+//                    System.out.println(sortedAuthors);
+//
+//                    System.out.println("Before Books");
+//                    System.out.println(sortedBooks);
+//
+                    MergeSort test = new MergeSort();
+
+//                    MergeSort booktest = new MergeSort((sortedBooks));
 
 
-                    MergeSort test = new MergeSort((sortedAuthors));
+//                    test.forEach();
+//                    test.sortAuthors();
+//                    test.showSortedAuthors();
+//                    System.out.println("After Authors ");
+//
+//////                    booktest.forEach();
+//                    test.sortBooks();
+//                    test.showSortedBooks();
+//                    System.out.println("After Books ");
+                    test.mergeSort(books);
+                    refreshTable();
 
-
-                    test.sortAuthors();
-                    test.showSortedAuthors();
-                    System.out.println("After");
                 }
             }
         });
@@ -232,6 +218,22 @@ public class  MainGUI {
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+    }
+
+    public void refreshTable() {
+        DefaultTableModel bookModel = (DefaultTableModel) InfoTable.getModel();
+        bookModel.setRowCount(0);
+        books.forEach(book -> {
+            Object[] bookRow = new Object[]{
+                    book.getId(),
+                    book.getTitle(),
+                    book.getAuthors(),
+                    book.getYearOfPublication(),
+                    book.getPublisher(),
+                    book.getSubject()
+            };
+            bookModel.addRow(bookRow);
+        });
     }
 
 

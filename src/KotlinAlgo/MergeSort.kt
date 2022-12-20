@@ -1,22 +1,29 @@
 package KotlinAlgo
 
+import KotlinClass.Book
 import java.util.*
+import kotlin.collections.MutableList
 
 class MergeSort    // Constructor
-    (private var authorNames: ArrayList<String>) {
-    fun sortAuthors() {
-        authorNames = mergeSort(authorNames)
-    }
+     {
+//    fun sortAuthors() {
+//        authorNames = mergeSort(authorNames)
+//    }
+//
+//    fun sortBooks(){
+//        bookNames = mergeSort(bookNames)
+//
+//    }
 
-    fun mergeSort(whole: ArrayList<String>): ArrayList<String> {
+    fun mergeSort(whole: MutableList<Book>): MutableList<Book> {
 
-        // Create two ArrayList object to split the information
+        // Create two MutableList object to split the information
         //into left and rights, this is how the merge sort algorithm works,
         // and we need to hold each section in a new object
-        var left = ArrayList<String>()
-        var right = ArrayList<String>()
+        var left = mutableListOf<Book>()
+        var right = mutableListOf<Book>()
 
-        //Variable to hold the middle of the ArrayList
+        //Variable to hold the middle of the MutableList
         val middle: Int
 
         // If the size is == 1 then we don't need to sort
@@ -29,12 +36,12 @@ class MergeSort    // Constructor
                 left.add(whole[i])
             }
 
-            //copy the right half of whole into the new ArrayList.
+            //copy the right half of whole into the new MutableList.
             for (i in middle until whole.size) {
                 right.add(whole[i])
             }
 
-            // Sort the left and right halves of the ArrayList.
+            // Sort the left and right halves of the MutableList.
             left = mergeSort(left)
             right = mergeSort(right)
 
@@ -48,16 +55,16 @@ class MergeSort    // Constructor
         println("dddd")
     }
 
-    private fun mergeResults(left: ArrayList<String>, right: ArrayList<String>, whole: ArrayList<String>) {
+    private fun mergeResults(left: MutableList<Book>, right: MutableList<Book>, whole: MutableList<Book>) {
         var leftIndex = 0
         var rightIndex = 0
         var wholeIndex = 0
 
-        // As long as neither the left nor the right ArrayList has
+        // As long as neither the left nor the right MutableList has
         // been used up, keep taking the smallest of left.get(leftIndex)
         // or right.get(rightIndex) and adding it at both.get(bothIndex).
         while (leftIndex < left.size && rightIndex < right.size) {
-            if (left[leftIndex].compareTo(right[rightIndex]) < 0) {
+            if (left[leftIndex].title.compareTo(right[rightIndex].title) < 0) {
                 whole[wholeIndex] = left[leftIndex]
                 leftIndex++
             } else {
@@ -66,36 +73,41 @@ class MergeSort    // Constructor
             }
             wholeIndex++
         }
-        val rest: ArrayList<String>
+        val rest: MutableList<Book>
         val restIndex: Int
         if (leftIndex >= left.size) {
-            // The left ArrayList is finished check the right one
+            // The left MutableList is finished check the right one
             rest = right
             restIndex = rightIndex
         } else {
-            // The right ArrayList has been all checked
+            // The right MutableList has been all checked
             rest = left
             restIndex = leftIndex
         }
 
-        // Copy the rest of whichever ArrayList (left or right) was not used up.
+        // Copy the rest of whichever MutableList (left or right) was not used up.
         for (i in restIndex until rest.size) {
             whole[wholeIndex] = rest[i]
             wholeIndex++
         }
     }
 
-    fun showSortedAuthors() {
-        println("Sorted:")
-        println(authorNames)
-        //        for (int i=0; i< strList.size();i++) {
-//            System.out.println(strList.get(i));
-//        }
-    }
+//    fun showSortedAuthors() {
+//        println("Sorted:")
+//        println(authorNames)
+//        //        for (int i=0; i< strList.size();i++) {
+////            System.out.println(strList.get(i));
+////        }
+//    }
+//    fun showSortedBooks(){
+//        println("Sorted")
+//        println(bookNames)
+//    }
+
 }
 
 /*
-var sortedAuthors: java.util.ArrayList<String?>? = java.util.ArrayList()
+var sortedAuthors: java.util.MutableList<String?>? = java.util.MutableList()
 var sc = Scanner(File("C:\\Users\\hentailover\\Desktop\\AuthorNames.csv"))
 
 while (sc.hasNext()){

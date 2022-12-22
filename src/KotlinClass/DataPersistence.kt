@@ -3,23 +3,28 @@ import java.io.File
 
 object DataPersistence {
 
+    //Return mutable list of books by calling bookToRows function
     fun getBooks(path: String): List<Book> {
 //        val rows = bookToRows(path)
 //        println(rows)
         return bookToRows(path)
   }
+
+    //Return mutable list of authors by calling authToRows function
     fun getAuthors(path: String): List<Author> {
         val rows = authToRows(path)
         println(rows)
         return rows
     }
 
+    //Return mutable list of publishers by calling pubToRows function
     fun getPublishers(path: String): List<Pub>{
         val rows = pubToRows(path)
         println(rows)
         return rows
     }
 
+    // Create a mutable list of books by reading the CSV of books and adding each row
     fun bookToRows(path: String): MutableList<Book> {
         val books:MutableList<Book> = mutableListOf()
         File(path).forEachLine { line ->
@@ -36,6 +41,7 @@ object DataPersistence {
         return books
     }
 
+    // Create a mutable list of authors by reading the CSV of authors and adding each row
     fun authToRows(path:String): MutableList<Author>{
         val authors:MutableList<Author> = mutableListOf()
         File(path).forEachLine { line ->
@@ -49,7 +55,7 @@ object DataPersistence {
         return authors
     }
 
-
+    // Create a mutable list of publishers by reading the CSV of publishers and adding each row
     fun pubToRows(path:String): MutableList<Pub>{
         val pubs:MutableList<Pub> = mutableListOf()
         File(path).forEachLine { line ->
@@ -61,7 +67,4 @@ object DataPersistence {
         }
         return pubs
     }
-
-
-
 }

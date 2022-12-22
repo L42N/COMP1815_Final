@@ -69,6 +69,7 @@ public class MainGUI {
 
 
     public MainGUI() {
+        // Load books by retrieving path from text field for use in getBooks function
         loadButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -78,6 +79,7 @@ public class MainGUI {
             }
         });
 
+        // Load authors by retrieving path from text field for use in getAuthors function
         authLoadButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -94,6 +96,7 @@ public class MainGUI {
             }
         });
 
+        // Load publishers by retrieving path from text field for use in getPublishers function
         pubLoadButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -136,19 +139,21 @@ public class MainGUI {
             }
         });
 
+        // Execute selected sort algorithm
         sortButton.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(e.getSource() == sortButton){
+                    // Create ArrayList for authors and books to sort
                     ArrayList<String> sortedAuthors = new ArrayList<>();
                     ArrayList<String> sortedBooks = new ArrayList<>();
+                    // Scan CSV and append author and book names to corresponding ArrayLists
                     try {
                         Scanner sc = new Scanner(new File("resources/Book.csv"));
                         while (sc.hasNext()) {
                             String line = sc.nextLine();
-                            //setting comma as delimiter pattern
-                            String[] sortedItems = line.split(",");
+                            String[] sortedItems = line.split(",");  // Set comma as delimiter pattern
                             sortedAuthors.add(sortedItems[2]);
                             sortedBooks.add(sortedItems[1]);
 
@@ -157,7 +162,7 @@ public class MainGUI {
                         throw new RuntimeException(ex);
                     }
 
-
+                    // Display unsorted array list
 //                    System.out.println("Before Authors");
 //                    System.out.println(sortedAuthors);
 //
@@ -169,7 +174,7 @@ public class MainGUI {
                     MergeSort test = new MergeSort();
                     long endTime = System.nanoTime();
 
-                    // Calculate algorithm timings
+                    // Calculate algorithm timings and display results
                     System.out.println("That took " + (endTime - startTime) + " nanoseconds");
                     String timings = String.valueOf((endTime - startTime) / 1000);
                     timeTextField.setText(timings + " milliseconds");
@@ -192,6 +197,8 @@ public class MainGUI {
                 }
             }
         });
+
+        // Terminate code
         NUKEButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -200,6 +207,7 @@ public class MainGUI {
         });
     }
 
+    // Create infotables for book, author and publisher with respective columns
     private void createUIComponents() {
         // TODO: place custom component creation code here
         Object[] mainCols = {"ID", "Title", "Author" ,"Year", "Publisher", "Subject"};
@@ -216,6 +224,7 @@ public class MainGUI {
 
     }
 
+    //Create main frame
     public static void main(String[] args) {
         JFrame frame = new JFrame("GUIBOI");
         frame.setContentPane(new MainGUI().MainPanel);
@@ -225,6 +234,7 @@ public class MainGUI {
         frame.setVisible(true);
     }
 
+    // Refresh infotable (to be used after sort algorithm)
     public void refreshTable() {
         DefaultTableModel bookModel = (DefaultTableModel) InfoTable.getModel();
         bookModel.setRowCount(0);
@@ -240,8 +250,4 @@ public class MainGUI {
             bookModel.addRow(bookRow);
         });
     }
-
-
-
 }
-

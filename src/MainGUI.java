@@ -164,7 +164,15 @@ public class MainGUI {
 //                    System.out.println("Before Books");
 //                    System.out.println(sortedBooks);
 //
+                    // Execute algorithm & record timings
+                    long startTime = System.nanoTime();
                     MergeSort test = new MergeSort();
+                    long endTime = System.nanoTime();
+
+                    // Calculate algorithm timings
+                    System.out.println("That took " + (endTime - startTime) + " nanoseconds");
+                    String timings = String.valueOf((endTime - startTime) / 1000);
+                    timeTextField.setText(timings + " milliseconds");
 
 //                    MergeSort booktest = new MergeSort((sortedBooks));
 
@@ -190,9 +198,6 @@ public class MainGUI {
                 System.exit(0);
             }
         });
-
-
-
     }
 
     private void createUIComponents() {

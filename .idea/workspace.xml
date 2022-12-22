@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Added timings to MergeSort and results to timeTextField">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KotlinClass/Author.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinClass/Author.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KotlinClass/Book.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinClass/Book.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KotlinClass/DataPersistence.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinClass/DataPersistence.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KotlinClass/Pub.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinClass/Pub.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
-    </list>
+    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="merge and bubble done" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,7 +60,7 @@
       <recent name="SortingAlgo" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainGUI (2)">
+  <component name="RunManager" selected="Application.MainGUI (3)">
     <configuration name="MainGUI (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainGUI" />
       <module name="COMP1815_Trial" />
@@ -76,6 +69,13 @@
       </method>
     </configuration>
     <configuration name="MainGUI (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainGUI" />
+      <module name="COMP1815_Trial" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainGUI (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainGUI" />
       <module name="COMP1815_Trial" />
       <method v="2">
@@ -91,6 +91,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainGUI (3)" />
         <item itemvalue="Application.MainGUI (2)" />
         <item itemvalue="Application.MainGUI (1)" />
         <item itemvalue="Application.MainGUI" />
@@ -245,14 +246,55 @@
     <option name="localTasksCounter" value="20" />
     <servers />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="042a86f2-6700-48a2-bc4a-4de7ad25308f">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
           </value>
         </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="042a86f2-6700-48a2-bc4a-4de7ad25308f" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>
@@ -266,6 +308,7 @@
     <MESSAGE value="Updated GUI with more components" />
     <MESSAGE value="Updated GUI with more components. All load buttons work" />
     <MESSAGE value="Added timings to MergeSort and results to timeTextField" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added timings to MergeSort and results to timeTextField" />
+    <MESSAGE value="merge and bubble done" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge and bubble done" />
   </component>
 </project>

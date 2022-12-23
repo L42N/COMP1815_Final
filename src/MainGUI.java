@@ -146,40 +146,22 @@ public class MainGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(e.getSource() == sortButton){
-                    // Create ArrayList for authors and books to sort
-                    ArrayList<String> sortedAuthors = new ArrayList<>();
-                    ArrayList<String> sortedBooks = new ArrayList<>();
-                    // Scan CSV and append author and book names to corresponding ArrayLists
-                    try {
-                        Scanner sc = new Scanner(new File("resources/Book.csv"));
-                        while (sc.hasNext()) {
-                            String line = sc.nextLine();
-                            String[] sortedItems = line.split(",");  // Set comma as delimiter pattern
-                            sortedAuthors.add(sortedItems[2]);
-                            sortedBooks.add(sortedItems[1]);
 
-                        }
-                    } catch (FileNotFoundException ex) {
-                        throw new RuntimeException(ex);
-                    }
-
-                    // Display unsorted array list
-//                    System.out.println("Before Authors");
-//                    System.out.println(sortedAuthors);
-//
-//                    System.out.println("Before Books");
-//                    System.out.println(sortedBooks);
-//
                     // Execute algorithm & record timings
                     String algorithmType = sortCombobox.getSelectedItem().toString();
                     long startTime = System.nanoTime();
-                   if (algorithmType.equals("Merge sort")){
+                  if (algorithmType.equals("Merge Sort")){
                        MergeSort test = new MergeSort();
                        test.mergeSort(books);
-                   } else if (algorithmType.equals("Bubble Sort")) {
-                      // BubbleSort sort = new BubbleSort();
-                  //     sort.bubbleSort(books);
                    }
+                else if (algorithmType.equals("Bubble Sort")) {
+                       BubbleSort sort = new BubbleSort();
+                       sort.bubbleSort(books);
+                   }
+//
+//                  else if () {
+//
+//                  }
 
                     long endTime = System.nanoTime();
 
@@ -187,19 +169,6 @@ public class MainGUI {
                     System.out.println("That took " + (endTime - startTime) + " nanoseconds");
                     String timings = String.valueOf((endTime - startTime) / 1000);
                     timeTextField.setText(timings + " milliseconds");
-
-//                    MergeSort booktest = new MergeSort((sortedBooks));
-
-
-//                    test.forEach();
-//                    test.sortAuthors();
-//                    test.showSortedAuthors();
-//                    System.out.println("After Authors ");
-//
-//////                    booktest.forEach();
-//                    test.sortBooks();
-//                    test.showSortedBooks();
-//                    System.out.println("After Books ");
 
 
                     refreshTable();
@@ -259,5 +228,13 @@ public class MainGUI {
             };
             bookModel.addRow(bookRow);
         });
+    }
+
+    public void authorTable(){
+
+    }
+
+    public void publisherTable(){
+
     }
 }

@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="merge and bubble done">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_12_2022_15_19__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_12_2022_15_19__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_12_2022_17_27__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_12_2022_17_27__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Book.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Book.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/KotlinAlgo/BubbleSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinAlgo/BubbleSort.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/KotlinAlgo/MergeSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinAlgo/MergeSort.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/KotlinClass/DataPersistence.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinClass/DataPersistence.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +34,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/MainGUI.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -67,7 +71,7 @@
       <recent name="SortingAlgo" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainGUI">
+  <component name="RunManager" selected="Application.MainGUI (3)">
     <configuration name="MainGUI (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainGUI" />
       <module name="COMP1815_Trial" />
@@ -89,13 +93,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainGUI (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainGUI" />
-      <module name="COMP1815_Trial" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MainGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainGUI" />
       <module name="COMP1815_Trial" />
@@ -105,11 +102,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainGUI" />
-        <item itemvalue="Application.MainGUI (4)" />
         <item itemvalue="Application.MainGUI (3)" />
         <item itemvalue="Application.MainGUI (2)" />
         <item itemvalue="Application.MainGUI (1)" />
+        <item itemvalue="Application.MainGUI" />
       </list>
     </recent_temporary>
   </component>
@@ -258,14 +254,7 @@
       <option name="project" value="LOCAL" />
       <updated>1671721556451</updated>
     </task>
-    <task id="LOCAL-00020" summary="merge and bubble done">
-      <created>1671742051551</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1671742051551</updated>
-    </task>
-    <option name="localTasksCounter" value="21" />
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

@@ -50,9 +50,6 @@ class MergeSort    // Constructor
         return whole
     }
 
-     fun print(){
-        println("dddd")
-    }
 
     private fun mergeResults(left: MutableList<Book>, right: MutableList<Book>, whole: MutableList<Book>) {
         var leftIndex = 0
@@ -63,7 +60,7 @@ class MergeSort    // Constructor
         // been used up, keep taking the smallest of left.get(leftIndex)
         // or right.get(rightIndex) and adding it at both.get(bothIndex).
         while (leftIndex < left.size && rightIndex < right.size) {
-            if (left[leftIndex].title.compareTo(right[rightIndex].title) < 0) {
+            if (left[leftIndex].title < right[rightIndex].title) {
                 whole[wholeIndex] = left[leftIndex]
                 leftIndex++
             } else {

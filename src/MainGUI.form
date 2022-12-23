@@ -454,4 +454,10 @@
       </tabbedpane>
     </children>
   </grid>
+  <buttonGroups>
+    <group name="radioButtonSortBy">
+      <member id="18fa8"/>
+      <member id="38d2e"/>
+    </group>
+  </buttonGroups>
 </form>

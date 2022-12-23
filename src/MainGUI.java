@@ -1,3 +1,4 @@
+import KotlinAlgo.BubbleSort;
 import KotlinAlgo.MergeSort;
 import KotlinClass.Book;
 import KotlinClass.DataPersistence;
@@ -170,8 +171,16 @@ public class MainGUI {
 //                    System.out.println(sortedBooks);
 //
                     // Execute algorithm & record timings
+                    String algorithmType = sortCombobox.getSelectedItem().toString();
                     long startTime = System.nanoTime();
-                    MergeSort test = new MergeSort();
+                   if (algorithmType.equals("Merge sort")){
+                       MergeSort test = new MergeSort();
+                       test.mergeSort(books);
+                   } else if (algorithmType.equals("Bubble Sort")) {
+                      // BubbleSort sort = new BubbleSort();
+                  //     sort.bubbleSort(books);
+                   }
+
                     long endTime = System.nanoTime();
 
                     // Calculate algorithm timings and display results
@@ -191,7 +200,8 @@ public class MainGUI {
 //                    test.sortBooks();
 //                    test.showSortedBooks();
 //                    System.out.println("After Books ");
-                    test.mergeSort(books);
+
+
                     refreshTable();
 
                 }

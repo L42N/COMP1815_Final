@@ -9,10 +9,9 @@ class MergeSort    // Constructor
 //    fun sortAuthors() {
 //        authorNames = mergeSort(authorNames)
 //    }
-//
-//    fun sortBooks(){
+//         fun sortBooks(){
 //        bookNames = mergeSort(bookNames)
-//
+
 //    }
 
     fun mergeSort(whole: MutableList<Book>): MutableList<Book> {

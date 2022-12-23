@@ -4,6 +4,7 @@ import KotlinClass.Author;
 import KotlinClass.Book;
 import KotlinClass.DataPersistence;
 import KotlinClass.Pub;
+import Scala.RadixSort;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -75,7 +76,7 @@ public class MainGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 books = DataPersistence.INSTANCE.getBooks(loadField.getText());
-                refreshTable();
+                bookTable();
             }
         });
 
@@ -100,7 +101,7 @@ public class MainGUI {
         addNewEntryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                
+
             }
         });
         deleteButton.addActionListener(new ActionListener() {
@@ -110,6 +111,13 @@ public class MainGUI {
             }
         });
         editButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
+        searchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
@@ -137,9 +145,10 @@ public class MainGUI {
                        BubbleSort sort = new BubbleSort();
                        sort.bubbleSort(books);
                    }
-//
-//                  else if () {
-//
+                
+//                  else if (algorithmType.equals("Radix  Sort")) {
+//                      BubbleSort sort = new RadixSort();
+//                      sort.bubbleSort(books);
 //                  }
 
                     long endTime = System.nanoTime();
@@ -162,6 +171,7 @@ public class MainGUI {
                 System.exit(0);
             }
         });
+
     }
 
     // Create infotables for book, author and publisher with respective columns
@@ -192,7 +202,7 @@ public class MainGUI {
     }
 
     // Refresh and load infotable (to be used after sort algorithm)
-    public void refreshTable() {
+    public void bookTable() {
         DefaultTableModel bookModel = (DefaultTableModel) InfoTable.getModel();
         bookModel.setRowCount(0);
         books.forEach(book -> {

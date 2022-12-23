@@ -1,7 +1,9 @@
 import KotlinAlgo.BubbleSort;
 import KotlinAlgo.MergeSort;
+import KotlinClass.Author;
 import KotlinClass.Book;
 import KotlinClass.DataPersistence;
+import KotlinClass.Pub;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -43,7 +45,6 @@ public class MainGUI {
     private JButton authExitButton;
     private JButton authLoadButton;
     private JButton authSearchButton;
-    private JButton AuthRefeshButton;
     private JTextField authLoad;
     private JTextField authSearchEntry;
     private JButton authAdd;
@@ -55,7 +56,6 @@ public class MainGUI {
     private JTable pubInfoTable;
     private JButton pubLoadButton;
     private JButton pubSearchButton;
-    private JButton pubRefreshButton;
     private JTextField pubLoad;
     private JTextField pubSearchEntry;
     private JButton pubEditButton;
@@ -65,9 +65,9 @@ public class MainGUI {
     private JScrollPane pubScrollPane;
     private JButton pubExitButton;
     private JPanel pubControlPanel;
-
     private List<Book> books;
-
+    private List<Author> authors;
+    private List<Pub> pubs;
 
     public MainGUI() {
         // Load books by retrieving path from text field for use in getBooks function
@@ -76,7 +76,6 @@ public class MainGUI {
             public void actionPerformed(ActionEvent e) {
                 books = DataPersistence.INSTANCE.getBooks(loadField.getText());
                 refreshTable();
-
             }
         });
 
@@ -84,16 +83,8 @@ public class MainGUI {
         authLoadButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                var authorImport = DataPersistence.INSTANCE.getAuthors(authLoad.getText());
-                DefaultTableModel authModel = (DefaultTableModel)authInfoTable.getModel();
-                authorImport.forEach(author -> {
-                    Object[] authRow = new Object[]{
-                            author.getId(),
-                            author.getFirstName(),
-                            author.getLastName()
-                    };
-                    authModel.addRow(authRow);
-                });
+                authors = DataPersistence.INSTANCE.getAuthors(authLoad.getText());
+                authorTable();
             }
         });
 
@@ -101,24 +92,15 @@ public class MainGUI {
         pubLoadButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                var pubImport = DataPersistence.INSTANCE.getPublishers(pubLoad.getText());
-                DefaultTableModel pubModel = (DefaultTableModel)pubInfoTable.getModel();
-                pubImport.forEach(pub -> {
-                    Object[] pubRow = new Object[]{
-                            pub.getId(),
-                            pub.getPubName()
-                    };
-                    pubModel.addRow(pubRow);
-                });
+                pubs = DataPersistence.INSTANCE.getPublishers(pubLoad.getText());
+                publisherTable();
             }
         });
-
 
         addNewEntryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-
+                
             }
         });
         deleteButton.addActionListener(new ActionListener() {
@@ -133,12 +115,7 @@ public class MainGUI {
 
             }
         });
-        refreshButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
 
-            }
-        });
 
         // Execute selected sort algorithm
         sortButton.addActionListener(new ActionListener() {
@@ -149,6 +126,8 @@ public class MainGUI {
 
                     // Execute algorithm & record timings
                     String algorithmType = sortCombobox.getSelectedItem().toString();
+
+
                     long startTime = System.nanoTime();
                   if (algorithmType.equals("Merge Sort")){
                        MergeSort test = new MergeSort();
@@ -169,7 +148,6 @@ public class MainGUI {
                     System.out.println("That took " + (endTime - startTime) + " nanoseconds");
                     String timings = String.valueOf((endTime - startTime) / 1000);
                     timeTextField.setText(timings + " milliseconds");
-
 
                     refreshTable();
 
@@ -213,7 +191,7 @@ public class MainGUI {
         frame.setVisible(true);
     }
 
-    // Refresh infotable (to be used after sort algorithm)
+    // Refresh and load infotable (to be used after sort algorithm)
     public void refreshTable() {
         DefaultTableModel bookModel = (DefaultTableModel) InfoTable.getModel();
         bookModel.setRowCount(0);
@@ -230,11 +208,30 @@ public class MainGUI {
         });
     }
 
+    // Refresh and load AuthInfotable (to be used after sort algorithm)
     public void authorTable(){
-
+        DefaultTableModel authModel = (DefaultTableModel)authInfoTable.getModel();
+        authModel.setRowCount(0);
+        authors.forEach(author -> {
+            Object[] authRow = new Object[]{
+                    author.getId(),
+                    author.getFirstName(),
+                    author.getLastName()
+            };
+            authModel.addRow(authRow);
+        });
     }
 
+    // Refresh and load PubInfotable (to be used after sort algorithm)
     public void publisherTable(){
-
+        DefaultTableModel pubModel = (DefaultTableModel)pubInfoTable.getModel();
+        pubModel.setRowCount(0);
+        pubs.forEach(pub -> {
+            Object[] pubRow = new Object[]{
+                    pub.getId(),
+                    pub.getPubName()
+            };
+            pubModel.addRow(pubRow);
+        });
     }
 }

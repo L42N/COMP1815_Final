@@ -5,14 +5,8 @@ import java.util.*
 import kotlin.collections.MutableList
 
 class MergeSort    // Constructor
-     {
-//    fun sortAuthors() {
-//        authorNames = mergeSort(authorNames)
-//    }
-//         fun sortBooks(){
-//        bookNames = mergeSort(bookNames)
+{
 
-//    }
 
     fun mergeSort(whole: MutableList<Book>): MutableList<Book> {
 
@@ -88,37 +82,4 @@ class MergeSort    // Constructor
         }
     }
 
-//    fun showSortedAuthors() {
-//        println("Sorted:")
-//        println(authorNames)
-//        //        for (int i=0; i< strList.size();i++) {
-////            System.out.println(strList.get(i));
-////        }
-//    }
-//    fun showSortedBooks(){
-//        println("Sorted")
-//        println(bookNames)
-//    }
-
 }
-
-/*
-var sortedAuthors: java.util.MutableList<String?>? = java.util.MutableList()
-var sc = Scanner(File("C:\\Users\\hentailover\\Desktop\\AuthorNames.csv"))
-
-while (sc.hasNext()){
-    val line = sc.nextLine()
-    //setting comma as delimiter pattern
-    val authorNames = line.split(",".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
-    sortedAuthors!!.add(authorNames[0])
-}
-sc.close()
-
-kotlin.io.println("Before")
-kotlin.io.println(sortedAuthors)
-var test = MergeSort(sortedAuthors)
-
-
-test.sortAuthors()
-test.showSortedAuthors()
-kotlin.io.println("After")*/

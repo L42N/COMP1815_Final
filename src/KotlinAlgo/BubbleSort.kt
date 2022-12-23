@@ -22,7 +22,7 @@ class BubbleSort {
 
         for (j in 0 until list.size - 1) {
             for (i in 0 until list.size - 1 - j) {
-                //if the mutable list[i] compares list[i+1] if it is bigger alphabetically based on Book class titles
+                //if the mutable list[i] compares list[i+1] if it is bigger alphabetically based on Book authors
                 if (list[i].authors > (list[i + 1].authors) ) {
                     // swap the mutable list[i] and list[i+1]
                     val temp = list[i]

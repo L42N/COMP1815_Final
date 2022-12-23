@@ -145,7 +145,7 @@ public class MainGUI {
                        BubbleSort sort = new BubbleSort();
                        sort.bubbleSort(books);
                    }
-                
+
 //                  else if (algorithmType.equals("Radix  Sort")) {
 //                      BubbleSort sort = new RadixSort();
 //                      sort.bubbleSort(books);
@@ -158,7 +158,7 @@ public class MainGUI {
                     String timings = String.valueOf((endTime - startTime) / 1000);
                     timeTextField.setText(timings + " milliseconds");
 
-                    refreshTable();
+                    bookTable();
 
                 }
             }

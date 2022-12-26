@@ -1,10 +1,11 @@
 import KotlinAlgo.BubbleSort;
 import KotlinAlgo.MergeSort;
+import KotlinAlgo.SearchAlgo;
 import KotlinClass.Author;
 import KotlinClass.Book;
 import KotlinClass.DataPersistence;
 import KotlinClass.Pub;
-//import Scala.RadixSort;
+import Scala.RadixSort;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -16,6 +17,7 @@ import java.io.LineNumberInputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 import javax.swing.JButton;
 
 
@@ -121,6 +123,25 @@ public class MainGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+          var potato = searchField.getText().toLowerCase();
+
+              var filteredBooks = SearchAlgo.INSTANCE.searchTitle(potato,books);
+
+            DefaultTableModel bookModel = (DefaultTableModel) InfoTable.getModel();
+            bookModel.setRowCount(0);
+            filteredBooks.forEach(book -> {
+                Object[] bookRow = new Object[]{
+                        book.getId(),
+                        book.getTitle(),
+                        book.getAuthors(),
+                        book.getYearOfPublication(),
+                        book.getPublisher(),
+                        book.getSubject()
+                };
+                bookModel.addRow(bookRow);
+            });
+
+
             }
         });
 
@@ -135,34 +156,21 @@ public class MainGUI {
                     // Execute algorithm & record timings
                     String algorithmType = sortCombobox.getSelectedItem().toString();
 
-
                     long startTime = System.nanoTime();
-
                   if (algorithmType.equals("Merge Sort")){
                        MergeSort test = new MergeSort();
-
-                       if (authorRadioButton.isSelected()) {
-                           test.mergeSortAuthor(books);
-                       } else {
-                           test.mergeSort(books);
-                       }
-
+                       test.mergeSort(books);
                    }
                 else if (algorithmType.equals("Bubble Sort")) {
-                      BubbleSort test2 = new BubbleSort();
+                       BubbleSort sort = new BubbleSort();
+                       sort.bubbleSort(books);
+                   }
 
-                      if (BookButton.isSelected()) {
-                          test2.bubbleSort(books);
-                      } else {
-                          test2.bubbleSortAuthor(books);
-                      }
+                  else if (algorithmType.equals("Radix Sort")) {
+                      RadixSort potato = new RadixSort();
+                      books = potato.initRadixSort(books,true);
 
-                }
-
-//                  else if (algorithmType.equals("Radix  Sort")) {
-//                      BubbleSort sort = new RadixSort();
-//                      sort.bubbleSort(books);
-//                  }
+                  }
 
                     long endTime = System.nanoTime();
 
@@ -185,12 +193,6 @@ public class MainGUI {
             }
         });
 
-        BookButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
     }
 
     // Create infotables for book, author and publisher with respective columns

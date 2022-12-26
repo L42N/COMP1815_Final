@@ -4,7 +4,7 @@ import KotlinClass.Author;
 import KotlinClass.Book;
 import KotlinClass.DataPersistence;
 import KotlinClass.Pub;
-import Scala.RadixSort;
+//import Scala.RadixSort;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -137,14 +137,27 @@ public class MainGUI {
 
 
                     long startTime = System.nanoTime();
+
                   if (algorithmType.equals("Merge Sort")){
                        MergeSort test = new MergeSort();
-                       test.mergeSort(books);
+
+                       if (authorRadioButton.isSelected()) {
+                           test.mergeSortAuthor(books);
+                       } else {
+                           test.mergeSort(books);
+                       }
+
                    }
                 else if (algorithmType.equals("Bubble Sort")) {
-                       BubbleSort sort = new BubbleSort();
-                       sort.bubbleSort(books);
-                   }
+                      BubbleSort test2 = new BubbleSort();
+
+                      if (BookButton.isSelected()) {
+                          test2.bubbleSort(books);
+                      } else {
+                          test2.bubbleSortAuthor(books);
+                      }
+
+                }
 
 //                  else if (algorithmType.equals("Radix  Sort")) {
 //                      BubbleSort sort = new RadixSort();
@@ -172,6 +185,12 @@ public class MainGUI {
             }
         });
 
+        BookButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 
     // Create infotables for book, author and publisher with respective columns

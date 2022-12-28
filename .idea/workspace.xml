@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Radix sort and searching for title done">
-      <change afterPath="$PROJECT_DIR$/src/JavaClass/DataTable.java" afterDir="false" />
+    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="New window for Add book Frame">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KotlinAlgo/MergeSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinAlgo/MergeSort.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KotlinAlgo/SearchAlgo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinAlgo/SearchAlgo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -304,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672090014061</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="New window for Add book Frame">
+      <created>1672258306604</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1672258306604</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -372,6 +371,7 @@
     <MESSAGE value="merge and bubble done" />
     <MESSAGE value="Bubble sort and Merge sort done for book Titles. Need to implement Boolean for Authors" />
     <MESSAGE value="Radix sort and searching for title done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Radix sort and searching for title done" />
+    <MESSAGE value="New window for Add book Frame" />
+    <option name="LAST_COMMIT_MESSAGE" value="New window for Add book Frame" />
   </component>
 </project>

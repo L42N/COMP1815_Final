@@ -6,6 +6,8 @@ import KotlinClass.Book;
 import KotlinClass.DataPersistence;
 import KotlinClass.Pub;
 import Scala.RadixSort;
+import SubGUI.AddAuthorWindow;
+import SubGUI.AddBookWindow;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -103,6 +105,8 @@ public class MainGUI {
         addNewEntryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                AddBookWindow window = new AddBookWindow(); 
+                window.bookWindow();
 
             }
         });

@@ -1,6 +1,8 @@
 package SubGUI;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class AddBookWindow {
     private JTextField titleFieldEntry;
@@ -9,11 +11,35 @@ public class AddBookWindow {
     private JTextField pubYearFieldEntry;
     private JTextField subjectFieldEntry;
     private JButton submitButton;
+    private JPanel addBookPanel;
+    private JButton backButton;
 
-    JFrame frame = new JFrame();
-    public AddBookWindow(){
 
+    public AddBookWindow() {
+        submitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
+
+    public static void bookWindow(){
+        JFrame frame = new JFrame("GUIBOI");
+        frame.setContentPane(new AddBookWindow().addBookPanel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }
+
+
 }
 
 

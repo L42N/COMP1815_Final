@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Bubble sort and Merge sort done for book Titles. Need to implement Boolean for Authors">
+    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Radix sort and searching for title done">
+      <change afterPath="$PROJECT_DIR$/src/JavaClass/DataTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/KotlinAlgo/MergeSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinAlgo/MergeSort.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/KotlinAlgo/SearchAlgo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinAlgo/SearchAlgo.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scala/RadixSort.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scala/RadixSort.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +29,8 @@
         <option value="Kotlin Class" />
         <option value="Scala Object" />
         <option value="Package Object" />
-        <option value="Class" />
         <option value="Kotlin Object" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -70,10 +73,29 @@
       <recent name="SortingAlgo" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainGUI (3)">
-    <configuration name="MainGUI (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainGUI" />
+  <component name="RunManager" selected="Application.MainGUI">
+    <configuration name="AddAuthorWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SubGUI.AddAuthorWindow" />
       <module name="COMP1815_Trial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SubGUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddBookWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SubGUI.AddBookWindow" />
+      <module name="COMP1815_Trial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SubGUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -101,10 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainGUI" />
+        <item itemvalue="Application.AddBookWindow" />
+        <item itemvalue="Application.AddAuthorWindow" />
         <item itemvalue="Application.MainGUI (3)" />
         <item itemvalue="Application.MainGUI (2)" />
-        <item itemvalue="Application.MainGUI (1)" />
-        <item itemvalue="Application.MainGUI" />
       </list>
     </recent_temporary>
   </component>
@@ -274,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671821002452</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Radix sort and searching for title done">
+      <created>1672090014061</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1672090014061</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -341,6 +371,7 @@
     <MESSAGE value="Added timings to MergeSort and results to timeTextField" />
     <MESSAGE value="merge and bubble done" />
     <MESSAGE value="Bubble sort and Merge sort done for book Titles. Need to implement Boolean for Authors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bubble sort and Merge sort done for book Titles. Need to implement Boolean for Authors" />
+    <MESSAGE value="Radix sort and searching for title done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Radix sort and searching for title done" />
   </component>
 </project>

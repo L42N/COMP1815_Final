@@ -7,6 +7,9 @@ import kotlin.collections.MutableList
 class MergeSort    // Constructor
 {
 
+fun initMergeSort(){
+
+}
 
     fun mergeSort(whole: MutableList<Book>): MutableList<Book> {
 

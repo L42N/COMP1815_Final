@@ -1,8 +1,9 @@
 package SubGUI;
 
 import javax.swing.*;
+import java.awt.*;
 
-public class AddBookWindow {
+public class AddBookWindow extends Container {
     private JTextField titleFieldEntry;
     private JTextField authorFieldEntry;
     private JTextField pubFieldEntry;
@@ -11,8 +12,7 @@ public class AddBookWindow {
     private JButton submitButton;
 
     JFrame frame = new JFrame();
-    public AddBookWindow(){
-
+    public AddBookWindow(){;
     }
 }
 

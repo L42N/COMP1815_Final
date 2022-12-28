@@ -6,9 +6,11 @@ import KotlinClass.Book;
 import KotlinClass.DataPersistence;
 import KotlinClass.Pub;
 import Scala.RadixSort;
+import SubGUI.AddBookWindow;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -104,8 +106,16 @@ public class MainGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                JFrame frame = new JFrame();
+                frame.setContentPane(new AddBookWindow());
+                frame.setLayout(new FlowLayout());
+                frame.pack();
+                frame.setLocationRelativeTo(null);
+                frame.setEnabled(true);
+                frame.setVisible(true);
             }
         });
+
         deleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

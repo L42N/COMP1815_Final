@@ -15,7 +15,6 @@ public class AddAuthorWindow {
     public static void bookWindow(){
         JFrame frame = new JFrame("GUIBOI");
         frame.setContentPane(new AddAuthorWindow().authorAddPanel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);

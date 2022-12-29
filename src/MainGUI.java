@@ -8,6 +8,8 @@ import KotlinClass.Pub;
 import Scala.RadixSort;
 import SubGUI.AddAuthorWindow;
 import SubGUI.AddBookWindow;
+import SubGUI.DeleteBookWindow;
+import SubGUI.EditBookWindow;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -113,13 +115,15 @@ public class MainGUI {
         deleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                DeleteBookWindow window = new DeleteBookWindow();
+                window.bookWindow();
             }
         });
         editButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                EditBookWindow window = new EditBookWindow();
+                window.bookWindow();
             }
         });
 

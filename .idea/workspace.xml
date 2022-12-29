@@ -5,23 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Deleted unnecessary stuff">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SubGUI/DeleteAuthorWindow.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SubGUI/DeleteAuthorWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SubGUI/DeletePubWindow.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SubGUI/DeletePubWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SubGUI/EditAuthorWindow.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SubGUI/EditAuthorWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SubGUI/EditPubWindow.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SubGUI/EditPubWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/scala_sdk_3_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/scala_sdk_3_2_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/scala_sdk_3_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_02_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_02_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_12_2022_13_38__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_12_2022_13_38__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_12_2022_20_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_12_2022_20_14__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/COMP1815_Trial.iml" beforeDir="false" afterPath="$PROJECT_DIR$/COMP1815_Trial.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddPubWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddPubWindow.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddPubWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddPubWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SubGUI/DeleteBookWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/DeleteBookWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeleteBookWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/DeleteBookWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,10 +61,16 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.build"
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -101,6 +103,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670257099503</updated>
+      <workItem from="1672317704059" duration="61000" />
+      <workItem from="1672317779390" duration="2495000" />
     </task>
     <task id="LOCAL-00001" summary="New GUI. Still need the buttons to work">
       <created>1670283685948</created>
@@ -153,6 +157,9 @@
     </task>
     <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

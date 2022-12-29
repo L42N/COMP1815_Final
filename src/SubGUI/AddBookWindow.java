@@ -18,8 +18,9 @@ public class AddBookWindow {
     private JButton backButton;
 
 
-    //
+    // Creates window for users to create new book and appends to book and author CSV
     public AddBookWindow() {
+        // Run once user clicks on "submit"
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent b) {
@@ -29,45 +30,46 @@ public class AddBookWindow {
                 pubFieldEntry.getText();
                 subjectFieldEntry.getText();
 
+                // Ensures all text fields are filled in, raises error if not
                 if (titleFieldEntry.getText().isEmpty() || authorFieldEntry.getText().isEmpty() || pubYearFieldEntry.getText().isEmpty() ||
                         pubFieldEntry.getText().isEmpty() || subjectFieldEntry.getText().isEmpty()) {
                     JOptionPane.showInternalMessageDialog(null, "Missing Fields", "Error!", 1);
                 } else {
-
+                    // Creates book vairable for new entry
                     Book add = new Book("69", titleFieldEntry.getText(), authorFieldEntry.getText(), pubYearFieldEntry.getText(), pubFieldEntry.getText(), subjectFieldEntry.getText());
 
                     try {
+                        // Appends new book variable to book CSV and author to author CSV
+                        BufferedWriter bookWriter = new BufferedWriter(new FileWriter("C:\\Users\\abdill\\IdeaProjects\\COMP1815_Trial\\resources\\Book.csv", true));
+                        bookWriter.append(add.getId());
+                        bookWriter.append(",");
+                        bookWriter.append(titleFieldEntry.getText());
+                        bookWriter.append(",");
+                        bookWriter.append(authorFieldEntry.getText());
+                        bookWriter.append(",");
+                        bookWriter.append(pubYearFieldEntry.getText());
+                        bookWriter.append(",");
+                        bookWriter.append(pubFieldEntry.getText());
+                        bookWriter.append(",");
+                        bookWriter.append(subjectFieldEntry.getText());
+                        bookWriter.newLine();
+                        bookWriter.close();
 
-                        BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Users\\abdill\\IdeaProjects\\COMP1815_Trial\\resources\\Book.csv", true));
-                        BufferedWriter writer2 = new BufferedWriter(new FileWriter("C:\\Users\\abdill\\IdeaProjects\\COMP1815_Trial\\resources\\Author.csv", true));
-                        writer.append(add.getId());
-                        writer2.append(add.getId());
-                        writer2.append(",");
-                        writer.append(",");
-                        writer.append(titleFieldEntry.getText());
-                        writer.append(",");
-                        writer.append(authorFieldEntry.getText());
-                        writer2.append(authorFieldEntry.getText());
-                        writer.append(",");
-                        writer.append(pubYearFieldEntry.getText());
-                        writer.append(",");
-                        writer.append(pubFieldEntry.getText());
-                        writer.append(",");
-                        writer.append(subjectFieldEntry.getText());
+                        BufferedWriter authorWriter = new BufferedWriter(new FileWriter("C:\\Users\\abdill\\IdeaProjects\\COMP1815_Trial\\resources\\Author.csv", true));
+                        authorWriter.append(add.getId());
+                        authorWriter.append(",");
+                        authorWriter.append(authorFieldEntry.getText());
+                        authorWriter.newLine();
+                        authorWriter.close();
 
-
-                        writer.newLine();
-                        writer.close();
-                        writer2.newLine();
-                        writer2.close();
                     } catch (Exception e) {
 
                     }
-
-
                 }
             }
         });
+
+        // Back button
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

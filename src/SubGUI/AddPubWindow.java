@@ -7,7 +7,7 @@ public class AddPubWindow {
     private JButton button1;
     private JPanel addPubWindow;
 
-    public static void bookWindow(){
+    public static void publisherWindow(){
         JFrame frame = new JFrame("GUIBOI");
         frame.setContentPane(new AddPubWindow().addPubWindow);
         frame.pack();

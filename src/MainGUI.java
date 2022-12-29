@@ -102,16 +102,19 @@ public class MainGUI {
             public void actionPerformed(ActionEvent e) {
                 AddBookWindow window = new AddBookWindow();
                 window.bookWindow();
-
+                
             }
         });
 
         // Add author
         authAddNewEntryButton.addActionListener(new ActionListener() {
             @Override
+            
             public void actionPerformed(ActionEvent e) {
                 AddAuthorWindow window = new AddAuthorWindow();
                 window.bookWindow();
+                
+            
             }
         });
 
@@ -222,11 +225,10 @@ public class MainGUI {
                         MergeSort test = new MergeSort();
 
                         if (authorRadioButton.isSelected()) {
-                            books = test.authMergeSort(books);
+                            test.authMergeSort(books);
                         } else {
-                            books = test.mergeSort(books);
+                            test.mergeSort(books);
                         }
-
 
                     }
                     else if (algorithmType.equals("Bubble Sort")) {
@@ -238,9 +240,7 @@ public class MainGUI {
                         } else {
                             sort.bubbleSortAuthor(books);
                         }
-
                     }
-
                     else if (algorithmType.equals("Radix Sort")) {
                         RadixSort potato = new RadixSort();
 

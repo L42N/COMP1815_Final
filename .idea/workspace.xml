@@ -4,8 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="New window for Add book Frame">
+    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Deleted unnecessary stuff">
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SubGUI/DeleteAuthorWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SubGUI/DeleteAuthorWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SubGUI/DeletePubWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SubGUI/DeletePubWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SubGUI/EditAuthorWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SubGUI/EditAuthorWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SubGUI/EditPubWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SubGUI/EditPubWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/scala_sdk_3_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/scala_sdk_3_2_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_12_2022_13_38__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_12_2022_13_38__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_12_2022_20_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_12_2022_20_14__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/COMP1815_Trial.iml" beforeDir="false" afterPath="$PROJECT_DIR$/COMP1815_Trial.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddPubWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddPubWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddPubWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddPubWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeleteBookWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/DeleteBookWindow.form" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,15 +35,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
-        <option value="Scala Object" />
-        <option value="Package Object" />
-        <option value="Kotlin Object" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/MainGUI.java" root0="FORCE_HIGHLIGHTING" />
@@ -44,68 +60,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;165&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;363&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/lenovo/Downloads/IntellijScalaToKotlin-0.1.1.zip&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.build"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\lenovo\IdeaProjects\COMP1815_Trial\resources" />
     </key>
-    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
-      <recent name="SortingAlgo" />
-    </key>
   </component>
-  <component name="RunManager" selected="Application.MainGUI">
-    <configuration name="AddAuthorWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SubGUI.AddAuthorWindow" />
-      <module name="COMP1815_Trial" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="SubGUI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddBookWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SubGUI.AddBookWindow" />
-      <module name="COMP1815_Trial" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="SubGUI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainGUI (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainGUI" />
-      <module name="COMP1815_Trial" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainGUI (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainGUI" />
-      <module name="COMP1815_Trial" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="MainGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainGUI" />
       <module name="COMP1815_Trial" />
@@ -116,10 +87,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainGUI" />
-        <item itemvalue="Application.AddBookWindow" />
-        <item itemvalue="Application.AddAuthorWindow" />
-        <item itemvalue="Application.MainGUI (3)" />
-        <item itemvalue="Application.MainGUI (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -184,167 +151,12 @@
       <option name="project" value="LOCAL" />
       <updated>1670285447834</updated>
     </task>
-    <task id="LOCAL-00008" summary="Added kotlin Classes">
-      <created>1670798393153</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1670798393153</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Added kotlin Classes">
-      <created>1670798409473</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1670798409473</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Kotlin Data Persistence done">
-      <created>1670876287716</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1670876287716</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Kotlin Data Persistence done">
-      <created>1670876355541</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1670876355541</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Deleted Java Class">
-      <created>1670877829201</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1670877829201</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Deleted Java Class">
-      <created>1670877847729</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1670877847729</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Deleted test classes from the Scala lab">
-      <created>1670878816810</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1670878816810</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Updated GUI with more components">
-      <created>1671064754028</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1671064754028</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Updated GUI with more components">
-      <created>1671064786042</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1671064786042</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Updated GUI with more components">
-      <created>1671064905572</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1671064905572</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Updated GUI with more components. All load buttons work">
-      <created>1671463724875</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1671463724875</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Added timings to MergeSort and results to timeTextField">
-      <created>1671721556451</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1671721556451</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Bubble sort and Merge sort done for book Titles. Need to implement Boolean for Authors">
-      <created>1671813293593</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1671813293593</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Bubble sort and Merge sort done for book Titles. Need to implement Boolean for Authors">
-      <created>1671816974797</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1671816974797</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Bubble sort and Merge sort done for book Titles. Need to implement Boolean for Authors">
-      <created>1671821002452</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1671821002452</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Radix sort and searching for title done">
-      <created>1672090014061</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1672090014061</updated>
-    </task>
-    <task id="LOCAL-00024" summary="New window for Add book Frame">
-      <created>1672258306604</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1672258306604</updated>
-    </task>
-    <option name="localTasksCounter" value="25" />
+    <option name="localTasksCounter" value="8" />
     <servers />
-  </component>
-  <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ID_ORDER">
-      <list>
-        <option value="Default.Root" />
-        <option value="Default.Author" />
-        <option value="Default.Date" />
-        <option value="Default.Subject" />
-        <option value="Space.CommitStatus" />
-      </list>
-    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
-        <entry key="042a86f2-6700-48a2-bc4a-4de7ad25308f">
-          <value>
-            <State>
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="HEAD" />
-                      </list>
-                    </value>
-                  </entry>
-                  <entry key="roots">
-                    <value>
-                      <list>
-                        <option value="$PROJECT_DIR$" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
         <entry key="MAIN">
           <value>
             <State />
@@ -352,26 +164,10 @@
         </entry>
       </map>
     </option>
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="042a86f2-6700-48a2-bc4a-4de7ad25308f" value="TOOL_WINDOW" />
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New GUI. Still need the buttons to work" />
     <MESSAGE value="Added More classes. Still need to work on GUI" />
-    <MESSAGE value="Added kotlin Classes" />
-    <MESSAGE value="Kotlin Data Persistence done" />
-    <MESSAGE value="Deleted Java Class" />
-    <MESSAGE value="Deleted test classes from the Scala lab" />
-    <MESSAGE value="Updated GUI with more components" />
-    <MESSAGE value="Updated GUI with more components. All load buttons work" />
-    <MESSAGE value="Added timings to MergeSort and results to timeTextField" />
-    <MESSAGE value="merge and bubble done" />
-    <MESSAGE value="Bubble sort and Merge sort done for book Titles. Need to implement Boolean for Authors" />
-    <MESSAGE value="Radix sort and searching for title done" />
-    <MESSAGE value="New window for Add book Frame" />
-    <option name="LAST_COMMIT_MESSAGE" value="New window for Add book Frame" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added More classes. Still need to work on GUI" />
   </component>
 </project>

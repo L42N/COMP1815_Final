@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Add, edit and delete windows for author tab added">
+    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="merge and bubble done">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_02_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_02_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_12_2022_20_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_12_2022_20_14__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddPubWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddPubWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeletePubWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/DeletePubWindow.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeletePubWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/DeletePubWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditPubWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditPubWindow.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditPubWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditPubWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,18 +22,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
+        <option value="Scala Object" />
+        <option value="Package Object" />
         <option value="Class" />
+        <option value="Kotlin Object" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitToolBoxStore">
-    <option name="projectConfigVersion" value="5" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/MainGUI.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -51,29 +44,56 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;165&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;363&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lenovo/Downloads/IntellijScalaToKotlin-0.1.1.zip&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\lenovo\IdeaProjects\COMP1815_Trial\resources" />
     </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="SortingAlgo" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MainGUI (4)">
+    <configuration name="MainGUI (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainGUI" />
+      <module name="COMP1815_Trial" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainGUI (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainGUI" />
+      <module name="COMP1815_Trial" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainGUI (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainGUI" />
+      <module name="COMP1815_Trial" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainGUI (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainGUI" />
+      <module name="COMP1815_Trial" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainGUI" />
       <module name="COMP1815_Trial" />
@@ -83,7 +103,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainGUI (4)" />
+        <item itemvalue="Application.MainGUI (3)" />
         <item itemvalue="Application.MainGUI" />
+        <item itemvalue="Application.MainGUI (2)" />
+        <item itemvalue="Application.MainGUI (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -98,8 +122,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670257099503</updated>
-      <workItem from="1672317704059" duration="61000" />
-      <workItem from="1672317779390" duration="7204000" />
     </task>
     <task id="LOCAL-00001" summary="New GUI. Still need the buttons to work">
       <created>1670283685948</created>
@@ -150,29 +172,139 @@
       <option name="project" value="LOCAL" />
       <updated>1670285447834</updated>
     </task>
-    <task id="LOCAL-00008" summary="Add, edit and delete windows for book tab added">
-      <created>1672320495356</created>
+    <task id="LOCAL-00008" summary="Added kotlin Classes">
+      <created>1670798393153</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1672320495356</updated>
+      <updated>1670798393153</updated>
     </task>
-    <task id="LOCAL-00009" summary="Add, edit and delete windows for author tab added">
-      <created>1672322886418</created>
+    <task id="LOCAL-00009" summary="Added kotlin Classes">
+      <created>1670798409473</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1672322886418</updated>
+      <updated>1670798409473</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Kotlin Data Persistence done">
+      <created>1670876287716</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670876287716</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Kotlin Data Persistence done">
+      <created>1670876355541</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670876355541</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Deleted Java Class">
+      <created>1670877829201</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670877829201</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Deleted Java Class">
+      <created>1670877847729</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1670877847729</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Deleted test classes from the Scala lab">
+      <created>1670878816810</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1670878816810</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Updated GUI with more components">
+      <created>1671064754028</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1671064754028</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Updated GUI with more components">
+      <created>1671064786042</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1671064786042</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Updated GUI with more components">
+      <created>1671064905572</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1671064905572</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Updated GUI with more components. All load buttons work">
+      <created>1671463724875</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1671463724875</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Added timings to MergeSort and results to timeTextField">
+      <created>1671721556451</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1671721556451</updated>
+    </task>
+    <task id="LOCAL-00020" summary="merge and bubble done">
+      <created>1671742051551</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1671742051551</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="042a86f2-6700-48a2-bc4a-4de7ad25308f">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
@@ -180,12 +312,23 @@
         </entry>
       </map>
     </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="042a86f2-6700-48a2-bc4a-4de7ad25308f" value="TOOL_WINDOW" />
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New GUI. Still need the buttons to work" />
     <MESSAGE value="Added More classes. Still need to work on GUI" />
-    <MESSAGE value="Add, edit and delete windows for book tab added" />
-    <MESSAGE value="Add, edit and delete windows for author tab added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add, edit and delete windows for author tab added" />
+    <MESSAGE value="Added kotlin Classes" />
+    <MESSAGE value="Kotlin Data Persistence done" />
+    <MESSAGE value="Deleted Java Class" />
+    <MESSAGE value="Deleted test classes from the Scala lab" />
+    <MESSAGE value="Updated GUI with more components" />
+    <MESSAGE value="Updated GUI with more components. All load buttons work" />
+    <MESSAGE value="Added timings to MergeSort and results to timeTextField" />
+    <MESSAGE value="merge and bubble done" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge and bubble done" />
   </component>
 </project>

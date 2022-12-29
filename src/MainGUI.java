@@ -5,7 +5,7 @@ import KotlinClass.Author;
 import KotlinClass.Book;
 import KotlinClass.DataPersistence;
 import KotlinClass.Pub;
-import Scala.RadixSort;
+//import Scala.RadixSort;
 import SubGUI.*;
 
 import javax.swing.*;
@@ -73,6 +73,7 @@ public class MainGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 books = DataPersistence.INSTANCE.getBooks(loadField.getText());
+                
                 bookTable();
             }
         });
@@ -201,6 +202,7 @@ public class MainGUI {
                 });
 
 
+
             }
         });
 
@@ -218,16 +220,29 @@ public class MainGUI {
                     long startTime = System.nanoTime();
                     if (algorithmType.equals("Merge Sort")){
                         MergeSort test = new MergeSort();
-                        test.mergeSort(books);
+                        if (authorRadioButton.getText().equals("Author")) {
+                            test.mergeSortAuthor(books);
+                        } else {
+                            test.mergeSort(books);
+                        }
+
+
+
                     }
                     else if (algorithmType.equals("Bubble Sort")) {
                         BubbleSort sort = new BubbleSort();
-                        sort.bubbleSort(books);
+
+                        if (BookButton.getText().equals("Book")) {
+                            sort.bubbleSort(books);
+                        } else {
+                            sort.bubbleSortAuthor(books);
+                        }
+
                     }
 
                     else if (algorithmType.equals("Radix Sort")) {
-                        RadixSort potato = new RadixSort();
-                        books = potato.initRadixSort(books,true);
+                       //  RadixSort potato = new RadixSort();
+                       // books = potato.initRadixSort(books,true);
 
                     }
 

@@ -18,6 +18,7 @@ public class AddBookWindow {
     private JButton backButton;
 
 
+    //
     public AddBookWindow() {
         submitButton.addActionListener(new ActionListener() {
             @Override
@@ -30,10 +31,10 @@ public class AddBookWindow {
 
                 if (titleFieldEntry.getText().isEmpty() || authorFieldEntry.getText().isEmpty() || pubYearFieldEntry.getText().isEmpty() ||
                         pubFieldEntry.getText().isEmpty() || subjectFieldEntry.getText().isEmpty()) {
-                    JOptionPane.showInternalMessageDialog(null, "Missing Fields","Error!",1);
+                    JOptionPane.showInternalMessageDialog(null, "Missing Fields", "Error!", 1);
                 } else {
 
-                    Book add = new Book("69",titleFieldEntry.getText(), authorFieldEntry.getText(), pubYearFieldEntry.getText(), pubFieldEntry.getText(),subjectFieldEntry.getText());
+                    Book add = new Book("69", titleFieldEntry.getText(), authorFieldEntry.getText(), pubYearFieldEntry.getText(), pubFieldEntry.getText(), subjectFieldEntry.getText());
 
                     try {
 
@@ -64,25 +65,20 @@ public class AddBookWindow {
                     }
 
 
-
-
-
-
                 }
             }
         });
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                String book_title = titleFieldEntry.getText();
+                System.out.println(book_title);
             }
         });
     }
 
 
-
-
-    public static void bookWindow(){
+    public static void bookWindow() {
         JFrame frame = new JFrame("GUIBOI");
         frame.setContentPane(new AddBookWindow().addBookPanel);
         frame.pack();
@@ -90,8 +86,4 @@ public class AddBookWindow {
         frame.setVisible(true);
 
     }
-
-
 }
-
-

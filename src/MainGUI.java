@@ -31,7 +31,7 @@ public class MainGUI {
     private JComboBox sortCombobox;
     private JLabel RuntimeLabel;
     private JButton pubAddNewEntryButton;
-    private JButton NUKEButton;
+    private JButton closeButton;
     private JButton refreshButton;
     private JTabbedPane tabbedPane;
     private JPanel runTimePanel;
@@ -102,7 +102,6 @@ public class MainGUI {
             public void actionPerformed(ActionEvent e) {
                 AddBookWindow window = new AddBookWindow();
                 window.bookWindow();
-                
             }
         });
 
@@ -113,8 +112,6 @@ public class MainGUI {
             public void actionPerformed(ActionEvent e) {
                 AddAuthorWindow window = new AddAuthorWindow();
                 window.bookWindow();
-                
-            
             }
         });
 
@@ -186,9 +183,9 @@ public class MainGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                var potato = searchField.getText().toLowerCase();
+                var searchInput = searchField.getText().toLowerCase();
 
-                var filteredBooks = SearchAlgo.INSTANCE.searchTitle(potato,books);
+                var filteredBooks = SearchAlgo.INSTANCE.searchTitle(searchInput,books);
 
                 DefaultTableModel bookModel = (DefaultTableModel) InfoTable.getModel();
                 bookModel.setRowCount(0);
@@ -203,9 +200,6 @@ public class MainGUI {
                     };
                     bookModel.addRow(bookRow);
                 });
-
-
-
             }
         });
 
@@ -220,38 +214,46 @@ public class MainGUI {
                     // Execute algorithm & record timings
                     String algorithmType = sortCombobox.getSelectedItem().toString();
 
+                    // Start timing
                     long startTime = System.nanoTime();
+
+                    // Merge Sort algorithm
                     if (algorithmType.equals("Merge Sort")){
-                        MergeSort test = new MergeSort();
+                        
+                        MergeSort algorithm = new MergeSort();
 
                         if (authorRadioButton.isSelected()) {
-                            test.authMergeSort(books);
+                            algorithm.authMergeSort(books);
                         } else {
-                            test.mergeSort(books);
+                            algorithm.mergeSort(books);
                         }
-
                     }
+                    
+                    // Bubble Sort algorithm
                     else if (algorithmType.equals("Bubble Sort")) {
-
-                        BubbleSort sort = new BubbleSort();
+                        
+                        BubbleSort algorithm = new BubbleSort();
 
                         if (BookButton.isSelected()) {
-                            sort.bubbleSort(books);
+                            algorithm.bubbleSort(books);
                         } else {
-                            sort.bubbleSortAuthor(books);
+                            algorithm.bubbleSortAuthor(books);
                         }
                     }
+                    
+                    // Radix Sort algorithm
                     else if (algorithmType.equals("Radix Sort")) {
-                        RadixSort potato = new RadixSort();
+                        
+                        RadixSort algorithm = new RadixSort();
 
                         if (authorRadioButton.isSelected()) {
-                            books = potato.initRadixSort(books,false);
+                            books = algorithm.initRadixSort(books,false);
                         } else {
-                            books = potato.initRadixSort(books,true);
+                            books = algorithm.initRadixSort(books,true);
                         }
-
                     }
 
+                    // Stop timing
                     long endTime = System.nanoTime();
 
                     // Calculate algorithm timings and display results
@@ -266,13 +268,12 @@ public class MainGUI {
         });
 
         // Terminate code
-        NUKEButton.addActionListener(new ActionListener() {
+        closeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
             }
         });
-
     }
 
     // Create infotables for book, author and publisher with respective columns

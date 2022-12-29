@@ -1,0 +1,217 @@
+Index: src/KotlinAlgo/SearchAlgo.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package KotlinAlgo\r\nimport KotlinClass.Book\r\nimport KotlinClass.Author\r\nimport KotlinClass.Pub\r\n\r\nobject SearchAlgo {\r\n\r\n    fun searchTitle(search: String,books: List<Book>): List<Book>{\r\n        var die = books.filter { book -> book.title.lowercase().contains(search.lowercase()) }\r\n        return die\r\n    }\r\n\r\n    fun searchAuthor(search: String,books: List<Book>): List<Book>{\r\n        var die = books.filter { book -> book.authors.lowercase().contains(search.lowercase()) }\r\n        return die\r\n    }\r\n\r\n    fun searchPub(search: String,books: List<Book>): List<Book>{\r\n        var die = books.filter { book -> book.publisher.lowercase().contains(search.lowercase()) }\r\n        return die\r\n    }\r\n\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/KotlinAlgo/SearchAlgo.kt b/src/KotlinAlgo/SearchAlgo.kt
+--- a/src/KotlinAlgo/SearchAlgo.kt	(revision 2b1fc0c6deae241e1cc60e55f331b86b05ca1da6)
++++ b/src/KotlinAlgo/SearchAlgo.kt	(date 1672330646684)
+@@ -15,8 +15,15 @@
+         return die
+     }
+ 
+-    fun searchPub(search: String,books: List<Book>): List<Book>{
+-        var die = books.filter { book -> book.publisher.lowercase().contains(search.lowercase()) }
++    fun searchAuthorLast(search: String, authors: List<Author> ): List<Author>{
++        var die = authors.filter { author -> author.lastName.lowercase().contains(search.lowercase()) }
++        return die
++    }
++
++
++
++    fun searchPub(search: String,pubs: List<Pub>): List<Pub>{
++        var die = pubs.filter { pub -> pub.pubName.lowercase().contains(search.lowercase()) }
+         return die
+     }
+ 
+Index: src/MainGUI.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import KotlinAlgo.BubbleSort;\r\nimport KotlinAlgo.MergeSort;\r\nimport KotlinAlgo.SearchAlgo;\r\nimport KotlinClass.Author;\r\nimport KotlinClass.Book;\r\nimport KotlinClass.DataPersistence;\r\nimport KotlinClass.Pub;\r\n//import Scala.RadixSort;\r\nimport SubGUI.*;\r\n\r\nimport javax.swing.*;\r\nimport javax.swing.table.DefaultTableModel;\r\nimport java.awt.event.ActionEvent;\r\nimport java.awt.event.ActionListener;\r\nimport java.util.List;\r\nimport javax.swing.JButton;\r\n\r\n\r\npublic class MainGUI {\r\n    private JPanel MainPanel;\r\n    private JTable InfoTable;\r\n    private JScrollPane scrollPane;\r\n    private JButton loadButton;\r\n    private JButton searchButton;\r\n    private JButton sortButton;\r\n    private JTextField searchField;\r\n    private JRadioButton BookButton;\r\n    private JRadioButton authorRadioButton;\r\n    private JTextField loadField;\r\n    private JTextField timeTextField;\r\n    private JComboBox sortCombobox;\r\n    private JLabel RuntimeLabel;\r\n    private JButton pubAddNewEntryButton;\r\n    private JButton NUKEButton;\r\n    private JButton refreshButton;\r\n    private JTabbedPane tabbedPane;\r\n    private JPanel runTimePanel;\r\n    private JPanel controlPanel;\r\n    private JButton addNewEntryButton;\r\n    private JButton deleteButton;\r\n    private JButton editButton;\r\n    private JTable authInfoTable;\r\n    private JButton authExitButton;\r\n    private JButton authLoadButton;\r\n    private JButton authSearchButton;\r\n    private JTextField authLoad;\r\n    private JTextField authSearchEntry;\r\n    private JButton authAddNewEntryButton;\r\n    private JButton authEditButton;\r\n    private JButton authDeleteButton;\r\n    private JScrollPane authScrollPane;\r\n    private JPanel bookPanel;\r\n    private JPanel authControlPanel;\r\n    private JTable pubInfoTable;\r\n    private JButton pubLoadButton;\r\n    private JButton pubSearchButton;\r\n    private JTextField pubLoad;\r\n    private JTextField pubSearchEntry;\r\n    private JButton pubEditButton;\r\n    private JButton pubDeleteButton;\r\n    private JPanel authPanel;\r\n    private JPanel pubPanel;\r\n    private JScrollPane pubScrollPane;\r\n    private JButton pubExitButton;\r\n    private JPanel pubControlPanel;\r\n    private List<Book> books;\r\n    private List<Author> authors;\r\n    private List<Pub> pubs;\r\n\r\n    public MainGUI() {\r\n        // Load books by retrieving path from text field for use in getBooks function\r\n        loadButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                books = DataPersistence.INSTANCE.getBooks(loadField.getText());\r\n                \r\n                bookTable();\r\n            }\r\n        });\r\n\r\n        // Load authors by retrieving path from text field for use in getAuthors function\r\n        authLoadButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                authors = DataPersistence.INSTANCE.getAuthors(authLoad.getText());\r\n                authorTable();\r\n            }\r\n        });\r\n\r\n        // Load publishers by retrieving path from text field for use in getPublishers function\r\n        pubLoadButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                pubs = DataPersistence.INSTANCE.getPublishers(pubLoad.getText());\r\n                publisherTable();\r\n            }\r\n        });\r\n\r\n        // Add book\r\n        addNewEntryButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                AddBookWindow window = new AddBookWindow();\r\n                window.bookWindow();\r\n\r\n            }\r\n        });\r\n\r\n        // Add author\r\n        authAddNewEntryButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                AddAuthorWindow window = new AddAuthorWindow();\r\n                window.bookWindow();\r\n            }\r\n        });\r\n\r\n        // Add publisher\r\n        pubAddNewEntryButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                AddPubWindow window = new AddPubWindow();\r\n                window.bookWindow();\r\n            }\r\n        });\r\n\r\n        // Delete book\r\n        deleteButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                DeleteBookWindow window = new DeleteBookWindow();\r\n                window.bookWindow();\r\n            }\r\n        });\r\n\r\n        // Delete author\r\n        authDeleteButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                DeleteAuthorWindow window = new DeleteAuthorWindow();\r\n                window.bookWindow();\r\n            }\r\n        });\r\n\r\n        // Delete publisher\r\n        pubDeleteButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                DeletePubWindow window = new DeletePubWindow();\r\n                window.bookWindow();\r\n            }\r\n        });\r\n\r\n        // Edit book\r\n        editButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                EditBookWindow window = new EditBookWindow();\r\n                window.bookWindow();\r\n            }\r\n        });\r\n\r\n        // Edit author\r\n        authEditButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                EditAuthorWindow window = new EditAuthorWindow();\r\n                window.bookWindow();\r\n            }\r\n        });\r\n\r\n        // Edit publisher\r\n        pubEditButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                EditPubWindow window = new EditPubWindow();\r\n                window.bookWindow();\r\n            }\r\n        });\r\n\r\n        // Search button\r\n        searchButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n\r\n                var potato = searchField.getText().toLowerCase();\r\n\r\n                var filteredBooks = SearchAlgo.INSTANCE.searchTitle(potato,books);\r\n\r\n                DefaultTableModel bookModel = (DefaultTableModel) InfoTable.getModel();\r\n                bookModel.setRowCount(0);\r\n                filteredBooks.forEach(book -> {\r\n                    Object[] bookRow = new Object[]{\r\n                            book.getId(),\r\n                            book.getTitle(),\r\n                            book.getAuthors(),\r\n                            book.getYearOfPublication(),\r\n                            book.getPublisher(),\r\n                            book.getSubject()\r\n                    };\r\n                    bookModel.addRow(bookRow);\r\n                });\r\n\r\n\r\n\r\n            }\r\n        });\r\n\r\n\r\n        // Execute selected sort algorithm\r\n        sortButton.addActionListener(new ActionListener() {\r\n\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                if(e.getSource() == sortButton){\r\n\r\n                    // Execute algorithm & record timings\r\n                    String algorithmType = sortCombobox.getSelectedItem().toString();\r\n\r\n                    long startTime = System.nanoTime();\r\n                    if (algorithmType.equals(\"Merge Sort\")){\r\n                        MergeSort test = new MergeSort();\r\n                        if (authorRadioButton.getText().equals(\"Author\")) {\r\n                            test.mergeSortAuthor(books);\r\n                        } else {\r\n                            test.mergeSort(books);\r\n                        }\r\n\r\n\r\n\r\n                    }\r\n                    else if (algorithmType.equals(\"Bubble Sort\")) {\r\n                        BubbleSort sort = new BubbleSort();\r\n\r\n                        if (BookButton.getText().equals(\"Book\")) {\r\n                            sort.bubbleSort(books);\r\n                        } else {\r\n                            sort.bubbleSortAuthor(books);\r\n                        }\r\n\r\n                    }\r\n\r\n                    else if (algorithmType.equals(\"Radix Sort\")) {\r\n                       //  RadixSort potato = new RadixSort();\r\n                       // books = potato.initRadixSort(books,true);\r\n\r\n                    }\r\n\r\n                    long endTime = System.nanoTime();\r\n\r\n                    // Calculate algorithm timings and display results\r\n                    System.out.println(\"That took \" + (endTime - startTime) + \" nanoseconds\");\r\n                    String timings = String.valueOf((endTime - startTime) / 1000);\r\n                    timeTextField.setText(timings + \" milliseconds\");\r\n\r\n                    bookTable();\r\n\r\n                }\r\n            }\r\n        });\r\n\r\n        // Terminate code\r\n        NUKEButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                System.exit(0);\r\n            }\r\n        });\r\n\r\n    }\r\n\r\n    // Create infotables for book, author and publisher with respective columns\r\n    private void createUIComponents() {\r\n        // TODO: place custom component creation code here\r\n        Object[] mainCols = {\"ID\", \"Title\", \"Author\" ,\"Year\", \"Publisher\", \"Subject\"};\r\n        InfoTable = new JTable(new DefaultTableModel(mainCols, 0));\r\n        scrollPane = new JScrollPane(InfoTable);\r\n\r\n        Object[] authCols = {\"ID\", \"First Name\", \"Surname\" };\r\n        authInfoTable = new JTable(new DefaultTableModel(authCols, 0));\r\n        authScrollPane = new JScrollPane(authInfoTable);\r\n\r\n        Object[] pubCols = {\"ID\", \"Publisher Name\"};\r\n        pubInfoTable = new JTable(new DefaultTableModel(pubCols, 0));\r\n        pubScrollPane = new JScrollPane(pubInfoTable);\r\n\r\n    }\r\n\r\n    //Create main frame\r\n    public static void main(String[] args) {\r\n        JFrame frame = new JFrame(\"GUIBOI\");\r\n        frame.setContentPane(new MainGUI().MainPanel);\r\n        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);\r\n        frame.pack();\r\n        frame.setLocationRelativeTo(null);\r\n        frame.setVisible(true);\r\n    }\r\n\r\n    // Refresh and load infotable (to be used after sort algorithm)\r\n    public void bookTable() {\r\n        DefaultTableModel bookModel = (DefaultTableModel) InfoTable.getModel();\r\n        bookModel.setRowCount(0);\r\n        books.forEach(book -> {\r\n            Object[] bookRow = new Object[]{\r\n                    book.getId(),\r\n                    book.getTitle(),\r\n                    book.getAuthors(),\r\n                    book.getYearOfPublication(),\r\n                    book.getPublisher(),\r\n                    book.getSubject()\r\n            };\r\n            bookModel.addRow(bookRow);\r\n        });\r\n    }\r\n\r\n    // Refresh and load AuthInfotable (to be used after sort algorithm)\r\n    public void authorTable(){\r\n        DefaultTableModel authModel = (DefaultTableModel)authInfoTable.getModel();\r\n        authModel.setRowCount(0);\r\n        authors.forEach(author -> {\r\n            Object[] authRow = new Object[]{\r\n                    author.getId(),\r\n                    author.getFirstName(),\r\n                    author.getLastName()\r\n            };\r\n            authModel.addRow(authRow);\r\n        });\r\n    }\r\n\r\n    // Refresh and load PubInfotable (to be used after sort algorithm)\r\n    public void publisherTable(){\r\n        DefaultTableModel pubModel = (DefaultTableModel)pubInfoTable.getModel();\r\n        pubModel.setRowCount(0);\r\n        pubs.forEach(pub -> {\r\n            Object[] pubRow = new Object[]{\r\n                    pub.getId(),\r\n                    pub.getPubName()\r\n            };\r\n            pubModel.addRow(pubRow);\r\n        });\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/MainGUI.java b/src/MainGUI.java
+--- a/src/MainGUI.java	(revision 2b1fc0c6deae241e1cc60e55f331b86b05ca1da6)
++++ b/src/MainGUI.java	(date 1672332241585)
+@@ -5,7 +5,7 @@
+ import KotlinClass.Book;
+ import KotlinClass.DataPersistence;
+ import KotlinClass.Pub;
+-//import Scala.RadixSort;
++import Scala.RadixSort;
+ import SubGUI.*;
+ 
+ import javax.swing.*;
+@@ -220,11 +220,12 @@
+                     long startTime = System.nanoTime();
+                     if (algorithmType.equals("Merge Sort")){
+                         MergeSort test = new MergeSort();
+-                        if (authorRadioButton.getText().equals("Author")) {
+-                            test.mergeSortAuthor(books);
+-                        } else {
+-                            test.mergeSort(books);
+-                        }
++//                        if (authorRadioButton.getText().equals("Author")) {
++////                            test.mergeSortAuthor(books);
++////                        } else {
++////                            test.mergeSort(books);
++////                        }
++                        test.mergeSortAuthor(books);
+ 
+ 
+ 
+@@ -241,8 +242,8 @@
+                     }
+ 
+                     else if (algorithmType.equals("Radix Sort")) {
+-                       //  RadixSort potato = new RadixSort();
+-                       // books = potato.initRadixSort(books,true);
++                         RadixSort potato = new RadixSort();
++                        books = potato.initRadixSort(books,false);
+ 
+                     }
+ 
+@@ -267,6 +268,26 @@
+             }
+         });
+ 
++        authSearchButton.addActionListener(new ActionListener() {
++            @Override
++            public void actionPerformed(ActionEvent e) {
++                var potato = searchField.getText().toLowerCase();
++
++                var filteredAuthorSurname= SearchAlgo.INSTANCE.searchAuthorLast(potato,authors);
++
++                DefaultTableModel authModel = (DefaultTableModel) authInfoTable.getModel();
++                authModel.setRowCount(0);
++                filteredAuthorSurname.forEach(author -> {
++                    Object[] authRow = new Object[]{
++                            author.getId(),
++                            author.getFirstName(),
++                            author.getLastName()
++                    };
++                    authModel.addRow(authRow);
++                });
++
++            }
++        });
+     }
+ 
+     // Create infotables for book, author and publisher with respective columns
+Index: src/KotlinAlgo/BubbleSort.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package KotlinAlgo\r\nimport KotlinClass.Book\r\nimport kotlin.collections.MutableList\r\nclass BubbleSort {\r\n\r\n    fun bubbleSort(list: MutableList<Book>)  {\r\n\r\n        for (j in 0 until list.size - 1) {\r\n            for (i in 0 until list.size - 1 - j) {\r\n                //if the mutable list[i] compares list[i+1] if it is bigger alphabetically based on Book class titles\r\n                if (list[i].title  > (list[i + 1].title) ) {\r\n                    // swap the mutable list[i] and list[i+1]\r\n                    val temp = list[i]\r\n                    list[i]= list[i + 1]\r\n                    list[i + 1]= temp\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    fun bubbleSortAuthor(list: MutableList<Book>)  {\r\n\r\n        for (j in 0 until list.size - 1) {\r\n            for (i in 0 until list.size - 1 - j) {\r\n                //if the mutable list[i] compares list[i+1] if it is bigger alphabetically based on Book authors\r\n                if (list[i].authors > (list[i + 1].authors) ) {\r\n                    // swap the mutable list[i] and list[i+1]\r\n                    val temp = list[i]\r\n                    list[i]= list[i + 1]\r\n                    list[i + 1]= temp\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/KotlinAlgo/BubbleSort.kt b/src/KotlinAlgo/BubbleSort.kt
+--- a/src/KotlinAlgo/BubbleSort.kt	(revision 2b1fc0c6deae241e1cc60e55f331b86b05ca1da6)
++++ b/src/KotlinAlgo/BubbleSort.kt	(date 1672330646716)
+@@ -17,7 +17,7 @@
+             }
+         }
+     }
+-
++    
+     fun bubbleSortAuthor(list: MutableList<Book>)  {
+ 
+         for (j in 0 until list.size - 1) {
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"fd832a2c-f1f2-4932-9b5d-a82797f103df\" name=\"Changes\" comment=\"merge and bubble done\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_02_AM__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_02_AM__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_12_2022_20_14__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_12_2022_20_14__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/MainGUI.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/MainGUI.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"CodeStyleSettingsInfer\">\r\n    <option name=\"done\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Kotlin Class\" />\r\n        <option value=\"Scala Object\" />\r\n        <option value=\"Package Object\" />\r\n        <option value=\"Class\" />\r\n        <option value=\"Kotlin Object\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectCodeStyleSettingsMigration\">\r\n    <option name=\"version\" value=\"2\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2IVBuvUr3qLGaQ8AyzF29KfGn6w\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;165&quot;,\r\n    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;363&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/lenovo/Downloads/IntellijScalaToKotlin-0.1.1.zip&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\lenovo\\IdeaProjects\\COMP1815_Trial\\resources\" />\r\n    </key>\r\n    <key name=\"MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY\">\r\n      <recent name=\"SortingAlgo\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.MainGUI (4)\">\r\n    <configuration name=\"MainGUI (1)\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"MainGUI\" />\r\n      <module name=\"COMP1815_Trial\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"MainGUI (2)\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"MainGUI\" />\r\n      <module name=\"COMP1815_Trial\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"MainGUI (3)\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"MainGUI\" />\r\n      <module name=\"COMP1815_Trial\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"MainGUI (4)\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"MainGUI\" />\r\n      <module name=\"COMP1815_Trial\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"MainGUI\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"MainGUI\" />\r\n      <module name=\"COMP1815_Trial\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.MainGUI (4)\" />\r\n        <item itemvalue=\"Application.MainGUI (3)\" />\r\n        <item itemvalue=\"Application.MainGUI\" />\r\n        <item itemvalue=\"Application.MainGUI (2)\" />\r\n        <item itemvalue=\"Application.MainGUI (1)\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"ScalaProjectSettings\">\r\n    <option name=\"scala3DisclaimerShown\" value=\"true\" />\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"fd832a2c-f1f2-4932-9b5d-a82797f103df\" name=\"Changes\" comment=\"\" />\r\n      <created>1670257099503</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1670257099503</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"New GUI. Still need the buttons to work\">\r\n      <created>1670283685948</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670283685948</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"New GUI. Still need the buttons to work\">\r\n      <created>1670283789206</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670283789206</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"New GUI. Still need the buttons to work\">\r\n      <created>1670284893577</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670284893577</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"New GUI. Still need the buttons to work\">\r\n      <created>1670285096060</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670285096060</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"New GUI. Still need the buttons to work\">\r\n      <created>1670285342054</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670285342054</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Added More classes. Still need to work on GUI\">\r\n      <created>1670285400162</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670285400162</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Added More classes. Still need to work on GUI\">\r\n      <created>1670285447834</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670285447834</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Added kotlin Classes\">\r\n      <created>1670798393153</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670798393153</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Added kotlin Classes\">\r\n      <created>1670798409473</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670798409473</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Kotlin Data Persistence done\">\r\n      <created>1670876287716</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670876287716</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Kotlin Data Persistence done\">\r\n      <created>1670876355541</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670876355541</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"Deleted Java Class\">\r\n      <created>1670877829201</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670877829201</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"Deleted Java Class\">\r\n      <created>1670877847729</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670877847729</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"Deleted test classes from the Scala lab\">\r\n      <created>1670878816810</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670878816810</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"Updated GUI with more components\">\r\n      <created>1671064754028</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671064754028</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"Updated GUI with more components\">\r\n      <created>1671064786042</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671064786042</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"Updated GUI with more components\">\r\n      <created>1671064905572</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671064905572</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00018\" summary=\"Updated GUI with more components. All load buttons work\">\r\n      <created>1671463724875</created>\r\n      <option name=\"number\" value=\"00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671463724875</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00019\" summary=\"Added timings to MergeSort and results to timeTextField\">\r\n      <created>1671721556451</created>\r\n      <option name=\"number\" value=\"00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671721556451</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00020\" summary=\"merge and bubble done\">\r\n      <created>1671742051551</created>\r\n      <option name=\"number\" value=\"00020\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671742051551</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"21\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.History.Properties\">\r\n    <option name=\"COLUMN_ID_ORDER\">\r\n      <list>\r\n        <option value=\"Default.Root\" />\r\n        <option value=\"Default.Author\" />\r\n        <option value=\"Default.Date\" />\r\n        <option value=\"Default.Subject\" />\r\n        <option value=\"Space.CommitStatus\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"042a86f2-6700-48a2-bc4a-4de7ad25308f\">\r\n          <value>\r\n            <State>\r\n              <option name=\"SHOW_ONLY_AFFECTED_CHANGES\" value=\"true\" />\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"HEAD\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                  <entry key=\"roots\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"$PROJECT_DIR$\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"OPEN_GENERIC_TABS\">\r\n      <map>\r\n        <entry key=\"042a86f2-6700-48a2-bc4a-4de7ad25308f\" value=\"TOOL_WINDOW\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"New GUI. Still need the buttons to work\" />\r\n    <MESSAGE value=\"Added More classes. Still need to work on GUI\" />\r\n    <MESSAGE value=\"Added kotlin Classes\" />\r\n    <MESSAGE value=\"Kotlin Data Persistence done\" />\r\n    <MESSAGE value=\"Deleted Java Class\" />\r\n    <MESSAGE value=\"Deleted test classes from the Scala lab\" />\r\n    <MESSAGE value=\"Updated GUI with more components\" />\r\n    <MESSAGE value=\"Updated GUI with more components. All load buttons work\" />\r\n    <MESSAGE value=\"Added timings to MergeSort and results to timeTextField\" />\r\n    <MESSAGE value=\"merge and bubble done\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"merge and bubble done\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 2b1fc0c6deae241e1cc60e55f331b86b05ca1da6)
++++ b/.idea/workspace.xml	(date 1672332197234)
+@@ -5,9 +5,14 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="merge and bubble done">
++      <change afterPath="$PROJECT_DIR$/.idea/libraries/scala_sdk_3_2_1.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_02_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_02_AM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_12_2022_13_38__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_12_2022_13_38__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_12_2022_20_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_12_2022_20_14__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/COMP1815_Trial.iml" beforeDir="false" afterPath="$PROJECT_DIR$/COMP1815_Trial.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/KotlinAlgo/BubbleSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinAlgo/BubbleSort.kt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/KotlinAlgo/SearchAlgo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinAlgo/SearchAlgo.kt" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -31,6 +36,9 @@
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="HighlightingSettingsPerFile">
++    <setting file="file://$PROJECT_DIR$/src/MainGUI.java" root0="FORCE_HIGHLIGHTING" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+Index: COMP1815_Trial.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n    <orderEntry type=\"library\" name=\"KotlinJavaRuntime\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"scala-sdk-3.1.3\" level=\"project\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/COMP1815_Trial.iml b/COMP1815_Trial.iml
+--- a/COMP1815_Trial.iml	(revision 2b1fc0c6deae241e1cc60e55f331b86b05ca1da6)
++++ b/COMP1815_Trial.iml	(date 1672330652362)
+@@ -9,5 +9,6 @@
+     <orderEntry type="sourceFolder" forTests="false" />
+     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+     <orderEntry type="library" name="scala-sdk-3.1.3" level="project" />
++    <orderEntry type="library" name="scala-sdk-3.2.1" level="project" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: .idea/libraries/scala_sdk_3_2_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/scala_sdk_3_2_1.xml b/.idea/libraries/scala_sdk_3_2_1.xml
+new file mode 100644
+--- /dev/null	(date 1672330652377)
++++ b/.idea/libraries/scala_sdk_3_2_1.xml	(date 1672330652377)
+@@ -0,0 +1,31 @@
++<component name="libraryTable">
++  <library name="scala-sdk-3.2.1" type="Scala">
++    <properties>
++      <language-level>Scala_3_2</language-level>
++      <compiler-classpath>
++        <root url="file://$USER_HOME$/.ivy2/cache/org.scala-lang/scala3-compiler_3/jars/scala3-compiler_3-3.2.1.jar" />
++        <root url="file://$USER_HOME$/.ivy2/cache/org.scala-lang/scala3-interfaces/jars/scala3-interfaces-3.2.1.jar" />
++        <root url="file://$USER_HOME$/.ivy2/cache/org.scala-lang/scala3-library_3/jars/scala3-library_3-3.2.1.jar" />
++        <root url="file://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.13.10.jar" />
++        <root url="file://$USER_HOME$/.ivy2/cache/org.scala-lang/tasty-core_3/jars/tasty-core_3-3.2.1.jar" />
++        <root url="file://$USER_HOME$/.ivy2/cache/org.scala-lang.modules/scala-asm/bundles/scala-asm-9.3.0-scala-1.jar" />
++        <root url="file://$USER_HOME$/.ivy2/cache/org.scala-sbt/compiler-interface/jars/compiler-interface-1.3.5.jar" />
++        <root url="file://$USER_HOME$/.ivy2/cache/com.google.protobuf/protobuf-java/bundles/protobuf-java-3.7.0.jar" />
++        <root url="file://$USER_HOME$/.ivy2/cache/org.scala-sbt/util-interface/jars/util-interface-1.3.0.jar" />
++        <root url="file://$USER_HOME$/.ivy2/cache/org.jline/jline-reader/jars/jline-reader-3.19.0.jar" />
++        <root url="file://$USER_HOME$/.ivy2/cache/org.jline/jline-terminal/jars/jline-terminal-3.19.0.jar" />
++        <root url="file://$USER_HOME$/.ivy2/cache/org.jline/jline-terminal-jna/jars/jline-terminal-jna-3.19.0.jar" />
++        <root url="file://$USER_HOME$/.ivy2/cache/net.java.dev.jna/jna/jars/jna-5.3.1.jar" />
++      </compiler-classpath>
++    </properties>
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala3-library_3/jars/scala3-library_3-3.2.1.jar!/" />
++      <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.13.10.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala3-library_3/srcs/scala3-library_3-3.2.1-sources.jar!/" />
++      <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.13.10-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file

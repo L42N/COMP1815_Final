@@ -15,8 +15,15 @@ object SearchAlgo {
         return die
     }
 
-    fun searchPub(search: String,books: List<Book>): List<Book>{
-        var die = books.filter { book -> book.publisher.lowercase().contains(search.lowercase()) }
+    fun searchAuthorLast(search: String, authors: List<Author> ): List<Author>{
+        var die = authors.filter { author -> author.lastName.lowercase().contains(search.lowercase()) }
+        return die
+    }
+
+
+
+    fun searchPub(search: String,pubs: List<Pub>): List<Pub>{
+        var die = pubs.filter { pub -> pub.pubName.lowercase().contains(search.lowercase()) }
         return die
     }
 

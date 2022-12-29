@@ -246,10 +246,6 @@ public class MainGUI {
                             books = potato.initRadixSort(books,true);
                         }
 
-
-
-
-
                     }
 
                     long endTime = System.nanoTime();

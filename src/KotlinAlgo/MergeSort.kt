@@ -7,9 +7,9 @@ import kotlin.collections.MutableList
 class MergeSort    // Constructor
 {
 
-fun initMergeSort(){
-
-}
+//fun initMergeSort(){
+//
+//}
 
     fun mergeSort(whole: MutableList<Book>): MutableList<Book> {
 
@@ -85,8 +85,7 @@ fun initMergeSort(){
         }
     }
 
-
-    fun mergeSortAuthor(whole: MutableList<Book>): MutableList<Book> {
+    fun authMergeSort(whole: MutableList<Book>): MutableList<Book> {
 
         // Create two MutableList object to split the information
         //into left and rights, this is how the merge sort algorithm works,
@@ -113,17 +112,17 @@ fun initMergeSort(){
             }
 
             // Sort the left and right halves of the MutableList.
-            left = mergeSort(left)
-            right = mergeSort(right)
+            left = authMergeSort(left)
+            right = authMergeSort(right)
 
             // Merge the results back together.
-            mergeResultsAuthor(left, right, whole)
+            authMergeResults(left, right, whole)
         }
         return whole
     }
 
 
-    private fun mergeResultsAuthor(left: MutableList<Book>, right: MutableList<Book>, whole: MutableList<Book>) {
+    private fun authMergeResults(left: MutableList<Book>, right: MutableList<Book>, whole: MutableList<Book>) {
         var leftIndex = 0
         var rightIndex = 0
         var wholeIndex = 0
@@ -159,4 +158,9 @@ fun initMergeSort(){
             wholeIndex++
         }
     }
+
+
+
+
+
 }

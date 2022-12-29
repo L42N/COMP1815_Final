@@ -17,7 +17,7 @@ class BubbleSort {
             }
         }
     }
-
+    
     fun bubbleSortAuthor(list: MutableList<Book>)  {
 
         for (j in 0 until list.size - 1) {

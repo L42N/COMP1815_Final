@@ -6,22 +6,13 @@ import KotlinClass.Book;
 import KotlinClass.DataPersistence;
 import KotlinClass.Pub;
 import Scala.RadixSort;
-import SubGUI.AddAuthorWindow;
-import SubGUI.AddBookWindow;
-import SubGUI.DeleteBookWindow;
-import SubGUI.EditBookWindow;
+import SubGUI.*;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.LineNumberInputStream;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
-import java.util.stream.Collectors;
 import javax.swing.JButton;
 
 
@@ -54,9 +45,9 @@ public class MainGUI {
     private JButton authSearchButton;
     private JTextField authLoad;
     private JTextField authSearchEntry;
-    private JButton authAdd;
-    private JButton authEdit;
-    private JButton authDelete;
+    private JButton authAddNewEntryButton;
+    private JButton authEditButton;
+    private JButton authDeleteButton;
     private JScrollPane authScrollPane;
     private JPanel bookPanel;
     private JPanel authControlPanel;
@@ -104,6 +95,7 @@ public class MainGUI {
             }
         });
 
+        // Add book
         addNewEntryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -112,6 +104,17 @@ public class MainGUI {
 
             }
         });
+
+        // Add author
+        authAddNewEntryButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AddAuthorWindow window = new AddAuthorWindow();
+                window.bookWindow();
+            }
+        });
+
+        // Delete book
         deleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -119,6 +122,17 @@ public class MainGUI {
                 window.bookWindow();
             }
         });
+
+        // Delete author
+        authDeleteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DeleteAuthorWindow window = new DeleteAuthorWindow();
+                window.bookWindow();
+            }
+        });
+
+        // Edit book
         editButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -127,6 +141,15 @@ public class MainGUI {
             }
         });
 
+        // Edit author
+        authEditButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                EditAuthorWindow window = new EditAuthorWindow();
+                window.bookWindow();
+            }
+        });
+        
         searchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

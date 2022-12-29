@@ -7,6 +7,7 @@ public class AddAuthorWindow {
     private JButton submitButton;
     private JTextField snField;
     private JPanel authorAddPanel;
+    private JButton backButton;
 
     public static  void main(String[] args){
         bookWindow();

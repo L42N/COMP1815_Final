@@ -4,20 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Deleted unnecessary stuff">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/scala_sdk_3_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_02_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_02_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_12_2022_13_38__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_12_2022_13_38__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_12_2022_20_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_12_2022_20_14__Changes_.xml" afterDir="false" />
+    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Add, edit and delete windows for book tab added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/COMP1815_Trial.iml" beforeDir="false" afterPath="$PROJECT_DIR$/COMP1815_Trial.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeleteBookWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/DeleteBookWindow.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeleteBookWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/DeleteBookWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeleteAuthorWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/DeleteAuthorWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeleteAuthorWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/DeleteAuthorWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditAuthorWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditAuthorWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditAuthorWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditAuthorWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +56,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -104,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1670257099503</updated>
       <workItem from="1672317704059" duration="61000" />
-      <workItem from="1672317779390" duration="2495000" />
+      <workItem from="1672317779390" duration="4776000" />
     </task>
     <task id="LOCAL-00001" summary="New GUI. Still need the buttons to work">
       <created>1670283685948</created>
@@ -155,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670285447834</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add, edit and delete windows for book tab added">
+      <created>1672320495356</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1672320495356</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +177,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New GUI. Still need the buttons to work" />
     <MESSAGE value="Added More classes. Still need to work on GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added More classes. Still need to work on GUI" />
+    <MESSAGE value="Add, edit and delete windows for book tab added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add, edit and delete windows for book tab added" />
   </component>
 </project>

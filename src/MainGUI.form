@@ -260,7 +260,7 @@
                     </constraints>
                     <properties/>
                   </component>
-                  <component id="94855" class="javax.swing.JButton" binding="authAdd">
+                  <component id="94855" class="javax.swing.JButton" binding="authAddNewEntryButton">
                     <constraints>
                       <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -268,7 +268,7 @@
                       <text value="Add New Entry"/>
                     </properties>
                   </component>
-                  <component id="2888b" class="javax.swing.JButton" binding="authDelete">
+                  <component id="2888b" class="javax.swing.JButton" binding="authDeleteButton">
                     <constraints>
                       <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -276,7 +276,7 @@
                       <text value="Delete"/>
                     </properties>
                   </component>
-                  <component id="537f2" class="javax.swing.JButton" binding="authEdit">
+                  <component id="537f2" class="javax.swing.JButton" binding="authEditButton">
                     <constraints>
                       <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>

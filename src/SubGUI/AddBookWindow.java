@@ -24,11 +24,6 @@ public class AddBookWindow {
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent b) {
-                titleFieldEntry.getText();
-                authorFieldEntry.getText();
-                pubYearFieldEntry.getText();
-                pubFieldEntry.getText();
-                subjectFieldEntry.getText();
 
                 // Ensures all text fields are filled in, raises error if not
                 if (titleFieldEntry.getText().isEmpty() || authorFieldEntry.getText().isEmpty() || pubYearFieldEntry.getText().isEmpty() ||
@@ -40,7 +35,7 @@ public class AddBookWindow {
 
                     try {
                         // Appends new book variable to book CSV and author to author CSV
-                        BufferedWriter bookWriter = new BufferedWriter(new FileWriter("C:\\Users\\abdill\\IdeaProjects\\COMP1815_Trial\\resources\\Book.csv", true));
+                        BufferedWriter bookWriter = new BufferedWriter(new FileWriter("resources/Book.csv", true));
                         bookWriter.append(add.getId());
                         bookWriter.append(",");
                         bookWriter.append(titleFieldEntry.getText());
@@ -55,12 +50,12 @@ public class AddBookWindow {
                         bookWriter.newLine();
                         bookWriter.close();
 
-                        BufferedWriter authorWriter = new BufferedWriter(new FileWriter("C:\\Users\\abdill\\IdeaProjects\\COMP1815_Trial\\resources\\Author.csv", true));
-                        authorWriter.append(add.getId());
-                        authorWriter.append(",");
-                        authorWriter.append(authorFieldEntry.getText());
-                        authorWriter.newLine();
-                        authorWriter.close();
+//                        BufferedWriter authorWriter = new BufferedWriter(new FileWriter("resources/Book.csv", true));
+//                        authorWriter.append(add.getId());
+//                        authorWriter.append(",");
+//                        authorWriter.append(authorFieldEntry.getText());
+//                        authorWriter.newLine();
+//                        authorWriter.close();
 
                     } catch (Exception e) {
 

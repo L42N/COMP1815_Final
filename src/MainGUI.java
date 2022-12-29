@@ -183,26 +183,88 @@ public class MainGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                var searchInput = searchField.getText().toLowerCase();
+                if (authorRadioButton.isSelected()) {
 
-                var filteredBooks = SearchAlgo.INSTANCE.searchTitle(searchInput,books);
+                    var searchInput = searchField.getText().toLowerCase();
 
-                DefaultTableModel bookModel = (DefaultTableModel) InfoTable.getModel();
-                bookModel.setRowCount(0);
-                filteredBooks.forEach(book -> {
-                    Object[] bookRow = new Object[]{
-                            book.getId(),
-                            book.getTitle(),
-                            book.getAuthors(),
-                            book.getYearOfPublication(),
-                            book.getPublisher(),
-                            book.getSubject()
+                    var filteredBooks = SearchAlgo.INSTANCE.searchAuthor(searchInput,books);
+
+                    DefaultTableModel bookModel = (DefaultTableModel) InfoTable.getModel();
+                    bookModel.setRowCount(0);
+                    filteredBooks.forEach(book -> {
+                        Object[] bookRow = new Object[]{
+                                book.getId(),
+                                book.getTitle(),
+                                book.getAuthors(),
+                                book.getYearOfPublication(),
+                                book.getPublisher(),
+                                book.getSubject()
+                        };
+                        bookModel.addRow(bookRow);
+                    });
+
+                } else {
+
+                    var searchInput = searchField.getText().toLowerCase();
+
+                    var filteredAuthors = SearchAlgo.INSTANCE.searchTitle(searchInput,books);
+
+                    DefaultTableModel bookModel = (DefaultTableModel) InfoTable.getModel();
+                    bookModel.setRowCount(0);
+                    filteredAuthors.forEach(book -> {
+                        Object[] bookRow = new Object[]{
+                                book.getId(),
+                                book.getTitle(),
+                                book.getAuthors(),
+                                book.getYearOfPublication(),
+                                book.getPublisher(),
+                                book.getSubject()
+                        };
+                        bookModel.addRow(bookRow);
+                    });
+                }
+            }
+        });
+
+        authSearchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                var searchInput = authSearchEntry.getText().toLowerCase();
+
+                var filteredAuthorLast = SearchAlgo.INSTANCE.searchAuthorLast(searchInput,authors);
+
+                DefaultTableModel authModel = (DefaultTableModel) authInfoTable.getModel();
+                authModel.setRowCount(0);
+                filteredAuthorLast.forEach(author -> {
+                    Object[] authRow = new Object[]{
+                            author.getId(),
+                            author.getFirstName(),
+                            author.getLastName(),
                     };
-                    bookModel.addRow(bookRow);
+                    authModel.addRow(authRow);
                 });
             }
         });
 
+        pubSearchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                var searchInput = pubSearchEntry.getText().toLowerCase();
+
+                var filteredPub = SearchAlgo.INSTANCE.searchPub(searchInput,pubs);
+
+                DefaultTableModel pubModel = (DefaultTableModel) pubInfoTable.getModel();
+                pubModel.setRowCount(0);
+                filteredPub.forEach(pub -> {
+                    Object[] pubRow = new Object[]{
+                            pub.getId(),
+                            pub.getPubName(),
+                    };
+                    pubModel.addRow(pubRow);
+                });
+            }
+
+        });
 
         // Execute selected sort algorithm
         sortButton.addActionListener(new ActionListener() {
@@ -274,6 +336,8 @@ public class MainGUI {
                 System.exit(0);
             }
         });
+
+
     }
 
     // Create infotables for book, author and publisher with respective columns

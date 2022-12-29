@@ -8,7 +8,7 @@ public class DeleteAuthorWindow {
     private JButton submitButton;
     private JPanel authorDeletePanel;
 
-    public static void bookWindow(){
+    public static void authorWindow(){
         JFrame frame = new JFrame("GUIBOI");
         frame.setContentPane(new DeleteAuthorWindow().authorDeletePanel);
         frame.pack();

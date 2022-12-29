@@ -9,7 +9,7 @@ public class EditAuthorWindow {
     private JTextField textField2;
     private JPanel authorEditPanel;
 
-    public static void bookWindow(){
+    public static void authorWindow(){
         JFrame frame = new JFrame("GUIBOI");
         frame.setContentPane(new EditAuthorWindow().authorEditPanel);
         frame.pack();

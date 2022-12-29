@@ -8,7 +8,7 @@ public class EditPubWindow {
     private JButton submitButton;
     private JPanel authorEditPanel;
 
-    public static void bookWindow(){
+    public static void publisherWindow(){
         JFrame frame = new JFrame("GUIBOI");
         frame.setContentPane(new EditPubWindow().authorEditPanel);
         frame.pack();

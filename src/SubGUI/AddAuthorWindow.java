@@ -13,7 +13,7 @@ public class AddAuthorWindow {
         bookWindow();
     }
 
-    public static void bookWindow(){
+    public static void authorWindow(){
         JFrame frame = new JFrame("GUIBOI");
         frame.setContentPane(new AddAuthorWindow().authorAddPanel);
         frame.pack();

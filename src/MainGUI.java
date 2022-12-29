@@ -30,24 +30,24 @@ public class MainGUI {
     private JTextField timeTextField;
     private JComboBox sortCombobox;
     private JLabel RuntimeLabel;
-    private JButton pubAddNewEntryButton;
+    private JButton addNewPublisherButton;
     private JButton closeButton;
     private JButton refreshButton;
     private JTabbedPane tabbedPane;
     private JPanel runTimePanel;
     private JPanel controlPanel;
-    private JButton addNewEntryButton;
-    private JButton deleteButton;
-    private JButton editButton;
+    private JButton addNewBookButton;
+    private JButton deleteBookButton;
+    private JButton editBookButton;
     private JTable authInfoTable;
     private JButton authExitButton;
     private JButton authLoadButton;
     private JButton authSearchButton;
     private JTextField authLoad;
     private JTextField authSearchEntry;
-    private JButton authAddNewEntryButton;
-    private JButton authEditButton;
-    private JButton authDeleteButton;
+    private JButton addNewAuthorButton;
+    private JButton editAuthorButton;
+    private JButton deleteAuthorButton;
     private JScrollPane authScrollPane;
     private JPanel bookPanel;
     private JPanel authControlPanel;
@@ -56,8 +56,8 @@ public class MainGUI {
     private JButton pubSearchButton;
     private JTextField pubLoad;
     private JTextField pubSearchEntry;
-    private JButton pubEditButton;
-    private JButton pubDeleteButton;
+    private JButton editPublisherButton;
+    private JButton deletePublisherButton;
     private JPanel authPanel;
     private JPanel pubPanel;
     private JScrollPane pubScrollPane;
@@ -97,7 +97,7 @@ public class MainGUI {
         });
 
         // Add book
-        addNewEntryButton.addActionListener(new ActionListener() {
+        addNewBookButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 AddBookWindow window = new AddBookWindow();
@@ -106,26 +106,26 @@ public class MainGUI {
         });
 
         // Add author
-        authAddNewEntryButton.addActionListener(new ActionListener() {
+        addNewAuthorButton.addActionListener(new ActionListener() {
             @Override
             
             public void actionPerformed(ActionEvent e) {
                 AddAuthorWindow window = new AddAuthorWindow();
-                window.bookWindow();
+                window.authorWindow();
             }
         });
 
         // Add publisher
-        pubAddNewEntryButton.addActionListener(new ActionListener() {
+        addNewPublisherButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 AddPubWindow window = new AddPubWindow();
-                window.bookWindow();
+                window.publisherWindow();
             }
         });
 
         // Delete book
-        deleteButton.addActionListener(new ActionListener() {
+        deleteBookButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 DeleteBookWindow window = new DeleteBookWindow();
@@ -134,25 +134,25 @@ public class MainGUI {
         });
 
         // Delete author
-        authDeleteButton.addActionListener(new ActionListener() {
+        deleteAuthorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 DeleteAuthorWindow window = new DeleteAuthorWindow();
-                window.bookWindow();
+                window.authorWindow();
             }
         });
 
         // Delete publisher
-        pubDeleteButton.addActionListener(new ActionListener() {
+        deletePublisherButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 DeletePubWindow window = new DeletePubWindow();
-                window.bookWindow();
+                window.publisherWindow();
             }
         });
 
         // Edit book
-        editButton.addActionListener(new ActionListener() {
+        editBookButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 EditBookWindow window = new EditBookWindow();
@@ -161,23 +161,23 @@ public class MainGUI {
         });
 
         // Edit author
-        authEditButton.addActionListener(new ActionListener() {
+        editAuthorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 EditAuthorWindow window = new EditAuthorWindow();
-                window.bookWindow();
+                window.authorWindow();
             }
         });
 
         // Edit publisher
-        pubEditButton.addActionListener(new ActionListener() {
+        editPublisherButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 EditPubWindow window = new EditPubWindow();
-                window.bookWindow();
+                window.publisherWindow();
             }
         });
-
+        
         // Search button
         searchButton.addActionListener(new ActionListener() {
             @Override
@@ -219,7 +219,7 @@ public class MainGUI {
 
                     // Merge Sort algorithm
                     if (algorithmType.equals("Merge Sort")){
-                        
+
                         MergeSort algorithm = new MergeSort();
 
                         if (authorRadioButton.isSelected()) {
@@ -228,10 +228,10 @@ public class MainGUI {
                             algorithm.mergeSort(books);
                         }
                     }
-                    
+
                     // Bubble Sort algorithm
                     else if (algorithmType.equals("Bubble Sort")) {
-                        
+
                         BubbleSort algorithm = new BubbleSort();
 
                         if (BookButton.isSelected()) {
@@ -240,10 +240,10 @@ public class MainGUI {
                             algorithm.bubbleSortAuthor(books);
                         }
                     }
-                    
+
                     // Radix Sort algorithm
                     else if (algorithmType.equals("Radix Sort")) {
-                        
+
                         RadixSort algorithm = new RadixSort();
 
                         if (authorRadioButton.isSelected()) {

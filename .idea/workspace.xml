@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Add, edit and delete windows for book tab added">
+    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Add, edit and delete windows for author tab added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeleteAuthorWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/DeleteAuthorWindow.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeleteAuthorWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/DeleteAuthorWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditAuthorWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditAuthorWindow.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditAuthorWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditAuthorWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddPubWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddPubWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeletePubWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/DeletePubWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeletePubWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/DeletePubWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditPubWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditPubWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditPubWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditPubWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +63,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
@@ -99,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1670257099503</updated>
       <workItem from="1672317704059" duration="61000" />
-      <workItem from="1672317779390" duration="4776000" />
+      <workItem from="1672317779390" duration="7204000" />
     </task>
     <task id="LOCAL-00001" summary="New GUI. Still need the buttons to work">
       <created>1670283685948</created>
@@ -157,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672320495356</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add, edit and delete windows for author tab added">
+      <created>1672322886418</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1672322886418</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +185,7 @@
     <MESSAGE value="New GUI. Still need the buttons to work" />
     <MESSAGE value="Added More classes. Still need to work on GUI" />
     <MESSAGE value="Add, edit and delete windows for book tab added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add, edit and delete windows for book tab added" />
+    <MESSAGE value="Add, edit and delete windows for author tab added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add, edit and delete windows for author tab added" />
   </component>
 </project>

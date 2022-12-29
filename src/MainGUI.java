@@ -30,7 +30,7 @@ public class MainGUI {
     private JTextField timeTextField;
     private JComboBox sortCombobox;
     private JLabel RuntimeLabel;
-    private JButton pubAddButton;
+    private JButton pubAddNewEntryButton;
     private JButton NUKEButton;
     private JButton refreshButton;
     private JTabbedPane tabbedPane;
@@ -99,7 +99,7 @@ public class MainGUI {
         addNewEntryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                AddBookWindow window = new AddBookWindow(); 
+                AddBookWindow window = new AddBookWindow();
                 window.bookWindow();
 
             }
@@ -110,6 +110,15 @@ public class MainGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 AddAuthorWindow window = new AddAuthorWindow();
+                window.bookWindow();
+            }
+        });
+
+        // Add publisher
+        pubAddNewEntryButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AddPubWindow window = new AddPubWindow();
                 window.bookWindow();
             }
         });
@@ -132,6 +141,15 @@ public class MainGUI {
             }
         });
 
+        // Delete publisher
+        pubDeleteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DeletePubWindow window = new DeletePubWindow();
+                window.bookWindow();
+            }
+        });
+
         // Edit book
         editButton.addActionListener(new ActionListener() {
             @Override
@@ -149,28 +167,38 @@ public class MainGUI {
                 window.bookWindow();
             }
         });
-        
+
+        // Edit publisher
+        pubEditButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                EditPubWindow window = new EditPubWindow();
+                window.bookWindow();
+            }
+        });
+
+        // Search button
         searchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-          var potato = searchField.getText().toLowerCase();
+                var potato = searchField.getText().toLowerCase();
 
-              var filteredBooks = SearchAlgo.INSTANCE.searchTitle(potato,books);
+                var filteredBooks = SearchAlgo.INSTANCE.searchTitle(potato,books);
 
-            DefaultTableModel bookModel = (DefaultTableModel) InfoTable.getModel();
-            bookModel.setRowCount(0);
-            filteredBooks.forEach(book -> {
-                Object[] bookRow = new Object[]{
-                        book.getId(),
-                        book.getTitle(),
-                        book.getAuthors(),
-                        book.getYearOfPublication(),
-                        book.getPublisher(),
-                        book.getSubject()
-                };
-                bookModel.addRow(bookRow);
-            });
+                DefaultTableModel bookModel = (DefaultTableModel) InfoTable.getModel();
+                bookModel.setRowCount(0);
+                filteredBooks.forEach(book -> {
+                    Object[] bookRow = new Object[]{
+                            book.getId(),
+                            book.getTitle(),
+                            book.getAuthors(),
+                            book.getYearOfPublication(),
+                            book.getPublisher(),
+                            book.getSubject()
+                    };
+                    bookModel.addRow(bookRow);
+                });
 
 
             }
@@ -188,20 +216,20 @@ public class MainGUI {
                     String algorithmType = sortCombobox.getSelectedItem().toString();
 
                     long startTime = System.nanoTime();
-                  if (algorithmType.equals("Merge Sort")){
-                       MergeSort test = new MergeSort();
-                       test.mergeSort(books);
-                   }
-                else if (algorithmType.equals("Bubble Sort")) {
-                       BubbleSort sort = new BubbleSort();
-                       sort.bubbleSort(books);
-                   }
+                    if (algorithmType.equals("Merge Sort")){
+                        MergeSort test = new MergeSort();
+                        test.mergeSort(books);
+                    }
+                    else if (algorithmType.equals("Bubble Sort")) {
+                        BubbleSort sort = new BubbleSort();
+                        sort.bubbleSort(books);
+                    }
 
-                  else if (algorithmType.equals("Radix Sort")) {
-                      RadixSort potato = new RadixSort();
-                      books = potato.initRadixSort(books,true);
+                    else if (algorithmType.equals("Radix Sort")) {
+                        RadixSort potato = new RadixSort();
+                        books = potato.initRadixSort(books,true);
 
-                  }
+                    }
 
                     long endTime = System.nanoTime();
 

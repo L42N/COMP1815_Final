@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="merge and bubble done">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/scala_sdk_3_2_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_02_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_02_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_12_2022_13_38__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_12_2022_13_38__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_12_2022_20_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_12_2022_20_14__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KotlinAlgo/BubbleSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinAlgo/BubbleSort.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KotlinAlgo/MergeSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinAlgo/MergeSort.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KotlinAlgo/SearchAlgo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinAlgo/SearchAlgo.kt" afterDir="false" />
+    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Retest Merge sort for authors done">
       <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -278,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672330630444</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Retest Merge sort for authors done">
+      <created>1672333386197</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1672333386197</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -344,6 +343,7 @@
     <MESSAGE value="Updated GUI with more components. All load buttons work" />
     <MESSAGE value="Added timings to MergeSort and results to timeTextField" />
     <MESSAGE value="merge and bubble done" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge and bubble done" />
+    <MESSAGE value="Retest Merge sort for authors done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Retest Merge sort for authors done" />
   </component>
 </project>

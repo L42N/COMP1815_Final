@@ -221,7 +221,11 @@ public class MainGUI {
                     if (algorithmType.equals("Merge Sort")){
                         MergeSort test = new MergeSort();
 
-                            test.mergeSort(books);
+                        if (authorRadioButton.isSelected()) {
+                            books = test.authMergeSort(books);
+                        } else {
+                            books = test.mergeSort(books);
+                        }
 
 
                     }

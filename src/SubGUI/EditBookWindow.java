@@ -11,6 +11,7 @@ import java.io.IOException;
 
 
 public class EditBookWindow {
+    private static JFrame frame;
     private JButton backButton;
     private JButton submitButton;
     private JTextField editSubjectField;
@@ -75,5 +76,4 @@ public class EditBookWindow {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
-
 }

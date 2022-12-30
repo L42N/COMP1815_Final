@@ -19,7 +19,6 @@ import java.io.PrintWriter;
 import java.util.List;
 import javax.swing.JButton;
 
-
 public class MainGUI {
     private JPanel MainPanel;
     private JTable InfoTable;

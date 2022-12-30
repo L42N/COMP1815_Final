@@ -45,9 +45,6 @@ public class AddAuthorWindow {
         });
     }
 
-    public static  void main(String[] args){
-        authorWindow();
-    }
 
     public static void authorWindow(){
         JFrame frame = new JFrame("GUIBOI");

@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Add book, publisher and author">
+    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Cleaned up AddBookWindow.java">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_12_2022_13_38_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_12_2022_13_38__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/COMP1815_Trial.iml" beforeDir="false" afterPath="$PROJECT_DIR$/COMP1815_Trial.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/Author.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Author.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/new.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/new.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KotlinClass/DataPersistence.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/KotlinClass/DataPersistence.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Book.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Book.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

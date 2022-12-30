@@ -73,7 +73,6 @@ public class MainGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 books = DataPersistence.INSTANCE.getBooks(loadField.getText());
-                
                 bookTable();
             }
         });
@@ -128,8 +127,23 @@ public class MainGUI {
         deleteBookButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                DeleteBookWindow window = new DeleteBookWindow();
-                window.bookWindow();
+//                DeleteBookWindow window = new DeleteBookWindow();
+//                window.bookWindow();
+                DefaultTableModel deleteBookModel = (DefaultTableModel) InfoTable.getModel();
+                //delete row
+                if(InfoTable.getSelectedRowCount()==1){
+                    // If single row is selected then delete
+                    deleteBookModel.removeRow(InfoTable.getSelectedRow());
+
+                } else{
+                    if(InfoTable.getRowCount()==0){
+                        // if table is empty (no data) then display message
+                        JOptionPane.showMessageDialog(null, "Table is Empty");
+                    }else{
+                        // if table is not empty but row is not selected or multiple is selected
+                        JOptionPane.showMessageDialog(null, "Please Select One Element to Delete");
+                    }
+                }
             }
         });
 
@@ -157,6 +171,7 @@ public class MainGUI {
             public void actionPerformed(ActionEvent e) {
                 EditBookWindow window = new EditBookWindow();
                 window.bookWindow();
+
             }
         });
 

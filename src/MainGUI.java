@@ -12,6 +12,10 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 import javax.swing.JButton;
 
@@ -132,9 +136,33 @@ public class MainGUI {
                 DefaultTableModel deleteBookModel = (DefaultTableModel) InfoTable.getModel();
                 //delete row
                 if(InfoTable.getSelectedRowCount()==1){
-                    // If single row is selected then delete
-                    deleteBookModel.removeRow(InfoTable.getSelectedRow());
+                    for (int i =0; i < books.size(); i++){
+                        if (InfoTable.getValueAt(InfoTable.getSelectedRow(),0).toString() == books.get(i).getId()){
+                            books.remove(i);
+                            break;
+                        }
+                    }
+                    try {
+                        BufferedWriter bookWriter = new BufferedWriter(new FileWriter("resources/Book.csv", false));
 
+                        books.forEach(book -> {
+                            try {
+                                bookWriter.append(String.format("%s,%s,%s,%s,%s,%s\n",
+                                        book.getId(),
+                                        book.getTitle(),
+                                        book.getAuthors(),
+                                        book.getYearOfPublication(),
+                                        book.getPublisher(),
+                                        book.getSubject()));
+                            } catch (IOException ex) {
+                                throw new RuntimeException(ex);
+                            }
+                        });
+                        bookWriter.close();
+                    } catch(Exception f){
+                        f.printStackTrace();
+                    }
+                    deleteBookModel.removeRow(InfoTable.getSelectedRow());
                 } else{
                     if(InfoTable.getRowCount()==0){
                         // if table is empty (no data) then display message
@@ -151,8 +179,7 @@ public class MainGUI {
         deleteAuthorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                DeleteAuthorWindow window = new DeleteAuthorWindow();
-                window.authorWindow();
+
             }
         });
 
@@ -160,8 +187,7 @@ public class MainGUI {
         deletePublisherButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                DeletePubWindow window = new DeletePubWindow();
-                window.publisherWindow();
+
             }
         });
 
@@ -169,9 +195,22 @@ public class MainGUI {
         editBookButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                EditBookWindow window = new EditBookWindow();
-                window.bookWindow();
-
+                if(InfoTable.getSelectedRowCount()==1){
+                    for (Book book : books) {
+                        if (InfoTable.getValueAt(InfoTable.getSelectedRow(), 0).toString() == book.getId()) {
+                            EditBookWindow.bookWindow(books, book);
+                            break;
+                        }
+                    }
+                } else{
+                    if(InfoTable.getRowCount()==0){
+                        // if table is empty (no data) then display message
+                        JOptionPane.showMessageDialog(null, "Table is Empty");
+                    }else{
+                        // if table is not empty but row is not selected or multiple is selected
+                        JOptionPane.showMessageDialog(null, "Please Select One Element to Delete");
+                    }
+                }
             }
         });
 

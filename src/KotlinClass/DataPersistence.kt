@@ -26,12 +26,17 @@ object DataPersistence {
         File(path).forEachLine { line ->
             val row = line.split(",")
             val id:String = row[0]
-            val title:String = row[1]
-            val author:String = row[2]
+            var title:String = row[1]
+            var author:String = row[2]
             val year:String = row[3]
             val publish:String = row[4]
             val subject:String = row[5]
 
+            // Replace vertical bar character with a comma for readability
+            title = title.replace("|", """""")
+            author = author.replace("|", ",");
+
+            // Add row to books list
             books.add(Book(id, title, author, year, publish, subject))
         }
         return books

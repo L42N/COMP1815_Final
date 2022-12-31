@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import java.io.*;
 
 public class AddBookWindow {
+    private  static JFrame frame;
     private JTextField titleFieldEntry;
     private JTextField authorFieldEntry;
     private JTextField pubFieldEntry;
@@ -60,6 +61,7 @@ public class AddBookWindow {
                     } catch (Exception e) {
 
                     }
+                    frame.dispose();
                 }
             }
         });
@@ -76,7 +78,7 @@ public class AddBookWindow {
 
 
     public static void bookWindow() {
-        JFrame frame = new JFrame("GUIBOI");
+        frame = new JFrame("GUIBOI");
         frame.setContentPane(new AddBookWindow().addBookPanel);
         frame.pack();
         frame.setLocationRelativeTo(null);

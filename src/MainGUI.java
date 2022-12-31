@@ -178,7 +178,45 @@ public class MainGUI {
         deleteAuthorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //                DeleteBookWindow window = new DeleteBookWindow();
+//                window.bookWindow();
+                DefaultTableModel deleteBookModel = (DefaultTableModel) authInfoTable.getModel();
+                //delete row
+                if(authInfoTable.getSelectedRowCount()==1){
+                    for (int i =0; i < authors.size(); i++){
+                        if (authInfoTable.getValueAt(authInfoTable.getSelectedRow(),0).toString() == authors.get(i).getId()){
+                            authors.remove(i);
+                            break;
+                        }
+                    }
+                    try {
+                        BufferedWriter authorWriter = new BufferedWriter(new FileWriter("resources/Author.csv", false));
 
+                        authors.forEach(author -> {
+                            try {
+                                authorWriter.append(String.format("%s,%s,%s\n",
+                                        author.getId(),
+                                        author.getFirstName(),
+                                        author.getLastName()));
+
+                            } catch (IOException ex) {
+                                throw new RuntimeException(ex);
+                            }
+                        });
+                        authorWriter.close();
+                    } catch(Exception f){
+                        f.printStackTrace();
+                    }
+                    deleteBookModel.removeRow(authInfoTable.getSelectedRow());
+                } else{
+                    if(authInfoTable.getRowCount()==0){
+                        // if table is empty (no data) then display message
+                        JOptionPane.showMessageDialog(null, "Table is Empty");
+                    }else{
+                        // if table is not empty but row is not selected or multiple is selected
+                        JOptionPane.showMessageDialog(null, "Please Select One Element to Delete");
+                    }
+                }
             }
         });
 
@@ -217,8 +255,23 @@ public class MainGUI {
         editAuthorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                EditAuthorWindow window = new EditAuthorWindow();
-                window.authorWindow();
+
+                if(authInfoTable.getSelectedRowCount()==1){
+                    for (Author author : authors) {
+                        if (authInfoTable.getValueAt(authInfoTable.getSelectedRow(), 0).toString() == author.getId()) {
+                            EditAuthorWindow.authorWindow(authors, author);
+                            break;
+                        }
+                    }
+                } else{
+                    if(authInfoTable.getRowCount()==0){
+                        // if table is empty (no data) then display message
+                        JOptionPane.showMessageDialog(null, "Table is Empty");
+                    }else{
+                        // if table is not empty but row is not selected or multiple is selected
+                        JOptionPane.showMessageDialog(null, "Please Select One Element to Delete");
+                    }
+                }
             }
         });
 

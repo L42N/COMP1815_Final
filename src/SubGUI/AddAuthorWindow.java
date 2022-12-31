@@ -9,6 +9,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 
 public class AddAuthorWindow {
+    private static JFrame frame;
     private JTextField fnField;
     private JButton submitButton;
     private JTextField snField;
@@ -39,7 +40,8 @@ public class AddAuthorWindow {
 
                     } catch (Exception f) {
 
-                    }
+                    } 
+                    frame.dispose();
                 }
             }
         });
@@ -47,7 +49,7 @@ public class AddAuthorWindow {
 
 
     public static void authorWindow(){
-        JFrame frame = new JFrame("GUIBOI");
+        frame = new JFrame("GUIBOI");
         frame.setContentPane(new AddAuthorWindow().authorAddPanel);
         frame.pack();
         frame.setLocationRelativeTo(null);

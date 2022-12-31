@@ -95,7 +95,20 @@
   <component name="RunManager">
     <configuration name="MainGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainGUI" />
-      <module name="COMP1815_Trial" />
+      <module name="COMP1815_JVM_FinalCode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="COMP1815_JVM_FinalCode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="COMP1815_JVM_FinalCode" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

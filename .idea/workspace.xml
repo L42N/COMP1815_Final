@@ -4,39 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Gui done need to add for the rest of the tab GUI such as Author and Publisher">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/scala_sdk_3_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_18_07_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_18_07__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/Book_backup.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/new_backup.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_01_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_01_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_02_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_02_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_2_22_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_2_22_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_3_08_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_3_08_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_4_17_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_4_17_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_4_45_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_4_45_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_9_35_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_9_35_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_12_2022_20_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_12_2022_20_14__Changes_.xml" afterDir="false" />
+    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Edit, Delete and Add Pub done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Book.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Book.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/new.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/new.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Author.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Author.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Publisher.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Publisher.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeleteAuthorWindow.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeleteAuthorWindow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeleteBookWindow.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeleteBookWindow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeletePubWindow.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeletePubWindow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddPubWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddPubWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddPubWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddPubWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditPubWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditPubWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditPubWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditPubWindow.java" afterDir="false" />
     </list>
-    <list id="ad2af912-f96e-4c69-86c0-a636ec061f88" name="Changes by kevin" comment="">
-      <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.java" afterDir="false" />
-    </list>
+    <list id="4121f238-0d25-43d4-8bae-13b93b366bfb" name="Changes by abdill" comment="" />
+    <list id="ad2af912-f96e-4c69-86c0-a636ec061f88" name="Changes by kevin" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,30 +42,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/MainGUI.java" root0="FORCE_HIGHLIGHTING" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/SubGUI/EditBookWindow.java">
-      <ranges>
-        <range start1="2" end1="2" start2="2" end2="3" changelist="fd832a2c-f1f2-4932-9b5d-a82797f103df" />
-        <range start1="3" end1="3" start2="4" end2="11" changelist="fd832a2c-f1f2-4932-9b5d-a82797f103df" />
-        <range start1="5" end1="5" start2="13" end2="14" changelist="ad2af912-f96e-4c69-86c0-a636ec061f88" />
-        <range start1="7" end1="11" start2="16" end2="19" changelist="fd832a2c-f1f2-4932-9b5d-a82797f103df" />
-        <range start1="12" end1="13" start2="20" end2="22" changelist="fd832a2c-f1f2-4932-9b5d-a82797f103df" />
-        <range start1="15" end1="18" start2="24" end2="74" changelist="fd832a2c-f1f2-4932-9b5d-a82797f103df" />
-        <range start1="22" end1="23" start2="78" end2="78" changelist="ad2af912-f96e-4c69-86c0-a636ec061f88" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/MainGUI.java">
-      <ranges>
-        <range start1="14" end1="14" start2="14" end2="18" changelist="fd832a2c-f1f2-4932-9b5d-a82797f103df" />
-        <range start1="17" end1="18" start2="21" end2="21" changelist="ad2af912-f96e-4c69-86c0-a636ec061f88" />
-        <range start1="134" end1="135" start2="137" end2="163" changelist="fd832a2c-f1f2-4932-9b5d-a82797f103df" />
-        <range start1="136" end1="137" start2="164" end2="164" changelist="fd832a2c-f1f2-4932-9b5d-a82797f103df" />
-        <range start1="153" end1="155" start2="180" end2="181" changelist="fd832a2c-f1f2-4932-9b5d-a82797f103df" />
-        <range start1="162" end1="164" start2="188" end2="189" changelist="fd832a2c-f1f2-4932-9b5d-a82797f103df" />
-        <range start1="171" end1="174" start2="196" end2="212" changelist="fd832a2c-f1f2-4932-9b5d-a82797f103df" />
-      </ranges>
-    </file>
+    <setting file="file://$PROJECT_DIR$/src/SubGUI/AddAuthorWindow.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/SubGUI/AddBookWindow.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/SubGUI/AddPubWindow.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/SubGUI/EditAuthorWindow.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/SubGUI/EditBookWindow.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/SubGUI/EditPubWindow.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -101,25 +64,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/lenovo/IdeaProjects/COMP1815_Trial/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lenovo/IdeaProjects/COMP1815_Trial/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\lenovo\IdeaProjects\COMP1815_Trial\resources" />
@@ -249,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672357178945</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Edit, Delete and Add Pub done">
+      <created>1672500980943</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1672500980943</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,6 +252,7 @@
     <MESSAGE value="Cleaned up AddBookWindow.java" />
     <MESSAGE value="Add book, publisher and author" />
     <MESSAGE value="Gui done need to add for the rest of the tab GUI such as Author and Publisher" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gui done need to add for the rest of the tab GUI such as Author and Publisher" />
+    <MESSAGE value="Edit, Delete and Add Pub done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit, Delete and Add Pub done" />
   </component>
 </project>

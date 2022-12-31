@@ -45,6 +45,14 @@ public class AddAuthorWindow {
                 }
             }
         });
+
+
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+            }
+        });
     }
 
 

@@ -8,6 +8,8 @@ import java.awt.event.ActionListener;
 import java.io.*;
 
 public class AddBookWindow {
+
+    private static JFrame frame;
     private JTextField titleFieldEntry;
     private JTextField authorFieldEntry;
     private JTextField pubFieldEntry;
@@ -16,6 +18,7 @@ public class AddBookWindow {
     private JButton submitButton;
     private JPanel addBookPanel;
     private JButton backButton;
+    private JTextField idTextField;
 
 
     // Creates window for users to create new book and appends to book and author CSV
@@ -26,17 +29,17 @@ public class AddBookWindow {
             public void actionPerformed(ActionEvent b) {
 
                 // Ensures all text fields are filled in, raises error if not
-                if (titleFieldEntry.getText().isEmpty() || authorFieldEntry.getText().isEmpty() || pubYearFieldEntry.getText().isEmpty() ||
+                if (idTextField.getText().isEmpty()|| titleFieldEntry.getText().isEmpty() || authorFieldEntry.getText().isEmpty() || pubYearFieldEntry.getText().isEmpty() ||
                         pubFieldEntry.getText().isEmpty() || subjectFieldEntry.getText().isEmpty()) {
                     JOptionPane.showInternalMessageDialog(null, "Missing Fields", "Error!", 1);
                 } else {
                     // Creates book vairable for new entry
-                    Book add = new Book("69", titleFieldEntry.getText(), authorFieldEntry.getText(), pubYearFieldEntry.getText(), pubFieldEntry.getText(), subjectFieldEntry.getText());
+                    Book add = new Book(idTextField.getText(), titleFieldEntry.getText(), authorFieldEntry.getText(), pubYearFieldEntry.getText(), pubFieldEntry.getText(), subjectFieldEntry.getText());
 
                     try {
                         // Appends new book variable to book CSV and author to author CSV
                         BufferedWriter bookWriter = new BufferedWriter(new FileWriter("resources/Book.csv", true));
-                        bookWriter.append(add.getId());
+                        bookWriter.append(idTextField.getText());
                         bookWriter.append(",");
                         bookWriter.append(titleFieldEntry.getText());
                         bookWriter.append(",");
@@ -50,16 +53,11 @@ public class AddBookWindow {
                         bookWriter.newLine();
                         bookWriter.close();
 
-//                        BufferedWriter authorWriter = new BufferedWriter(new FileWriter("resources/Book_backup.csv", true));
-//                        authorWriter.append(add.getId());
-//                        authorWriter.append(",");
-//                        authorWriter.append(authorFieldEntry.getText());
-//                        authorWriter.newLine();
-//                        authorWriter.close();
 
                     } catch (Exception e) {
 
                     }
+                    frame.dispose();
                 }
             }
         });
@@ -68,15 +66,14 @@ public class AddBookWindow {
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String book_title = titleFieldEntry.getText();
-                System.out.println(book_title);
+                frame.dispose();
             }
         });
     }
 
 
     public static void bookWindow() {
-        JFrame frame = new JFrame("GUIBOI");
+        frame = new JFrame("GUIBOI");
         frame.setContentPane(new AddBookWindow().addBookPanel);
         frame.pack();
         frame.setLocationRelativeTo(null);

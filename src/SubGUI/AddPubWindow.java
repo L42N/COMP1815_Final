@@ -9,11 +9,14 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 
 public class AddPubWindow {
+    private  static  JFrame frame;
     private JTextField pubField;
     private JButton submitButton;
     private JPanel addPubWindow;
+    private JTextField pubIDTextField;
 
     public AddPubWindow() {
+        // Submit button
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -21,12 +24,12 @@ public class AddPubWindow {
                     JOptionPane.showInternalMessageDialog(null, "Missing Fields", "Error!", 1);
                 } else {
                     // Creates author vairable for new entry
-                    Pub add = new Pub("69", pubField.getText());
+                    Pub add = new Pub(pubIDTextField.getText(), pubField.getText());
 
                     try {
                         // Appends new book variable to book CSV and author to author CSV
                         BufferedWriter publisherWriter = new BufferedWriter(new FileWriter("resources/Publisher.csv", true));
-                        publisherWriter.append(add.getId());
+                        publisherWriter.append(pubIDTextField.getText());
                         publisherWriter.append(",");
                         publisherWriter.append(pubField.getText());
                         publisherWriter.newLine();
@@ -35,13 +38,17 @@ public class AddPubWindow {
                     } catch (Exception f) {
 
                     }
+                    frame.dispose();
                 }
             }
         });
-    }
+
+
+
+}
 
     public static void publisherWindow(){
-        JFrame frame = new JFrame("GUIBOI");
+        frame = new JFrame("GUIBOI");
         frame.setContentPane(new AddPubWindow().addPubWindow);
         frame.pack();
         frame.setLocationRelativeTo(null);

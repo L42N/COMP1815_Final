@@ -15,22 +15,23 @@ public class AddAuthorWindow {
     private JTextField snField;
     private JPanel authorAddPanel;
     private JButton backButton;
+    private JTextField authIDField;
 
     public AddAuthorWindow() {
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Ensures all text fields are filled in, raises error if not
-                if (fnField.getText().isEmpty() || snField.getText().isEmpty()) {
+                if (authIDField.getText().isEmpty()|| fnField.getText().isEmpty() || snField.getText().isEmpty()){
                     JOptionPane.showInternalMessageDialog(null, "Missing Fields", "Error!", 1);
                 } else {
                     // Creates book vairable for new entry
-                    Author add = new Author("69", fnField.getText(), snField.getText());
+                    Author add = new Author(authIDField.getText(), fnField.getText(), snField.getText());
 
                     try {
                         // Appends new book variable to book CSV and author to author CSV
                         BufferedWriter authorWriter = new BufferedWriter(new FileWriter("resources/Author.csv", true));
-                        authorWriter.append(add.getId());
+                        authorWriter.append(authIDField.getText());
                         authorWriter.append(",");
                         authorWriter.append(fnField.getText());
                         authorWriter.append(",");

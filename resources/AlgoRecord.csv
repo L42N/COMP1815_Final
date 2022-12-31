@@ -4,6 +4,10 @@ BubbleSort,100,
 MergeSort,100,
 RadixSort,100,
 
+BubbleSort,1000,
+MergeSort,1000,
+RadixSort,1000,
+
 BubbleSort,2000,
 MergeSort,2000,
 RadixSort,2000,

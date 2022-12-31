@@ -462,6 +462,10 @@
     <group name="radioButtonSortBy">
       <member id="18fa8"/>
       <member id="38d2e"/>
+      <member id="f872"/>
+      <member id="2ee87"/>
+      <member id="83296"/>
+      <member id="3faad"/>
     </group>
   </buttonGroups>
 </form>

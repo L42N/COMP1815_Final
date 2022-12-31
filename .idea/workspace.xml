@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Added CSV File to record the sorting algo">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/AlgoRecord.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/AlgoRecord.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Book100test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Book500test.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
     </list>
     <list id="4121f238-0d25-43d4-8bae-13b93b366bfb" name="Changes by abdill" comment="" />
     <list id="ad2af912-f96e-4c69-86c0-a636ec061f88" name="Changes by kevin" comment="" />
@@ -245,7 +248,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672516117024</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added CSV File to record the sorting algo">
+      <created>1672516277276</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1672516277276</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Added CSV File to record the sorting algo">
+      <created>1672516352845</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1672516352845</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

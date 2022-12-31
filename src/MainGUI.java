@@ -515,7 +515,7 @@ public class MainGUI {
 
                     // Calculate algorithm timings and display results
                     System.out.println("That took " + (endTime - startTime) + " nanoseconds");
-                    String timings = String.valueOf((endTime - startTime) / 1000);
+                    String timings = String.valueOf((endTime - startTime) / 1000000);
                     timeTextField.setText(timings + " milliseconds");
 
                     bookTable();

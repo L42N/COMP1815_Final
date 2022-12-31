@@ -1,10 +1,10 @@
 #Please test it by sorting it with Author because Book Title is already sorted
 Algorithm,Number of Data Units, Test 1, Test 2, Test 3, Test 4
-BubbleSort,100,,,,
-MergeSort,100,
-RadixSort,100,
+BubbleSort,500,,,,
+MergeSort,500,
+RadixSort,500,,,,
 
-BubbleSort,1000,
+BubbleSort,1000,12 ms,12 ms,13 ms,12 ms
 MergeSort,1000,
 RadixSort,1000,
 

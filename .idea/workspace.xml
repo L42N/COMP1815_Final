@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="All done">
-      <change afterPath="$PROJECT_DIR$/resources/Book1000test.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/Book100test.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/Book2000test.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/Book3000test.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/Book4000test.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/Book5000test.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/Book6000test.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/Book7000test.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/Book8000test.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/Book9000test.csv" afterDir="false" />
+    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Added Dataset for sorting algo testing">
+      <change afterPath="$PROJECT_DIR$/resources/AlgoRecord.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_16_47__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_16_47__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_16_47__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_16_47__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_17_11__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_17_11__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="4121f238-0d25-43d4-8bae-13b93b366bfb" name="Changes by abdill" comment="" />
@@ -235,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672502559801</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added Dataset for sorting algo testing">
+      <created>1672514797553</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1672514797553</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +271,7 @@
     <MESSAGE value="Gui done need to add for the rest of the tab GUI such as Author and Publisher" />
     <MESSAGE value="Edit, Delete and Add Pub done" />
     <MESSAGE value="All done" />
-    <option name="LAST_COMMIT_MESSAGE" value="All done" />
+    <MESSAGE value="Added Dataset for sorting algo testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Dataset for sorting algo testing" />
   </component>
 </project>

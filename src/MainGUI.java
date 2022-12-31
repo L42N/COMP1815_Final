@@ -130,8 +130,7 @@ public class MainGUI {
         deleteBookButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-//                DeleteBookWindow window = new DeleteBookWindow();
-//                window.bookWindow();
+
                 DefaultTableModel deleteBookModel = (DefaultTableModel) InfoTable.getModel();
                 //delete row
                 if(InfoTable.getSelectedRowCount()==1){
@@ -225,6 +224,41 @@ public class MainGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                DefaultTableModel deletePubModel = (DefaultTableModel) pubInfoTable.getModel();
+                //delete row
+                if(pubInfoTable.getSelectedRowCount()==1){
+                    for (int i =0; i < pubs.size(); i++){
+                        if (pubInfoTable.getValueAt(pubInfoTable.getSelectedRow(),0).toString() == pubs.get(i).getId()){
+                            pubs.remove(i);
+                            break;
+                        }
+                    }
+                    try {
+                        BufferedWriter pubWriter = new BufferedWriter(new FileWriter("resources/Publisher.csv", false));
+
+                        pubs.forEach(pub -> {
+                            try {
+                                pubWriter.append(String.format("%s,%s,\n",
+                                        pub.getId(),
+                                        pub.getPubName()));
+                            } catch (IOException ex) {
+                                throw new RuntimeException(ex);
+                            }
+                        });
+                        pubWriter.close();
+                    } catch(Exception f){
+                        f.printStackTrace();
+                    }
+                    deletePubModel.removeRow(pubInfoTable.getSelectedRow());
+                } else{
+                    if(pubInfoTable.getRowCount()==0){
+                        // if table is empty (no data) then display message
+                        JOptionPane.showMessageDialog(null, "Table is Empty");
+                    }else{
+                        // if table is not empty but row is not selected or multiple is selected
+                        JOptionPane.showMessageDialog(null, "Please Select One Element to Delete");
+                    }
+                }
             }
         });
 
@@ -239,6 +273,7 @@ public class MainGUI {
                             break;
                         }
                     }
+
                 } else{
                     if(InfoTable.getRowCount()==0){
                         // if table is empty (no data) then display message
@@ -279,8 +314,23 @@ public class MainGUI {
         editPublisherButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                EditPubWindow window = new EditPubWindow();
-                window.publisherWindow();
+                if(pubInfoTable.getSelectedRowCount()==1){
+                    for (Pub pub : pubs) {
+                        if (pubInfoTable.getValueAt(pubInfoTable.getSelectedRow(), 0).toString() == pub.getId()) {
+                            EditPubWindow.publisherWindow(pubs, pub);
+                            break;
+                        }
+                    }
+
+                } else{
+                    if(pubInfoTable.getRowCount()==0){
+                        // if table is empty (no data) then display message
+                        JOptionPane.showMessageDialog(null, "Table is Empty");
+                    }else{
+                        // if table is not empty but row is not selected or multiple is selected
+                        JOptionPane.showMessageDialog(null, "Please Select One Element to Delete");
+                    }
+                }
             }
         });
         

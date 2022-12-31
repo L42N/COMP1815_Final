@@ -20,7 +20,7 @@ public class EditBookWindow {
     private JPanel editBookPanel;
     private JTextField editTitleField;
     private JTextField editAuthorField;
-    private JTextField textfield5;
+
 
     public EditBookWindow(java.util.List<Book> books, Book book) {
         editTitleField.setText(book.getTitle());
@@ -64,6 +64,14 @@ public class EditBookWindow {
                 } catch(Exception f){
                     f.printStackTrace();
                 }
+                frame.dispose();
+            }
+        });
+
+        // Back button
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
                 frame.dispose();
             }
         });

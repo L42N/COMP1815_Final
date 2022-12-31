@@ -17,6 +17,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\resources\Book_backup.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\resources\Publisher.csv">
           <value>
             <Attribute>
@@ -38,7 +45,7 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\src\Book.csv">
+        <entry key="diff.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

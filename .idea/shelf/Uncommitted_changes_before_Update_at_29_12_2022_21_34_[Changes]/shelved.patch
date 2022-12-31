@@ -1,0 +1,88 @@
+Index: src/SubGUI/AddBookWindow.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package SubGUI;\r\n\r\nimport javax.swing.*;\r\nimport java.awt.event.ActionEvent;\r\nimport java.awt.event.ActionListener;\r\n\r\npublic class AddBookWindow {\r\n    private JTextField titleFieldEntry;\r\n    private JTextField authorFieldEntry;\r\n    private JTextField pubFieldEntry;\r\n    private JTextField pubYearFieldEntry;\r\n    private JTextField subjectFieldEntry;\r\n    private JButton submitButton;\r\n    private JPanel addBookPanel;\r\n    private JButton backButton;\r\n\r\n\r\n    public AddBookWindow() {\r\n        submitButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n\r\n            }\r\n        });\r\n        backButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n\r\n            }\r\n        });\r\n    }\r\n\r\n    public static void bookWindow(){\r\n        JFrame frame = new JFrame(\"GUIBOI\");\r\n        frame.setContentPane(new AddBookWindow().addBookPanel);\r\n        frame.pack();\r\n        frame.setLocationRelativeTo(null);\r\n        frame.setVisible(true);\r\n    }\r\n\r\n\r\n}\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/SubGUI/AddBookWindow.java b/src/SubGUI/AddBookWindow.java
+--- a/src/SubGUI/AddBookWindow.java	(revision 3e8e7826d46ab5b692291a188453625db8f55a3f)
++++ b/src/SubGUI/AddBookWindow.java	(date 1672338401889)
+@@ -15,11 +15,13 @@
+     private JButton backButton;
+ 
+ 
++    //
+     public AddBookWindow() {
+         submitButton.addActionListener(new ActionListener() {
+             @Override
+             public void actionPerformed(ActionEvent e) {
+-
++                String book_title = titleFieldEntry.getText();
++                System.out.println(book_title);
+             }
+         });
+         backButton.addActionListener(new ActionListener() {
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"fd832a2c-f1f2-4932-9b5d-a82797f103df\" name=\"Changes\" comment=\"Add, edit and delete windows for author tab added\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/MainGUI.form\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/MainGUI.form\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/MainGUI.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/MainGUI.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/SubGUI/AddPubWindow.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/SubGUI/AddPubWindow.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/SubGUI/DeletePubWindow.form\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/SubGUI/DeletePubWindow.form\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/SubGUI/DeletePubWindow.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/SubGUI/DeletePubWindow.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/SubGUI/EditPubWindow.form\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/SubGUI/EditPubWindow.form\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/SubGUI/EditPubWindow.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/SubGUI/EditPubWindow.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"CodeStyleSettingsInfer\">\r\n    <option name=\"done\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Kotlin Class\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitToolBoxStore\">\r\n    <option name=\"projectConfigVersion\" value=\"5\" />\r\n  </component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"file://$PROJECT_DIR$/src/MainGUI.java\" root0=\"FORCE_HIGHLIGHTING\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectCodeStyleSettingsMigration\">\r\n    <option name=\"version\" value=\"2\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2IVBuvUr3qLGaQ8AyzF29KfGn6w\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"project.structure.last.edited\": \"Libraries\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"run.code.analysis.last.selected.profile\": \"pProject Default\",\r\n    \"settings.editor.selected.configurable\": \"preferences.pluginManager\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\lenovo\\IdeaProjects\\COMP1815_Trial\\resources\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"MainGUI\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"MainGUI\" />\r\n      <module name=\"COMP1815_Trial\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.MainGUI\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"ScalaProjectSettings\">\r\n    <option name=\"scala3DisclaimerShown\" value=\"true\" />\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"fd832a2c-f1f2-4932-9b5d-a82797f103df\" name=\"Changes\" comment=\"\" />\r\n      <created>1670257099503</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1670257099503</updated>\r\n      <workItem from=\"1672317704059\" duration=\"61000\" />\r\n      <workItem from=\"1672317779390\" duration=\"7204000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"New GUI. Still need the buttons to work\">\r\n      <created>1670283685948</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670283685948</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"New GUI. Still need the buttons to work\">\r\n      <created>1670283789206</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670283789206</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"New GUI. Still need the buttons to work\">\r\n      <created>1670284893577</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670284893577</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"New GUI. Still need the buttons to work\">\r\n      <created>1670285096060</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670285096060</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"New GUI. Still need the buttons to work\">\r\n      <created>1670285342054</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670285342054</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Added More classes. Still need to work on GUI\">\r\n      <created>1670285400162</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670285400162</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Added More classes. Still need to work on GUI\">\r\n      <created>1670285447834</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670285447834</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Add, edit and delete windows for book tab added\">\r\n      <created>1672320495356</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672320495356</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Add, edit and delete windows for author tab added\">\r\n      <created>1672322886418</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672322886418</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"10\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"New GUI. Still need the buttons to work\" />\r\n    <MESSAGE value=\"Added More classes. Still need to work on GUI\" />\r\n    <MESSAGE value=\"Add, edit and delete windows for book tab added\" />\r\n    <MESSAGE value=\"Add, edit and delete windows for author tab added\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Add, edit and delete windows for author tab added\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 3e8e7826d46ab5b692291a188453625db8f55a3f)
++++ b/.idea/workspace.xml	(date 1672349689544)
+@@ -4,15 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Add, edit and delete windows for author tab added">
++    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Add, edit and delete windows for publisher tab added.&#10;&#10;Comments added for add, edit and delete functions for book, author and publisher tabs.">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/MainGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.form" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddPubWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddPubWindow.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeletePubWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/DeletePubWindow.form" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeletePubWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/DeletePubWindow.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditPubWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditPubWindow.form" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditPubWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditPubWindow.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -99,7 +93,7 @@
+       <option name="presentableId" value="Default" />
+       <updated>1670257099503</updated>
+       <workItem from="1672317704059" duration="61000" />
+-      <workItem from="1672317779390" duration="7204000" />
++      <workItem from="1672317779390" duration="10960000" />
+     </task>
+     <task id="LOCAL-00001" summary="New GUI. Still need the buttons to work">
+       <created>1670283685948</created>
+@@ -164,7 +158,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1672322886418</updated>
+     </task>
+-    <option name="localTasksCounter" value="10" />
++    <task id="LOCAL-00010" summary="Add, edit and delete windows for publisher tab added.&#10;&#10;Comments added for add, edit and delete functions for book, author and publisher tabs.">
++      <created>1672326521008</created>
++      <option name="number" value="00010" />
++      <option name="presentableId" value="LOCAL-00010" />
++      <option name="project" value="LOCAL" />
++      <updated>1672326521008</updated>
++    </task>
++    <option name="localTasksCounter" value="11" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -186,6 +187,7 @@
+     <MESSAGE value="Added More classes. Still need to work on GUI" />
+     <MESSAGE value="Add, edit and delete windows for book tab added" />
+     <MESSAGE value="Add, edit and delete windows for author tab added" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Add, edit and delete windows for author tab added" />
++    <MESSAGE value="Add, edit and delete windows for publisher tab added.&#10;&#10;Comments added for add, edit and delete functions for book, author and publisher tabs." />
++    <option name="LAST_COMMIT_MESSAGE" value="Add, edit and delete windows for publisher tab added.&#10;&#10;Comments added for add, edit and delete functions for book, author and publisher tabs." />
+   </component>
+ </project>
+\ No newline at end of file

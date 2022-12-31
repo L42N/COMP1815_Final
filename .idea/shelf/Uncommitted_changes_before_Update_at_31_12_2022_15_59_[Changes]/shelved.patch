@@ -1,0 +1,247 @@
+Index: .idea/libraries/scala_sdk_3_2_1.xml
+===================================================================
+diff --git a/.idea/libraries/scala_sdk_3_2_1.xml b/.idea/libraries/scala_sdk_3_2_1.xml
+deleted file mode 100644
+--- a/.idea/libraries/scala_sdk_3_2_1.xml	(revision ae8f7340bb6f051618058ce2a154fe5d1f9f3334)
++++ /dev/null	(revision ae8f7340bb6f051618058ce2a154fe5d1f9f3334)
+@@ -1,30 +0,0 @@
+-<component name="libraryTable">
+-  <library name="scala-sdk-3.2.1" type="Scala">
+-    <properties>
+-      <language-level>Scala_3_2</language-level>
+-      <compiler-classpath>
+-        <root url="file://$USER_HOME$/.ivy2/cache/org.scala-lang/scala3-compiler_3/jars/scala3-compiler_3-3.2.1.jar" />
+-        <root url="file://$USER_HOME$/.ivy2/cache/org.scala-lang/scala3-interfaces/jars/scala3-interfaces-3.2.1.jar" />
+-        <root url="file://$USER_HOME$/.ivy2/cache/org.scala-lang/scala3-library_3/jars/scala3-library_3-3.2.1.jar" />
+-        <root url="file://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.13.10.jar" />
+-        <root url="file://$USER_HOME$/.ivy2/cache/org.scala-lang/tasty-core_3/jars/tasty-core_3-3.2.1.jar" />
+-        <root url="file://$USER_HOME$/.ivy2/cache/org.scala-lang.modules/scala-asm/bundles/scala-asm-9.3.0-scala-1.jar" />
+-        <root url="file://$USER_HOME$/.ivy2/cache/org.scala-sbt/compiler-interface/jars/compiler-interface-1.3.5.jar" />
+-        <root url="file://$USER_HOME$/.ivy2/cache/com.google.protobuf/protobuf-java/bundles/protobuf-java-3.7.0.jar" />
+-        <root url="file://$USER_HOME$/.ivy2/cache/org.scala-sbt/util-interface/jars/util-interface-1.3.0.jar" />
+-        <root url="file://$USER_HOME$/.ivy2/cache/org.jline/jline-reader/jars/jline-reader-3.19.0.jar" />
+-        <root url="file://$USER_HOME$/.ivy2/cache/org.jline/jline-terminal/jars/jline-terminal-3.19.0.jar" />
+-        <root url="file://$USER_HOME$/.ivy2/cache/org.jline/jline-terminal-jna/jars/jline-terminal-jna-3.19.0.jar" />
+-        <root url="file://$USER_HOME$/.ivy2/cache/net.java.dev.jna/jna/jars/jna-5.3.1.jar" />
+-      </compiler-classpath>
+-    </properties>
+-    <CLASSES>
+-      <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala3-library_3/jars/scala3-library_3-3.2.1.jar!/" />
+-      <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.13.10.jar!/" />
+-    </CLASSES>
+-    <JAVADOC />
+-    <SOURCES>
+-      <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala3-library_3/srcs/scala3-library_3-3.2.1-sources.jar!/" />
+-    </SOURCES>
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_14_15__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_14_15__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_14_15__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_14_15__Changes_.xml	(revision ae8f7340bb6f051618058ce2a154fe5d1f9f3334)
++++ /dev/null	(revision ae8f7340bb6f051618058ce2a154fe5d1f9f3334)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_31_12_2022_14_15_[Changes]" date="1672496103443" recycled="false" toDelete="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_14_15_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 31/12/2022 14:15 [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: COMP1815_Trial.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n    <orderEntry type=\"library\" name=\"KotlinJavaRuntime\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"scala-sdk-3.1.3\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"scala-sdk-3.2.1\" level=\"project\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/COMP1815_Trial.iml b/COMP1815_Trial.iml
+--- a/COMP1815_Trial.iml	(revision ae8f7340bb6f051618058ce2a154fe5d1f9f3334)
++++ b/COMP1815_Trial.iml	(date 1672501411983)
+@@ -9,6 +9,5 @@
+     <orderEntry type="sourceFolder" forTests="false" />
+     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+     <orderEntry type="library" name="scala-sdk-3.1.3" level="project" />
+-    <orderEntry type="library" name="scala-sdk-3.2.1" level="project" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"fd832a2c-f1f2-4932-9b5d-a82797f103df\" name=\"Changes\" comment=\"Gui done need to add for the rest of the tab GUI such as Author and Publisher\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/libraries/scala_sdk_3_2_1.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_18_07_[Changes]/shelved.patch\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_18_07__Changes_.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/resources/Book_backup.csv\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/resources/new_backup.csv\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/csv-editor.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/csv-editor.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_01_PM__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_01_PM__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_02_AM__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_02_AM__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_2_22_PM__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_2_22_PM__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_3_08_PM__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_3_08_PM__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_4_17_PM__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_4_17_PM__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_4_45_PM__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_4_45_PM__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_9_35_PM__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_9_35_PM__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_12_2022_20_14__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_12_2022_20_14__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/resources/Book.csv\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/resources/Book.csv\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/resources/new.csv\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/resources/new.csv\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/MainGUI.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/MainGUI.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/SubGUI/AddBookWindow.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/SubGUI/AddBookWindow.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/SubGUI/DeleteAuthorWindow.form\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/SubGUI/DeleteAuthorWindow.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/SubGUI/DeleteBookWindow.form\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/SubGUI/DeleteBookWindow.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/SubGUI/DeletePubWindow.form\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/SubGUI/DeletePubWindow.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/SubGUI/EditBookWindow.form\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/SubGUI/EditBookWindow.form\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/SubGUI/EditBookWindow.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/SubGUI/EditBookWindow.java\" afterDir=\"false\" />\r\n    </list>\r\n    <list id=\"ad2af912-f96e-4c69-86c0-a636ec061f88\" name=\"Changes by kevin\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/src/MainGUI.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/MainGUI.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/SubGUI/EditBookWindow.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/SubGUI/EditBookWindow.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"CodeStyleSettingsInfer\">\r\n    <option name=\"done\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Kotlin Class\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitToolBoxStore\">\r\n    <option name=\"projectConfigVersion\" value=\"5\" />\r\n  </component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"file://$PROJECT_DIR$/src/MainGUI.java\" root0=\"FORCE_HIGHLIGHTING\" />\r\n  </component>\r\n  <component name=\"LineStatusTrackerManager\">\r\n    <file path=\"$PROJECT_DIR$/src/SubGUI/EditBookWindow.java\">\r\n      <ranges>\r\n        <range start1=\"2\" end1=\"2\" start2=\"2\" end2=\"3\" changelist=\"fd832a2c-f1f2-4932-9b5d-a82797f103df\" />\r\n        <range start1=\"3\" end1=\"3\" start2=\"4\" end2=\"11\" changelist=\"fd832a2c-f1f2-4932-9b5d-a82797f103df\" />\r\n        <range start1=\"5\" end1=\"5\" start2=\"13\" end2=\"14\" changelist=\"ad2af912-f96e-4c69-86c0-a636ec061f88\" />\r\n        <range start1=\"7\" end1=\"11\" start2=\"16\" end2=\"19\" changelist=\"fd832a2c-f1f2-4932-9b5d-a82797f103df\" />\r\n        <range start1=\"12\" end1=\"13\" start2=\"20\" end2=\"22\" changelist=\"fd832a2c-f1f2-4932-9b5d-a82797f103df\" />\r\n        <range start1=\"15\" end1=\"18\" start2=\"24\" end2=\"74\" changelist=\"fd832a2c-f1f2-4932-9b5d-a82797f103df\" />\r\n        <range start1=\"22\" end1=\"23\" start2=\"78\" end2=\"78\" changelist=\"ad2af912-f96e-4c69-86c0-a636ec061f88\" />\r\n      </ranges>\r\n    </file>\r\n    <file path=\"$PROJECT_DIR$/src/MainGUI.java\">\r\n      <ranges>\r\n        <range start1=\"14\" end1=\"14\" start2=\"14\" end2=\"18\" changelist=\"fd832a2c-f1f2-4932-9b5d-a82797f103df\" />\r\n        <range start1=\"17\" end1=\"18\" start2=\"21\" end2=\"21\" changelist=\"ad2af912-f96e-4c69-86c0-a636ec061f88\" />\r\n        <range start1=\"134\" end1=\"135\" start2=\"137\" end2=\"163\" changelist=\"fd832a2c-f1f2-4932-9b5d-a82797f103df\" />\r\n        <range start1=\"136\" end1=\"137\" start2=\"164\" end2=\"164\" changelist=\"fd832a2c-f1f2-4932-9b5d-a82797f103df\" />\r\n        <range start1=\"153\" end1=\"155\" start2=\"180\" end2=\"181\" changelist=\"fd832a2c-f1f2-4932-9b5d-a82797f103df\" />\r\n        <range start1=\"162\" end1=\"164\" start2=\"188\" end2=\"189\" changelist=\"fd832a2c-f1f2-4932-9b5d-a82797f103df\" />\r\n        <range start1=\"171\" end1=\"174\" start2=\"196\" end2=\"212\" changelist=\"fd832a2c-f1f2-4932-9b5d-a82797f103df\" />\r\n      </ranges>\r\n    </file>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"ProjectErrors\" />\r\n  </component>\r\n  <component name=\"ProjectCodeStyleSettingsMigration\">\r\n    <option name=\"version\" value=\"2\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2IVBuvUr3qLGaQ8AyzF29KfGn6w\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"last_opened_file_path\": \"C:/Users/lenovo/IdeaProjects/COMP1815_Trial/resources\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"project.structure.last.edited\": \"Libraries\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"run.code.analysis.last.selected.profile\": \"pProject Default\",\r\n    \"settings.editor.selected.configurable\": \"preferences.pluginManager\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\lenovo\\IdeaProjects\\COMP1815_Trial\\resources\" />\r\n      <recent name=\"C:\\Users\\lenovo\\IdeaProjects\\COMP1815_Trial\\src\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\lenovo\\IdeaProjects\\COMP1815_Trial\\resources\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"MainGUI\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"MainGUI\" />\r\n      <module name=\"COMP1815_Trial\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.MainGUI\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"ScalaProjectSettings\">\r\n    <option name=\"scala3DisclaimerShown\" value=\"true\" />\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"fd832a2c-f1f2-4932-9b5d-a82797f103df\" name=\"Changes\" comment=\"\" />\r\n      <created>1670257099503</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1670257099503</updated>\r\n      <workItem from=\"1672317704059\" duration=\"61000\" />\r\n      <workItem from=\"1672317779390\" duration=\"7204000\" />\r\n      <workItem from=\"1672399752920\" duration=\"5608000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"New GUI. Still need the buttons to work\">\r\n      <created>1670283685948</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670283685948</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"New GUI. Still need the buttons to work\">\r\n      <created>1670283789206</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670283789206</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"New GUI. Still need the buttons to work\">\r\n      <created>1670284893577</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670284893577</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"New GUI. Still need the buttons to work\">\r\n      <created>1670285096060</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670285096060</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"New GUI. Still need the buttons to work\">\r\n      <created>1670285342054</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670285342054</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Added More classes. Still need to work on GUI\">\r\n      <created>1670285400162</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670285400162</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Added More classes. Still need to work on GUI\">\r\n      <created>1670285447834</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670285447834</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Add, edit and delete windows for book tab added\">\r\n      <created>1672320495356</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672320495356</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Add, edit and delete windows for author tab added\">\r\n      <created>1672322886418</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672322886418</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Aesthetics\">\r\n      <created>1672351253097</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672351253097</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Renamed variables\">\r\n      <created>1672352563203</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672352563203</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"Cleaned up AddBookWindow.java\">\r\n      <created>1672353386035</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672353386035</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"Add book, publisher and author\">\r\n      <created>1672357178945</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672357178945</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"14\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"CUSTOM_BOOLEAN_PROPERTIES\">\r\n                <map>\r\n                  <entry key=\"Show.Git.Branches\" value=\"false\" />\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"New GUI. Still need the buttons to work\" />\r\n    <MESSAGE value=\"Added More classes. Still need to work on GUI\" />\r\n    <MESSAGE value=\"Add, edit and delete windows for book tab added\" />\r\n    <MESSAGE value=\"Add, edit and delete windows for author tab added\" />\r\n    <MESSAGE value=\"Aesthetics\" />\r\n    <MESSAGE value=\"Renamed variables\" />\r\n    <MESSAGE value=\"Cleaned up AddBookWindow.java\" />\r\n    <MESSAGE value=\"Add book, publisher and author\" />\r\n    <MESSAGE value=\"Gui done need to add for the rest of the tab GUI such as Author and Publisher\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Gui done need to add for the rest of the tab GUI such as Author and Publisher\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision ae8f7340bb6f051618058ce2a154fe5d1f9f3334)
++++ b/.idea/workspace.xml	(date 1672502351713)
+@@ -4,38 +4,19 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Gui done need to add for the rest of the tab GUI such as Author and Publisher">
+-      <change afterPath="$PROJECT_DIR$/.idea/libraries/scala_sdk_3_2_1.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_18_07_[Changes]/shelved.patch" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_18_07__Changes_.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/resources/Book_backup.csv" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/resources/new_backup.csv" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
++    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Add book, publisher and author">
++      <change beforePath="$PROJECT_DIR$/.idea/libraries/scala_sdk_3_2_1.xml" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_01_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_01_PM__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_02_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_02_AM__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_2_22_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_2_22_PM__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_3_08_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_3_08_PM__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_4_17_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_4_17_PM__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_4_45_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_4_45_PM__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_9_35_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_9_35_PM__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_12_2022_20_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_12_2022_20_14__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_01_43__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_01_43__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_18_07__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_18_07__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_20_47__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_20_47__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_23_54__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_23_54__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_23_54__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_23_54__Changes_1.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_14_09__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_14_09__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_14_15__Changes_.xml" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/resources/Book.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Book.csv" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/resources/new.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/new.csv" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/AddBookWindow.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeleteAuthorWindow.form" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeleteAuthorWindow.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeleteBookWindow.form" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeleteBookWindow.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeletePubWindow.form" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/SubGUI/DeletePubWindow.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.form" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.java" afterDir="false" />
+-    </list>
+-    <list id="ad2af912-f96e-4c69-86c0-a636ec061f88" name="Changes by kevin" comment="">
+-      <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubGUI/EditBookWindow.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/COMP1815_Trial.iml" beforeDir="false" afterPath="$PROJECT_DIR$/COMP1815_Trial.iml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -61,36 +42,9 @@
+   </component>
+   <component name="HighlightingSettingsPerFile">
+     <setting file="file://$PROJECT_DIR$/src/MainGUI.java" root0="FORCE_HIGHLIGHTING" />
+-  </component>
+-  <component name="LineStatusTrackerManager">
+-    <file path="$PROJECT_DIR$/src/SubGUI/EditBookWindow.java">
+-      <ranges>
+-        <range start1="2" end1="2" start2="2" end2="3" changelist="fd832a2c-f1f2-4932-9b5d-a82797f103df" />
+-        <range start1="3" end1="3" start2="4" end2="11" changelist="fd832a2c-f1f2-4932-9b5d-a82797f103df" />
+-        <range start1="5" end1="5" start2="13" end2="14" changelist="ad2af912-f96e-4c69-86c0-a636ec061f88" />
+-        <range start1="7" end1="11" start2="16" end2="19" changelist="fd832a2c-f1f2-4932-9b5d-a82797f103df" />
+-        <range start1="12" end1="13" start2="20" end2="22" changelist="fd832a2c-f1f2-4932-9b5d-a82797f103df" />
+-        <range start1="15" end1="18" start2="24" end2="74" changelist="fd832a2c-f1f2-4932-9b5d-a82797f103df" />
+-        <range start1="22" end1="23" start2="78" end2="78" changelist="ad2af912-f96e-4c69-86c0-a636ec061f88" />
+-      </ranges>
+-    </file>
+-    <file path="$PROJECT_DIR$/src/MainGUI.java">
+-      <ranges>
+-        <range start1="14" end1="14" start2="14" end2="18" changelist="fd832a2c-f1f2-4932-9b5d-a82797f103df" />
+-        <range start1="17" end1="18" start2="21" end2="21" changelist="ad2af912-f96e-4c69-86c0-a636ec061f88" />
+-        <range start1="134" end1="135" start2="137" end2="163" changelist="fd832a2c-f1f2-4932-9b5d-a82797f103df" />
+-        <range start1="136" end1="137" start2="164" end2="164" changelist="fd832a2c-f1f2-4932-9b5d-a82797f103df" />
+-        <range start1="153" end1="155" start2="180" end2="181" changelist="fd832a2c-f1f2-4932-9b5d-a82797f103df" />
+-        <range start1="162" end1="164" start2="188" end2="189" changelist="fd832a2c-f1f2-4932-9b5d-a82797f103df" />
+-        <range start1="171" end1="174" start2="196" end2="212" changelist="fd832a2c-f1f2-4932-9b5d-a82797f103df" />
+-      </ranges>
+-    </file>
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+-  </component>
+-  <component name="ProblemsViewState">
+-    <option name="selectedTabId" value="ProjectErrors" />
+   </component>
+   <component name="ProjectCodeStyleSettingsMigration">
+     <option name="version" value="2" />
+@@ -101,30 +55,24 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "last_opened_file_path": "C:/Users/lenovo/IdeaProjects/COMP1815_Trial/resources",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "project.structure.last.edited": "Libraries",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.2",
+-    "run.code.analysis.last.selected.profile": "pProject Default",
+-    "settings.editor.selected.configurable": "preferences.pluginManager",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+-    <key name="CopyFile.RECENT_KEYS">
+-      <recent name="C:\Users\lenovo\IdeaProjects\COMP1815_Trial\resources" />
+-      <recent name="C:\Users\lenovo\IdeaProjects\COMP1815_Trial\src" />
+-    </key>
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="C:\Users\lenovo\IdeaProjects\COMP1815_Trial\resources" />
+     </key>
+@@ -157,6 +105,10 @@
+       <workItem from="1672317704059" duration="61000" />
+       <workItem from="1672317779390" duration="7204000" />
+       <workItem from="1672399752920" duration="5608000" />
++      <workItem from="1672501170945" duration="146000" />
++      <workItem from="1672501355267" duration="86000" />
++      <workItem from="1672501455722" duration="345000" />
++      <workItem from="1672501835694" duration="511000" />
+     </task>
+     <task id="LOCAL-00001" summary="New GUI. Still need the buttons to work">
+       <created>1670283685948</created>
+@@ -260,13 +212,7 @@
+       <map>
+         <entry key="MAIN">
+           <value>
+-            <State>
+-              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+-                <map>
+-                  <entry key="Show.Git.Branches" value="false" />
+-                </map>
+-              </option>
+-            </State>
++            <State />
+           </value>
+         </entry>
+       </map>
+@@ -281,7 +227,6 @@
+     <MESSAGE value="Renamed variables" />
+     <MESSAGE value="Cleaned up AddBookWindow.java" />
+     <MESSAGE value="Add book, publisher and author" />
+-    <MESSAGE value="Gui done need to add for the rest of the tab GUI such as Author and Publisher" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Gui done need to add for the rest of the tab GUI such as Author and Publisher" />
++    <option name="LAST_COMMIT_MESSAGE" value="Add book, publisher and author" />
+   </component>
+ </project>
+\ No newline at end of file

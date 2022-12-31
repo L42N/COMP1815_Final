@@ -5,35 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="All done">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/scala_sdk_3_2_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/scala_sdk_3_2_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_01_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_01_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_02_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_10_02_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_2_22_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_2_22_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_3_08_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_3_08_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_4_17_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_4_17_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_4_45_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_4_45_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_9_35_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_29_2022_9_35_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_12_2022_20_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_12_2022_20_14__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_12_2022_21_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_12_2022_21_34__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_01_43__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_01_43__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_18_07__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_18_07__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_20_47__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_20_47__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_23_54__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_23_54__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_23_54__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2022_23_54__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_14_09__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_14_09__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_15_38__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_15_38__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_15_59__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_15_59__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Book1000test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Book100test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Book2000test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Book3000test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Book4000test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Book5000test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Book6000test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Book7000test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Book8000test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Book9000test.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Author.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Author.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Book.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Book.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Book_backup.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Publisher.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Publisher.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/final_authors.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/final_book.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/final_publisher.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/new_backup.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
     </list>
     <list id="4121f238-0d25-43d4-8bae-13b93b366bfb" name="Changes by abdill" comment="" />
     <list id="ad2af912-f96e-4c69-86c0-a636ec061f88" name="Changes by kevin" comment="" />

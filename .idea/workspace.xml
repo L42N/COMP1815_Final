@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Added Dataset for sorting algo testing">
-      <change afterPath="$PROJECT_DIR$/resources/AlgoRecord.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_16_47__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_16_47__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_16_47__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_16_47__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_17_11__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2022_17_11__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="fd832a2c-f1f2-4932-9b5d-a82797f103df" name="Changes" comment="Added CSV File to record the sorting algo">
+      <change beforePath="$PROJECT_DIR$/resources/AlgoRecord.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/AlgoRecord.csv" afterDir="false" />
     </list>
     <list id="4121f238-0d25-43d4-8bae-13b93b366bfb" name="Changes by abdill" comment="" />
     <list id="ad2af912-f96e-4c69-86c0-a636ec061f88" name="Changes by kevin" comment="" />
@@ -236,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672514797553</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added CSV File to record the sorting algo">
+      <created>1672516075141</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1672516075141</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,6 +274,7 @@
     <MESSAGE value="Edit, Delete and Add Pub done" />
     <MESSAGE value="All done" />
     <MESSAGE value="Added Dataset for sorting algo testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Dataset for sorting algo testing" />
+    <MESSAGE value="Added CSV File to record the sorting algo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added CSV File to record the sorting algo" />
   </component>
 </project>

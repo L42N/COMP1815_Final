@@ -15,7 +15,6 @@ import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.swing.JButton;
 
@@ -66,6 +65,10 @@ public class MainGUI {
     private JScrollPane pubScrollPane;
     private JButton pubExitButton;
     private JPanel pubControlPanel;
+    private JRadioButton firstNameRadioButton;
+    private JRadioButton lastNameRadioButton;
+    private JRadioButton IDRadioButton;
+    private JRadioButton pubNameRadioButton;
     private List<Book> books;
     private List<Author> authors;
     private List<Pub> pubs;
@@ -359,7 +362,7 @@ public class MainGUI {
                         bookModel.addRow(bookRow);
                     });
 
-                } else {
+                } else{
 
                     var searchInput = searchField.getText().toLowerCase();
 
@@ -385,39 +388,75 @@ public class MainGUI {
         authSearchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                var searchInput = authSearchEntry.getText().toLowerCase();
 
-                var filteredAuthorLast = SearchAlgo.INSTANCE.searchAuthorLast(searchInput,authors);
+                if (lastNameRadioButton.isSelected()) {
+                    var searchInput = authSearchEntry.getText().toLowerCase();
 
-                DefaultTableModel authModel = (DefaultTableModel) authInfoTable.getModel();
-                authModel.setRowCount(0);
-                filteredAuthorLast.forEach(author -> {
-                    Object[] authRow = new Object[]{
-                            author.getId(),
-                            author.getFirstName(),
-                            author.getLastName(),
-                    };
-                    authModel.addRow(authRow);
-                });
+                    var filteredAuthorLast = SearchAlgo.INSTANCE.searchAuthorLast(searchInput, authors);
+
+                    DefaultTableModel authModel = (DefaultTableModel) authInfoTable.getModel();
+                    authModel.setRowCount(0);
+                    filteredAuthorLast.forEach(author -> {
+                        Object[] authRow = new Object[]{
+                                author.getId(),
+                                author.getFirstName(),
+                                author.getLastName(),
+                        };
+                        authModel.addRow(authRow);
+                    });
+                } else  {
+                    var searchInput = authSearchEntry.getText().toLowerCase();
+
+                    var filteredAuthorLast = SearchAlgo.INSTANCE.searchAuthorFirst(searchInput, authors);
+
+                    DefaultTableModel authModel = (DefaultTableModel) authInfoTable.getModel();
+                    authModel.setRowCount(0);
+                    filteredAuthorLast.forEach(author -> {
+                        Object[] authRow = new Object[]{
+                                author.getId(),
+                                author.getFirstName(),
+                                author.getLastName(),
+                        };
+                        authModel.addRow(authRow);
+                    });
+
+                }
             }
         });
 
         pubSearchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                var searchInput = pubSearchEntry.getText().toLowerCase();
 
-                var filteredPub = SearchAlgo.INSTANCE.searchPub(searchInput,pubs);
+                if (pubNameRadioButton.isSelected()) {
+                    var searchInput = pubSearchEntry.getText().toLowerCase();
 
-                DefaultTableModel pubModel = (DefaultTableModel) pubInfoTable.getModel();
-                pubModel.setRowCount(0);
-                filteredPub.forEach(pub -> {
-                    Object[] pubRow = new Object[]{
-                            pub.getId(),
-                            pub.getPubName(),
-                    };
-                    pubModel.addRow(pubRow);
-                });
+                    var filteredPub = SearchAlgo.INSTANCE.searchPub(searchInput, pubs);
+
+                    DefaultTableModel pubModel = (DefaultTableModel) pubInfoTable.getModel();
+                    pubModel.setRowCount(0);
+                    filteredPub.forEach(pub -> {
+                        Object[] pubRow = new Object[]{
+                                pub.getId(),
+                                pub.getPubName(),
+                        };
+                        pubModel.addRow(pubRow);
+                    });
+                } else  {
+                    var searchInput = pubSearchEntry.getText().toLowerCase();
+
+                    var filteredPub = SearchAlgo.INSTANCE.searchPubID(searchInput, pubs);
+
+                    DefaultTableModel pubModel = (DefaultTableModel) pubInfoTable.getModel();
+                    pubModel.setRowCount(0);
+                    filteredPub.forEach(pub -> {
+                        Object[] pubRow = new Object[]{
+                                pub.getId(),
+                                pub.getPubName(),
+                        };
+                        pubModel.addRow(pubRow);
+                    });
+                }
             }
 
         });

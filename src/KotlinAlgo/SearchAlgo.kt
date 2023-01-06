@@ -36,6 +36,4 @@ object SearchAlgo {
         var publisher = pubs.filter { pub -> pub.pubName.lowercase().contains(search.lowercase()) }
         return publisher
     }
-
-
 }

@@ -23,15 +23,18 @@ public class EditBookWindow {
 
 
     public EditBookWindow(java.util.List<Book> books, Book book) {
+        // Set text fields to books current fields
         editTitleField.setText(book.getTitle());
         editAuthorField.setText(book.getAuthors());
         editPubYearField.setText(book.getYearOfPublication());
         editPubField.setText(book.getPublisher());
         editSubjectField.setText(book.getSubject());
-
+        
+        // When submit button is pressed, update authors name
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Overwrite fields with new entry
                 book.setTitle(editTitleField.getText());
                 book.setAuthors(editAuthorField.getText());
                 book.setYearOfPublication(editPubYearField.getText());
@@ -44,6 +47,7 @@ public class EditBookWindow {
                         break;
                     }
                 }
+                // Append new book to book CSV
                 try {
                     BufferedWriter bookWriter = new BufferedWriter(new FileWriter("resources/Book.csv", false));
 
@@ -56,14 +60,20 @@ public class EditBookWindow {
                                     book.getYearOfPublication(),
                                     book.getPublisher(),
                                     book.getSubject()));
+
+                        // Raise exception
                         } catch (IOException ex) {
                             throw new RuntimeException(ex);
                         }
                     });
                     bookWriter.close();
+                
+                // Raise exception
                 } catch(Exception f){
                     f.printStackTrace();
                 }
+                
+                // Close frame once complete
                 frame.dispose();
             }
         });

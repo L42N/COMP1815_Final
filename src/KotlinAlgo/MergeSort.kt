@@ -4,7 +4,8 @@ import KotlinClass.Book
 import java.util.*
 import kotlin.collections.MutableList
 
-class MergeSort    // Constructor
+// Constructor
+class MergeSort
 {
 
 //fun initMergeSort(){
@@ -19,7 +20,7 @@ class MergeSort    // Constructor
         var left = mutableListOf<Book>()
         var right = mutableListOf<Book>()
 
-        //Variable to hold the middle of the MutableList
+        // Variable to hold the middle of the MutableList
         val middle: Int
 
         // If the size is == 1 then we don't need to sort
@@ -27,7 +28,7 @@ class MergeSort    // Constructor
             return whole
         } else {
             middle = whole.size / 2
-            // copy the left half of whole into the left.
+            // Copy the left half of whole into the left.
             for (i in 0 until middle) {
                 left.add(whole[i])
             }
@@ -158,9 +159,4 @@ class MergeSort    // Constructor
             wholeIndex++
         }
     }
-
-
-
-
-
 }

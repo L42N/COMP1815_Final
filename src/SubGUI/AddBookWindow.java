@@ -53,10 +53,11 @@ public class AddBookWindow {
                         bookWriter.newLine();
                         bookWriter.close();
 
-
+                    // Raise exception
                     } catch (Exception e) {
 
                     }
+                    // Close frame once complete
                     frame.dispose();
                 }
             }

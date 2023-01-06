@@ -74,30 +74,30 @@ public class MainGUI {
     private List<Pub> pubs;
 
     public MainGUI() {
-        // Load books by retrieving path from text field for use in getBooks function
+        // Load books by retrieving path from text field for use in getBooks function from DataPersistence
         loadButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 books = DataPersistence.INSTANCE.getBooks(loadField.getText());
-                bookTable();
+                bookTable();  // Refresh table
             }
         });
 
-        // Load authors by retrieving path from text field for use in getAuthors function
+        // Load authors by retrieving path from text field for use in getAuthors function from DataPersistence
         authLoadButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 authors = DataPersistence.INSTANCE.getAuthors(authLoad.getText());
-                authorTable();
+                authorTable();  // Refresh table
             }
         });
 
-        // Load publishers by retrieving path from text field for use in getPublishers function
+        // Load publishers by retrieving path from text field for use in getPublishers function from DataPersistence
         pubLoadButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 pubs = DataPersistence.INSTANCE.getPublishers(pubLoad.getText());
-                publisherTable();
+                publisherTable();  // Refresh table
             }
         });
 
@@ -106,7 +106,7 @@ public class MainGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 AddBookWindow window = new AddBookWindow();
-                window.bookWindow();
+                window.bookWindow();  // Open add book window
             }
         });
 
@@ -116,7 +116,7 @@ public class MainGUI {
             
             public void actionPerformed(ActionEvent e) {
                 AddAuthorWindow window = new AddAuthorWindow();
-                window.authorWindow();
+                window.authorWindow();  // Open add author window
             }
         });
 
@@ -125,7 +125,7 @@ public class MainGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 AddPubWindow window = new AddPubWindow();
-                window.publisherWindow();
+                window.publisherWindow();  // Open add publisher window
             }
         });
 
@@ -135,14 +135,16 @@ public class MainGUI {
             public void actionPerformed(ActionEvent e) {
 
                 DefaultTableModel deleteBookModel = (DefaultTableModel) InfoTable.getModel();
-                //delete row
+                // Delete row
                 if(InfoTable.getSelectedRowCount()==1){
                     for (int i =0; i < books.size(); i++){
                         if (InfoTable.getValueAt(InfoTable.getSelectedRow(),0).toString() == books.get(i).getId()){
-                            books.remove(i);
+                            books.remove(i);  // Remove from list
                             break;
                         }
                     }
+                    
+                    // Update book records for list
                     try {
                         BufferedWriter bookWriter = new BufferedWriter(new FileWriter("resources/Book.csv", false));
 
@@ -160,16 +162,22 @@ public class MainGUI {
                             }
                         });
                         bookWriter.close();
+                        
+                    // Raise error
                     } catch(Exception f){
                         f.printStackTrace();
                     }
+                    
+                    // Remove row
                     deleteBookModel.removeRow(InfoTable.getSelectedRow());
+                
                 } else{
-                    if(InfoTable.getRowCount()==0){
-                        // if table is empty (no data) then display message
+                    if(InfoTable.getRowCount() == 0){
+                        // If table is empty (no data) then display message
                         JOptionPane.showMessageDialog(null, "Table is Empty");
+                    
                     }else{
-                        // if table is not empty but row is not selected or multiple is selected
+                        // If table is not empty but row is not selected or multiple is selected
                         JOptionPane.showMessageDialog(null, "Please Select One Element to Delete");
                     }
                 }
@@ -180,17 +188,19 @@ public class MainGUI {
         deleteAuthorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //                DeleteBookWindow window = new DeleteBookWindow();
-//                window.bookWindow();
+                // DeleteBookWindow window = new DeleteBookWindow();
+                // window.bookWindow();
                 DefaultTableModel deleteBookModel = (DefaultTableModel) authInfoTable.getModel();
-                //delete row
+                // Delete row
                 if(authInfoTable.getSelectedRowCount()==1){
                     for (int i =0; i < authors.size(); i++){
                         if (authInfoTable.getValueAt(authInfoTable.getSelectedRow(),0).toString() == authors.get(i).getId()){
-                            authors.remove(i);
+                            authors.remove(i);  // Remove from list
                             break;
                         }
                     }
+                    
+                    // Update author records for list
                     try {
                         BufferedWriter authorWriter = new BufferedWriter(new FileWriter("resources/Author.csv", false));
 
@@ -200,16 +210,19 @@ public class MainGUI {
                                         author.getId(),
                                         author.getFirstName(),
                                         author.getLastName()));
-
+                                
+                            // Raise error
                             } catch (IOException ex) {
                                 throw new RuntimeException(ex);
                             }
                         });
                         authorWriter.close();
+                    // Raise error
                     } catch(Exception f){
                         f.printStackTrace();
                     }
                     deleteBookModel.removeRow(authInfoTable.getSelectedRow());
+                
                 } else{
                     if(authInfoTable.getRowCount()==0){
                         // if table is empty (no data) then display message
@@ -228,31 +241,35 @@ public class MainGUI {
             public void actionPerformed(ActionEvent e) {
 
                 DefaultTableModel deletePubModel = (DefaultTableModel) pubInfoTable.getModel();
-                //delete row
+                // Delete row
                 if(pubInfoTable.getSelectedRowCount()==1){
                     for (int i =0; i < pubs.size(); i++){
                         if (pubInfoTable.getValueAt(pubInfoTable.getSelectedRow(),0).toString() == pubs.get(i).getId()){
-                            pubs.remove(i);
+                            pubs.remove(i);  // Remove from list
                             break;
                         }
                     }
+                    // Update publisher records for list
                     try {
                         BufferedWriter pubWriter = new BufferedWriter(new FileWriter("resources/Publisher.csv", false));
-
                         pubs.forEach(pub -> {
                             try {
                                 pubWriter.append(String.format("%s,%s,\n",
                                         pub.getId(),
                                         pub.getPubName()));
+                            // Raise error
                             } catch (IOException ex) {
                                 throw new RuntimeException(ex);
                             }
                         });
                         pubWriter.close();
+                    
+                    // Raise error
                     } catch(Exception f){
                         f.printStackTrace();
                     }
                     deletePubModel.removeRow(pubInfoTable.getSelectedRow());
+                
                 } else{
                     if(pubInfoTable.getRowCount()==0){
                         // if table is empty (no data) then display message
@@ -271,8 +288,9 @@ public class MainGUI {
             public void actionPerformed(ActionEvent e) {
                 if(InfoTable.getSelectedRowCount()==1){
                     for (Book book : books) {
+                        // Edit selected row
                         if (InfoTable.getValueAt(InfoTable.getSelectedRow(), 0).toString() == book.getId()) {
-                            EditBookWindow.bookWindow(books, book);
+                            EditBookWindow.bookWindow(books, book);  // Open EditBookWindow
                             break;
                         }
                     }
@@ -296,8 +314,9 @@ public class MainGUI {
 
                 if(authInfoTable.getSelectedRowCount()==1){
                     for (Author author : authors) {
+                        // Edit selected row
                         if (authInfoTable.getValueAt(authInfoTable.getSelectedRow(), 0).toString() == author.getId()) {
-                            EditAuthorWindow.authorWindow(authors, author);
+                            EditAuthorWindow.authorWindow(authors, author);  // Open EditAuthorWindow
                             break;
                         }
                     }
@@ -317,10 +336,11 @@ public class MainGUI {
         editPublisherButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Edit selected row
                 if(pubInfoTable.getSelectedRowCount()==1){
                     for (Pub pub : pubs) {
                         if (pubInfoTable.getValueAt(pubInfoTable.getSelectedRow(), 0).toString() == pub.getId()) {
-                            EditPubWindow.publisherWindow(pubs, pub);
+                            EditPubWindow.publisherWindow(pubs, pub);  // Open EditPublisherWindow
                             break;
                         }
                     }
@@ -337,19 +357,23 @@ public class MainGUI {
             }
         });
         
-        // Search button
+        // Search book button
         searchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                
+                // Sort by author
                 if (authorRadioButton.isSelected()) {
 
+                    // Get text from search field
                     var searchInput = searchField.getText().toLowerCase();
 
+                    // Execute sort algorithm by author
                     var filteredBooks = SearchAlgo.INSTANCE.searchAuthor(searchInput,books);
 
-                    DefaultTableModel bookModel = (DefaultTableModel) InfoTable.getModel();
+                    DefaultTableModel bookModel = (DefaultTableModel) InfoTable.getModel();  // Load infotable
                     bookModel.setRowCount(0);
+                    // Create sorted author object
                     filteredBooks.forEach(book -> {
                         Object[] bookRow = new Object[]{
                                 book.getId(),
@@ -359,17 +383,21 @@ public class MainGUI {
                                 book.getPublisher(),
                                 book.getSubject()
                         };
-                        bookModel.addRow(bookRow);
+                        bookModel.addRow(bookRow);  // Load author object
                     });
-
+                    
+                // Sort by book
                 } else{
-
+                    
+                    // Get text from search field
                     var searchInput = searchField.getText().toLowerCase();
 
+                    // Execute sort algorithm by book
                     var filteredAuthors = SearchAlgo.INSTANCE.searchTitle(searchInput,books);
 
-                    DefaultTableModel bookModel = (DefaultTableModel) InfoTable.getModel();
+                    DefaultTableModel bookModel = (DefaultTableModel) InfoTable.getModel();  // Load infotable
                     bookModel.setRowCount(0);
+                    // Create sorted book object
                     filteredAuthors.forEach(book -> {
                         Object[] bookRow = new Object[]{
                                 book.getId(),
@@ -379,82 +407,104 @@ public class MainGUI {
                                 book.getPublisher(),
                                 book.getSubject()
                         };
-                        bookModel.addRow(bookRow);
+                        bookModel.addRow(bookRow);  // Load book object
                     });
                 }
             }
         });
 
+        // Search author button
         authSearchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                // Sort by last name
                 if (lastNameRadioButton.isSelected()) {
+                    
+                    // Get text from search field
                     var searchInput = authSearchEntry.getText().toLowerCase();
-
+                    
+                    // Execute sort algorithm by first name
                     var filteredAuthorLast = SearchAlgo.INSTANCE.searchAuthorLast(searchInput, authors);
 
-                    DefaultTableModel authModel = (DefaultTableModel) authInfoTable.getModel();
+                    DefaultTableModel authModel = (DefaultTableModel) authInfoTable.getModel();  // Load infotable
                     authModel.setRowCount(0);
                     filteredAuthorLast.forEach(author -> {
+                        // Create sorted author object by first name
                         Object[] authRow = new Object[]{
                                 author.getId(),
                                 author.getFirstName(),
                                 author.getLastName(),
                         };
-                        authModel.addRow(authRow);
+                        authModel.addRow(authRow);  // Load author object
                     });
+                
+                // Sort by first name
                 } else  {
+
+                    // Get text from search field
                     var searchInput = authSearchEntry.getText().toLowerCase();
 
+                    // Execute sort algorithm by last name
                     var filteredAuthorLast = SearchAlgo.INSTANCE.searchAuthorFirst(searchInput, authors);
 
-                    DefaultTableModel authModel = (DefaultTableModel) authInfoTable.getModel();
+                    DefaultTableModel authModel = (DefaultTableModel) authInfoTable.getModel();  // Load infotable
                     authModel.setRowCount(0);
                     filteredAuthorLast.forEach(author -> {
+                        // Create sorted author object by first name
                         Object[] authRow = new Object[]{
                                 author.getId(),
                                 author.getFirstName(),
                                 author.getLastName(),
                         };
-                        authModel.addRow(authRow);
+                        authModel.addRow(authRow);  // Load author object
                     });
 
                 }
             }
         });
 
+        // Search publisher button
         pubSearchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                // Search by publisher name
                 if (pubNameRadioButton.isSelected()) {
+
+                    // Get text from search field
                     var searchInput = pubSearchEntry.getText().toLowerCase();
 
+                    // Execute sort algorithm by publisher
                     var filteredPub = SearchAlgo.INSTANCE.searchPub(searchInput, pubs);
 
-                    DefaultTableModel pubModel = (DefaultTableModel) pubInfoTable.getModel();
+                    DefaultTableModel pubModel = (DefaultTableModel) pubInfoTable.getModel();  // Load infotabl
                     pubModel.setRowCount(0);
+                    // Create sorted publisher object
                     filteredPub.forEach(pub -> {
                         Object[] pubRow = new Object[]{
                                 pub.getId(),
                                 pub.getPubName(),
                         };
-                        pubModel.addRow(pubRow);
+                        pubModel.addRow(pubRow);  // Load publisher object
                     });
+                    
+                // Search by publisher ID
                 } else  {
+                    // Get text from search field
                     var searchInput = pubSearchEntry.getText().toLowerCase();
 
+                    // Execute sort algorithm by ID
                     var filteredPub = SearchAlgo.INSTANCE.searchPubID(searchInput, pubs);
 
-                    DefaultTableModel pubModel = (DefaultTableModel) pubInfoTable.getModel();
+                    DefaultTableModel pubModel = (DefaultTableModel) pubInfoTable.getModel();  // Load infotabl
                     pubModel.setRowCount(0);
+                    // Create sorted publisher object
                     filteredPub.forEach(pub -> {
                         Object[] pubRow = new Object[]{
                                 pub.getId(),
                                 pub.getPubName(),
                         };
-                        pubModel.addRow(pubRow);
+                        pubModel.addRow(pubRow);  // Load publisher object
                     });
                 }
             }
@@ -478,9 +528,11 @@ public class MainGUI {
                     if (algorithmType.equals("Merge Sort")){
 
                         MergeSort algorithm = new MergeSort();
-
+                        
+                        // Merge sort by book
                         if (authorRadioButton.isSelected()) {
                             algorithm.authMergeSort(books);
+                        // Merge sort by author
                         } else {
                             algorithm.mergeSort(books);
                         }
@@ -490,9 +542,11 @@ public class MainGUI {
                     else if (algorithmType.equals("Bubble Sort")) {
 
                         BubbleSort algorithm = new BubbleSort();
-
+                        
+                        // Bubble sort by book
                         if (BookButton.isSelected()) {
                             algorithm.bubbleSort(books);
+                        // Bubble sort by author
                         } else {
                             algorithm.bubbleSortAuthor(books);
                         }
@@ -503,8 +557,10 @@ public class MainGUI {
 
                         RadixSort algorithm = new RadixSort();
 
+                        // Radix sort by book
                         if (authorRadioButton.isSelected()) {
                             books = algorithm.initRadixSort(books,false);
+                        // Radix sort by author
                         } else {
                             books = algorithm.initRadixSort(books,true);
                         }
@@ -514,10 +570,10 @@ public class MainGUI {
                     long endTime = System.nanoTime();
 
                     // Calculate algorithm timings and display results
-                    System.out.println("That took " + (endTime - startTime) + " nanoseconds");
                     String timings = String.valueOf((endTime - startTime) / 1000000);
                     timeTextField.setText(timings + " milliseconds");
 
+                    // Reload infotable to update page and display timing
                     bookTable();
 
                 }
@@ -532,13 +588,15 @@ public class MainGUI {
             }
         });
 
-
+        // Exit button (terminate code)
         authExitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
             }
         });
+
+        // Exit button (terminate code)
         pubExitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

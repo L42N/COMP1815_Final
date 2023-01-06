@@ -39,15 +39,17 @@ public class AddAuthorWindow {
                         authorWriter.newLine();
                         authorWriter.close();
 
+                    // Raise exception
                     } catch (Exception f) {
 
-                    } 
+                    }
+                    // Close frame once complete
                     frame.dispose();
                 }
             }
         });
 
-
+        // Back button
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

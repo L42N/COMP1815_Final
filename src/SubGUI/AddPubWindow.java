@@ -20,6 +20,7 @@ public class AddPubWindow {
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // If publisher field is empty, raise error
                 if (pubField.getText().isEmpty()) {
                     JOptionPane.showInternalMessageDialog(null, "Missing Fields", "Error!", 1);
                 } else {
@@ -35,16 +36,15 @@ public class AddPubWindow {
                         publisherWriter.newLine();
                         publisherWriter.close();
 
+                    // Raise exception
                     } catch (Exception f) {
 
                     }
+                    // Close frame once complete
                     frame.dispose();
                 }
             }
         });
-
-
-
 }
 
     public static void publisherWindow(){
